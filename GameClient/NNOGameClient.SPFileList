@@ -1,0 +1,20 @@
+//This is a list of all files scanned by StructParser at a given date/time, used for dependency purposes
+1/12/2015 10:42:49:111
+VERSION "Mar 20 201216:26:43"
+"..\..\obj100\NNOGameClient\Full Debug Win32\"
+"C:\src\Night\GameClient\..\Common\NNOCommon.c"
+0
+0
+"C:\src\Night\GameClient\NNOGameClient.c"
+0
+0
+"C:\src\Night\GameClient\..\..\libs\PythonLib\resource_pylib.h"
+0
+0
+"C:\src\Night\GameClient\..\Common\NNOCommon.h"
+0
+0
+"C:\src\Night\GameClient\resource1.h"
+0
+0
+END_OF_FILE
