@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3656D318-C1B3-4309-AC12-405AE6655F6E}</ProjectGuid>
+    <RootNamespace>vrmlexp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.31118.1</_ProjectFileVersion>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dlx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dlx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dlx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dlx</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\Autodesk\3ds Max 2013\stdplugs\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Autodesk\3ds Max 2013\stdplugs\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\Autodesk\3ds Max 2013\stdplugs\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Autodesk\3ds Max 2013\stdplugs\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>IS_CRYPTIC_EXPORTER=1;_DEBUG;WIN32;_WINDOWS;_LEC_;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\3ds Max 2013 SDK\maxsdk\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x63740000</BaseAddress>
+      <ModuleDefinitionFile>vrmlexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl />
+    <ClCompile>
+      <PreprocessorDefinitions>IS_CRYPTIC_EXPORTER=1;_DEBUG;WIN32;_WINDOWS;_LEC_;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\src\Utilities\3dsmax2013\vrmlexp;C:\Program Files %28x86%29\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript\foundation;C:\Program Files %28x86%29\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript\maxwrapper;..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\3ds Max 2013 SDK\maxsdk\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x63740000</BaseAddress>
+      <ModuleDefinitionFile>vrmlexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Autodesk\3ds Max 2013 SDK\maxsdk\x64\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+    </Midl>
+    <ClCompile>
+    </ClCompile>
+    <ResourceCompile>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x63740000</BaseAddress>
+      <ModuleDefinitionFile>vrmlexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>IS_CRYPTIC_EXPORTER=1;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl />
+    <ClCompile />
+    <ResourceCompile />
+    <Link>
+      <BaseAddress>0x63740000</BaseAddress>
+      <ModuleDefinitionFile>vrmlexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>IS_CRYPTIC_EXPORTER=1;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\animexp\animexp.cpp" />
+    <ClCompile Include="..\animexp\animexpbloat.cpp" />
+    <ClCompile Include="..\animexp\skelexp.cpp" />
+    <ClCompile Include="..\vrmlexp\anchor.cpp" />
+    <ClCompile Include="..\vrmlexp\audio.cpp" />
+    <ClCompile Include="..\vrmlexp\backgrnd.cpp" />
+    <ClCompile Include="..\vrmlexp\bboard.cpp" />
+    <ClCompile Include="..\vrmlexp\bookmark.cpp" />
+    <ClCompile Include="..\vrmlexp\cppout.cpp" />
+    <ClCompile Include="..\vrmlexp\dllmain.cpp" />
+    <ClCompile Include="..\vrmlexp\EvalCol.cpp" />
+    <ClCompile Include="..\vrmlexp\fog.cpp" />
+    <ClCompile Include="..\vrmlexp\inline.cpp" />
+    <ClCompile Include="..\vrmlexp\lod.cpp" />
+    <ClCompile Include="..\vrmlexp\navinfo.cpp" />
+    <ClCompile Include="..\vrmlexp\pmesh.cpp" />
+    <ClCompile Include="..\vrmlexp\polycnt.cpp" />
+    <ClCompile Include="..\vrmlexp\prox.cpp" />
+    <ClCompile Include="..\vrmlexp\sound.cpp" />
+    <ClCompile Include="..\vrmlexp\timer.cpp" />
+    <ClCompile Include="..\vrmlexp\touch.cpp" />
+    <ClCompile Include="..\vrmlexp\vrml2.cpp" />
+    <ClCompile Include="..\vrmlexp\vrml_api.cpp" />
+    <ClCompile Include="..\vrmlexp\vrmlexp.cpp" />
+    <ClCompile Include="..\vrmlexp\vrmlpch.cpp" />
+    <ClCompile Include="MaxScriptFunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\animexp\animexp.h" />
+    <ClInclude Include="..\animexp\asciitok.h" />
+    <ClInclude Include="..\animexp\skelexp.h" />
+    <ClInclude Include="..\animexp\veroverrides.h" />
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="..\vrmlexp\anchor.h" />
+    <ClInclude Include="..\vrmlexp\appd.h" />
+    <ClInclude Include="..\vrmlexp\audio.h" />
+    <ClInclude Include="..\vrmlexp\backgrnd.h" />
+    <ClInclude Include="..\vrmlexp\bboard.h" />
+    <ClInclude Include="..\vrmlexp\bookmark.h" />
+    <ClInclude Include="..\vrmlexp\EvalCol.h" />
+    <ClInclude Include="..\vrmlexp\FindSkin.h" />
+    <ClInclude Include="..\vrmlexp\fog.h" />
+    <ClInclude Include="..\vrmlexp\forceinclude.h" />
+    <ClInclude Include="..\vrmlexp\inline.h" />
+    <ClInclude Include="..\vrmlexp\inlist.h" />
+    <ClInclude Include="..\vrmlexp\ISkin.h" />
+    <ClInclude Include="..\vrmlexp\ISkinCodes.h" />
+    <ClInclude Include="..\vrmlexp\lod.h" />
+    <ClInclude Include="..\vrmlexp\navinfo.h" />
+    <ClInclude Include="..\vrmlexp\normtab.h" />
+    <ClInclude Include="..\vrmlexp\ntrack.h" />
+    <ClInclude Include="..\vrmlexp\pmesh.h" />
+    <ClInclude Include="..\vrmlexp\prox.h" />
+    <ClInclude Include="..\vrmlexp\sound.h" />
+    <ClInclude Include="..\vrmlexp\Target.h" />
+    <ClInclude Include="..\vrmlexp\timer.h" />
+    <ClInclude Include="..\vrmlexp\touch.h" />
+    <ClInclude Include="..\vrmlexp\vrml.h" />
+    <ClInclude Include="..\vrmlexp\vrml2.h" />
+    <ClInclude Include="..\vrmlexp\vrml_api.h" />
+    <ClInclude Include="..\vrmlexp\vrmlexp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Notes.txt" />
+    <None Include="vrmlexp.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\MaxPlugins.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

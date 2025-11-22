@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{858253C9-BA8C-4A01-B96C-107286307825}</ProjectGuid>
+    <RootNamespace>POToCSV</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\..\PropertySheets\GeneralSettings.props" />
+    <Import Project="..\..\PropertySheets\CrypticApplication.props" />
+    <Import Project="..\..\PropertySheets\LinkerOptimizations.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\..\PropertySheets\GeneralSettings.props" />
+    <Import Project="..\..\PropertySheets\CrypticApplication.props" />
+    <Import Project="..\..\PropertySheets\LinkerOptimizations.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">$(ProjectName)FD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../3rdparty/xdk/win32;../../libs/HostIOLib;../../libs/ServerLib\pub;../../3rdparty/zlib;../common/utils;../common/components;../common/network;../common;../../libs/Common;../../libs/HttpLib;$(VSINSTALLDIR)\DIA SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRTDBG_MAP_ALLOC=1;AUX_SERVER_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>psapi.lib;Rpcrt4.lib;Mswsock.lib;apr-1.lib;apriconv-1.lib;aprutil-1.lib;libsvn_client-1.lib;libsvn_delta-1.lib;libsvn_diff-1.lib;libsvn_fs-1.lib;libsvn_fs_fs-1.lib;libsvn_fs_util-1.lib;libsvn_ra-1.lib;libsvn_ra_local-1.lib;libsvn_ra_svn-1.lib;libsvn_repos-1.lib;libsvn_subr-1.lib;libsvn_test-1.lib;libsvn_wc-1.lib;xml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <AdditionalLibraryDirectories>..\..\3rdparty\bin;../../3rdparty/xdk/win32lib;..\..\3rdparty\subversion-1.6.6\output\win32\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\..\utilities\bin\structparser X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../3rdparty/xdk/win32;../../libs/HostIOLib;../../libs/ServerLib\pub;../../3rdparty/zlib;../common/utils;../common/components;../common/network;../common;../../libs/Common;../../libs/HttpLib;$(VSINSTALLDIR)\DIA SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRTDBG_MAP_ALLOC=1;AUX_SERVER_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>psapi.lib;Rpcrt4.lib;Mswsock.lib;apr-1.lib;apriconv-1.lib;aprutil-1.lib;libsvn_client-1.lib;libsvn_delta-1.lib;libsvn_diff-1.lib;libsvn_fs-1.lib;libsvn_fs_fs-1.lib;libsvn_fs_util-1.lib;libsvn_ra-1.lib;libsvn_ra_local-1.lib;libsvn_ra_svn-1.lib;libsvn_repos-1.lib;libsvn_subr-1.lib;libsvn_test-1.lib;libsvn_wc-1.lib;xml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <AdditionalLibraryDirectories>..\..\3rdparty\bin;../../3rdparty/xdk/win32lib;..\..\3rdparty\subversion-1.6.6\output\win32\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\..\utilities\bin\structparser X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\POToTranslateFiles\POFileUtils.c" />
+    <ClCompile Include="AutoGen\POToCSV_AutoGen_1.c" />
+    <ClCompile Include="AutoGen\POToCSV_AutoGen_2.c" />
+    <ClCompile Include="POToCSV.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\POToTranslateFiles\POFileUtils.h" />
+    <ClInclude Include="POToCSV.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\StructParserStub\StructParserStub.vcxproj">
+      <Project>{1d29e421-93b2-4e32-9186-7fafc3971c5b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\ProjectManager_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\ProjectManager_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectManager.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{1d808ea2-e0a6-4cfb-9a24-0e9b4b25756f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddToSymStore.bat" />
+  </ItemGroup>
+</Project>

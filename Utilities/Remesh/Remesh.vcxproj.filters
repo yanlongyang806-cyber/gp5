@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\Remesh_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\Remesh_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Remesh.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{feda58b5-b4be-4a72-aeea-4416af360eda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddToSymStore.bat" />
+  </ItemGroup>
+</Project>

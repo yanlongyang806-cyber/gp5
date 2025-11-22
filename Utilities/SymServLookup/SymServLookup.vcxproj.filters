@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\SymServLookup_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\SymServLookup_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{7d345c93-bf40-4f8f-a3c7-f82f95c949d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

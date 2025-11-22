@@ -1,0 +1,10 @@
+LIBRARY crypticExporter.dlx
+EXPORTS
+   LibDescription       @1       PRIVATE
+   LibInit				@2		 PRIVATE
+   LibNumberClasses     @3       PRIVATE
+   LibClassDesc         @4       PRIVATE
+   LibVersion           @5       PRIVATE
+   CanAutoDefer         @6       PRIVATE
+SECTIONS
+   .data READ WRITE

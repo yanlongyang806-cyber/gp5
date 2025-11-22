@@ -1,0 +1,235 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 294, 403
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Gimme Control"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,237,382,50,14,BS_CENTER
+    GROUPBOX        "Core",IDC_STATIC,7,7,280,47
+    COMBOBOX        IDC_CORE_PROJECT,42,18,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "FightClub",IDC_STATIC,7,60,280,102
+    GROUPBOX        "StarTrek",IDC_STATIC,7,168,280,102
+    GROUPBOX        "Night",IDC_STATIC,7,276,280,102
+    LTEXT           "Project",IDC_STATIC,12,18,24,8
+    LTEXT           "Project",IDC_STATIC,12,72,24,8
+    LTEXT           "Project",IDC_STATIC,12,180,24,8
+    LTEXT           "Project",IDC_STATIC,12,288,24,8
+    COMBOBOX        IDC_FIGHTCLUB_PROJECT,42,72,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_STARTREK_PROJECT,42,180,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_NIGHT_PROJECT,42,288,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,12,36,23,8
+    COMBOBOX        IDC_CORE_BRANCH,42,36,90,360,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,12,90,23,8
+    COMBOBOX        IDC_FIGHTCLUB_BRANCH,42,90,90,306,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix",IDC_STATIC,12,108,132,48
+    LTEXT           "Project",IDC_STATIC,18,120,24,8
+    COMBOBOX        IDC_FIGHTCLUB_FIX_PROJECT,48,120,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,18,138,23,8
+    COMBOBOX        IDC_FIGHTCLUB_FIX_BRANCH,48,138,90,258,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,12,198,23,8
+    COMBOBOX        IDC_STARTREK_BRANCH,42,198,90,198,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix",IDC_STATIC,12,216,132,48
+    LTEXT           "Project",IDC_STATIC,18,228,24,8
+    COMBOBOX        IDC_STARTREK_FIX_PROJECT,48,228,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,18,246,23,8
+    COMBOBOX        IDC_STARTREK_FIX_BRANCH,48,246,90,150,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,12,306,23,8
+    COMBOBOX        IDC_NIGHT_BRANCH,42,306,90,145,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix",IDC_STATIC,12,324,132,48
+    LTEXT           "Project",IDC_STATIC,18,336,24,8
+    COMBOBOX        IDC_NIGHT_FIX_PROJECT,48,336,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,18,354,23,8
+    COMBOBOX        IDC_NIGHT_FIX_BRANCH,48,354,90,122,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix Core",IDC_STATIC,150,216,132,48
+    LTEXT           "Project",IDC_STATIC,156,228,24,8
+    COMBOBOX        IDC_STARTREKCORE_FIX_PROJECT,186,228,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,156,246,23,8
+    COMBOBOX        IDC_STARTREKCORE_FIX_BRANCH,186,246,90,150,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix Core",IDC_STATIC,150,324,132,48
+    LTEXT           "Project",IDC_STATIC,156,337,24,8
+    COMBOBOX        IDC_NIGHTCORE_FIX_PROJECT,186,337,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,156,354,23,8
+    COMBOBOX        IDC_NIGHTCORE_FIX_BRANCH,186,354,90,149,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix Core",IDC_STATIC,150,108,132,48
+    LTEXT           "Project",IDC_STATIC,156,121,24,8
+    COMBOBOX        IDC_FIGHTCLUBCORE_FIX_PROJECT,186,121,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,156,138,23,8
+    COMBOBOX        IDC_FIGHTCLUBCORE_FIX_BRANCH,186,138,90,258,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Create Fix",IDC_FIGHTCLUB_CREATEFIX,138,72,50,14
+    PUSHBUTTON      "Create Fix",IDC_STARTREK_CREATEFIX,138,180,50,14
+    PUSHBUTTON      "Create Fix",IDC_NIGHT_CREATEFIX,138,288,50,14
+END
+
+IDD_MAIN2 DIALOGEX 0, 0, 255, 126
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Gimmectrl"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Apply",IDC_APPLY,60,105,50,14
+    PUSHBUTTON      "Button2",IDC_CANCEL,115,105,50,14,NOT WS_VISIBLE
+    LISTBOX         IDC_PROJECTS,7,15,48,83,LBS_SORT | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Project",IDC_STATIC,7,7,48,8
+    LTEXT           "Project",IDC_STATIC,60,15,24,8
+    COMBOBOX        IDC_PROJECT,90,15,90,310,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,60,33,23,8
+    COMBOBOX        IDC_BRANCH,90,33,90,306,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Fix",IDC_STATIC,60,50,132,48
+    LTEXT           "Project",IDC_STATIC,66,63,24,8
+    COMBOBOX        IDC_FIX_PROJECT,96,63,90,41,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Branch",IDC_STATIC,66,81,23,8
+    COMBOBOX        IDC_FIX_BRANCH,96,81,90,258,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Create Fix",IDC_BUTTON_CREATEFIX,186,33,50,14,WS_DISABLED
+    PUSHBUTTON      "Install",IDC_BUTTON_INSTALL,186,15,50,14,WS_DISABLED
+    PUSHBUTTON      "Show Queue",IDC_SHOWQUEUE,198,105,50,14
+END
+
+IDD_QUEUE DIALOGEX 0, 0, 121, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Command Queue"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_QUEUE,7,7,107,107,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATUS,7,114,107,8
+    PUSHBUTTON      "Remove",IDC_DELETE,7,122,50,14,WS_DISABLED
+    PUSHBUTTON      "Abort",IDC_ABORT,64,122,50,14
+END
+
+IDD_INSTALL DIALOGEX 0, 0, 121, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Project to install"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,25,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,64,25,50,14
+    COMBOBOX        IDC_PROJECT,34,7,80,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Project",IDC_STATIC,7,7,24,12,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 396
+    END
+
+    IDD_MAIN2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        VERTGUIDE, 55
+        VERTGUIDE, 60
+        VERTGUIDE, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+        HORZGUIDE, 15
+        HORZGUIDE, 33
+        HORZGUIDE, 98
+        HORZGUIDE, 104
+    END
+
+    IDD_QUEUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 114
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+        HORZGUIDE, 114
+        HORZGUIDE, 122
+    END
+
+    IDD_INSTALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 114
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+        HORZGUIDE, 19
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "cryptic.ico"
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>danimexp</ProjectName>
+    <ProjectGuid>{DF35AEF7-2F56-4899-A301-ACB21A9E8592}</ProjectGuid>
+    <RootNamespace>animexp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.31118.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\Autodesk\3ds Max 2013\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Autodesk\3ds Max 2013\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\Autodesk\3ds Max 2013\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Autodesk\3ds Max 2013\plugins\</OutDir>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dle</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dle</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dle</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dle</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\3ds Max 2013 SDK\maxsdk\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x64920000</BaseAddress>
+      <ModuleDefinitionFile>animexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl />
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\3ds Max 2013 SDK\maxsdk\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x64920000</BaseAddress>
+      <ModuleDefinitionFile>animexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Autodesk\3ds Max 2013 SDK\maxsdk\x64\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+    </Midl>
+    <ClCompile>
+    </ClCompile>
+    <ResourceCompile>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x64920000</BaseAddress>
+      <ModuleDefinitionFile>animexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl />
+    <ClCompile />
+    <ResourceCompile />
+    <Link>
+      <BaseAddress>0x64920000</BaseAddress>
+      <ModuleDefinitionFile>animexp.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\CS;C:\Program Files (x86)\Autodesk\3ds Max 2013 SDK\maxsdk\include\maxscript</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="animexp.cpp" />
+    <ClCompile Include="animexpbloat.cpp" />
+    <ClCompile Include="skelexp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="animexp.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="animexp.h" />
+    <ClInclude Include="forceinclude.h" />
+    <ClInclude Include="skelexp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\MaxPlugins.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

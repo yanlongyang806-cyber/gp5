@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\SolutionGen_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\SolutionGen_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="SolutionGen.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SolutionGen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{9e143772-7cb7-44e1-b69b-0c7f8c0b1270}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

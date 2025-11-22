@@ -1,0 +1,2 @@
+START RevisionFinder.exe -ConnectToController false -logserver NONE -HeartbeatInterval 600 -rfMode 1
+START RevisionFinder.exe -ConnectToController false -logserver NONE -HeartbeatInterval 600 -rfMode 2 -serverMonitorPort 8095

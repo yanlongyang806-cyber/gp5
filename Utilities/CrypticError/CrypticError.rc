@@ -1,0 +1,241 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CRYPTICERROR_INTERNAL DIALOGEX 0, 0, 366, 179
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Developer Details"
+FONT 8, "Courier New", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_ERROR,8,36,252,116,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Click Here To Explain What Happened",IDC_OFFER_ADDITIONAL_DETAILS,8,156,172,16
+    PUSHBUTTON      "Copy to Clipboard",IDC_COPY_TO_CLIPBOARD,184,156,76,16
+    PUSHBUTTON      "Debug",IDC_DEBUG,272,36,84,20
+    PUSHBUTTON      "Ignore",IDC_IGNORE,272,60,84,20
+    PUSHBUTTON      "Terminate",IDC_TERMINATE_PROCESS,272,84,84,20
+    PUSHBUTTON      "Report",IDC_REPORT,272,108,84,20
+    PUSHBUTTON      "Visit Error Tracker",IDC_VISIT_ERRORTRACKER,272,136,84,16
+    PUSHBUTTON      "Remote Debugger",IDC_REMOTE_DEBUGGER,272,156,84,16
+    GROUPBOX        "Crash Details",IDC_STATIC,4,24,260,152
+    LTEXT           "Executable:",IDC_STATIC,4,4,45,8
+    LTEXT           "Message:",IDC_STATIC,4,12,44,8
+    LTEXT           "",IDC_EXECUTABLE,56,4,300,8
+    LTEXT           "",IDC_MESSAGE,56,12,300,8
+    GROUPBOX        "Process Actions",IDC_STATIC,268,24,92,108
+END
+
+IDD_CRYPTICERROR_OOPS DIALOGEX 0, 0, 316, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CrypticError: Oops!"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DETAILS,8,36,300,88,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "Cancel",IDCANCEL,4,132,52,14
+    DEFPUSHBUTTON   "Submit",IDOK,260,132,52,14
+    CTEXT           "Oops! Your Cryptic Application has crashed. To help us out, please indicate what was going on at the time of the crash, while we gather information.",IDC_STATIC,4,4,308,16
+    GROUPBOX        "Details:",IDC_STATIC,4,24,308,104
+    EDITTEXT        IDC_ERRORID_OOPS,152,132,52,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Error Ticket ID:",IDC_STATIC,96,136,50,8
+END
+
+IDD_CRYPTICERROR_PROGRESS DIALOGEX 0, 0, 196, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cryptic Error Reporting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_OUTPUT_CTRL,"RichEdit20A",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,4,4,188,124,WS_EX_DLGMODALFRAME
+    DEFPUSHBUTTON   "Cancel Error Report",IDC_CANCEL_ERROR_REPORT,4,177,188,14
+    LTEXT           "",IDC_STATUS_BAR,4,132,188,12
+    LTEXT           "",IDC_REMAINING,4,148,188,12
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,4,164,188,10
+END
+
+IDD_CRYPTICERROR_CHOOSE_PROCESS DIALOGEX 0, 0, 260, 221
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Cryptic Error: Choose Process"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DETAILS,8,44,244,80,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    LISTBOX         IDC_PROCESS_LIST,8,140,244,56,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Quit",IDCANCEL,4,204,48,14
+    DEFPUSHBUTTON   "Send",IDOK,208,204,48,14
+    CTEXT           "Choose a Cryptic Process that you consider to be stalled or frozen, and push Send. It will gather and send data back to Cryptic which will help us solve this issue. Thank you.",IDC_STATIC,4,4,252,24
+    GROUPBOX        "Processes",IDC_STATIC,4,128,252,72
+    GROUPBOX        "Details",IDC_STATIC,4,32,252,96
+END
+
+IDD_CRYPTICERROR_POPID DIALOGEX 0, 0, 186, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Thank You"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,124,52,60,16
+    EDITTEXT        IDC_ERRORID,4,52,52,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Thank you for providing us with a user dump. Please notify Cryptic about your manual user dump, using this Error Ticket ID as a reference.",IDC_STATIC,4,4,176,28
+    LTEXT           "Error Ticket ID:",IDC_STATIC,4,40,52,8
+END
+
+IDD_CRYPTICERROR_FINDAPROGRAMMER DIALOGEX 0, 0, 204, 113
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wait for a Programmer!"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Wait For Programmer",IDCANCEL,4,84,80,24
+    PUSHBUTTON      "Close Anyway",IDOK,124,84,76,24
+    LTEXT           "--",IDC_ERRORMESSAGE,4,20,196,40,WS_BORDER
+    LTEXT           "This crash needs to be debugged when it occurs. Details:",IDC_STATIC,4,4,188,8
+    CTEXT           "PLEASE FIND A PROGRAMMER!",IDC_STATIC,4,64,196,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CRYPTICERROR_INTERNAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 359
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_CRYPTICERROR_OOPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_CRYPTICERROR_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_CRYPTICERROR_CHOOSE_PROCESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_CRYPTICERROR_POPID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_CRYPTICERROR_FINDAPROGRAMMER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SYSTRAY_MENU MENU 
+BEGIN
+    POPUP "SYSTRAY"
+    BEGIN
+        MENUITEM "Cryptic Error",               ID_SYSTRAY_CRYPTICERROR, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "Show Progress...",            ID_SYSTRAY_SHOWPROGRESS
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_SYSTRAY_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "cryptic.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\animexp\animexp.cpp">
+      <Filter>Source Files\anim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\animexp\animexpbloat.cpp">
+      <Filter>Source Files\anim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\animexp\skelexp.cpp">
+      <Filter>Source Files\anim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\anchor.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\audio.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\backgrnd.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\bboard.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\bookmark.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\cppout.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\dllmain.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\EvalCol.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\fog.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\inline.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\lod.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\navinfo.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\pmesh.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\polycnt.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\prox.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\sound.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\timer.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\touch.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\vrml2.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\vrml_api.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\vrmlexp.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vrmlexp\vrmlpch.cpp">
+      <Filter>Source Files\VRML</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxScriptFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\animexp\animexp.h">
+      <Filter>Source Files\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\animexp\asciitok.h">
+      <Filter>Source Files\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\animexp\skelexp.h">
+      <Filter>Source Files\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\animexp\veroverrides.h">
+      <Filter>Source Files\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\anchor.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\appd.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\audio.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\backgrnd.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\bboard.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\bookmark.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\EvalCol.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\FindSkin.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\fog.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\forceinclude.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\inline.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\inlist.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\ISkin.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\ISkinCodes.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\lod.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\navinfo.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\normtab.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\ntrack.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\pmesh.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\prox.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\sound.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\Target.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\timer.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\touch.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\vrml.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\vrml2.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\vrml_api.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vrmlexp\vrmlexp.h">
+      <Filter>Source Files\VRML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{619d990c-3a5c-4fa2-9773-24ad4667fc62}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{62be7363-0219-45d5-9307-1dc6d5999912}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Source Files\anim">
+      <UniqueIdentifier>{57512673-68bd-47d9-af1d-e4ace5fcebab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VRML">
+      <UniqueIdentifier>{e034fa82-7cad-4714-ae03-850f07684e26}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Notes.txt" />
+    <None Include="vrmlexp.def">
+      <Filter>Source Files\VRML</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\MaxPlugins.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

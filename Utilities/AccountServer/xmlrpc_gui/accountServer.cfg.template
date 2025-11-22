@@ -1,0 +1,16 @@
+[Connection]
+host = localhost
+port = 8081
+
+[SuperSubCreate]
+usePayPal = false
+
+[Credit Cards]
+valid = 4111111111111119
+declined = 4417123456789113
+expire = 201202
+
+[PayPal]
+successURL = http://www.crypticstudios.com/success
+failureURL = http://www.crypticstudios.com/failure
+email = jthale_1253560822_per@crypticstudios.com

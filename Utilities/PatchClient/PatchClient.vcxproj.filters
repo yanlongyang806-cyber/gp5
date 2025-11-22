@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\PatchClient_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\PatchClient_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="patchclientmain.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\PatchClientLib\PatchClientLibStatusMonitoring.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{aa8f4b99-b05d-43a6-86cb-cde9104c27a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternHeaders">
+      <UniqueIdentifier>{7891e66f-06d7-44e4-982b-622d10ce669f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\libs\PatchClientLib\PatchClientLib.rc" />
+  </ItemGroup>
+</Project>

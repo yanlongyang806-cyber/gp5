@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\getvrml_AutoGen_1.c">
+      <Filter>Source Files\AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\getvrml_AutoGen_2.c">
+      <Filter>Source Files\AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="clip.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="geo.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="gettex.c">
+      <Filter>Source Files\gettex</Filter>
+    </ClCompile>
+    <ClCompile Include="GetVrmlCompileLinkSupport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="manifold.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="mipmap.c">
+      <Filter>Source Files\gettex</Filter>
+    </ClCompile>
+    <ClCompile Include="NVMeshMender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NVMeshMenderWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="poly.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="procAnim.c">
+      <Filter>Source Files\anim</Filter>
+    </ClCompile>
+    <ClCompile Include="spheremap.c">
+      <Filter>Source Files\gettex</Filter>
+    </ClCompile>
+    <ClCompile Include="tdither.c">
+      <Filter>Source Files\gettex</Filter>
+    </ClCompile>
+    <ClCompile Include="TootleWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tree.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="uvunwrap.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+    <ClCompile Include="vrml.c">
+      <Filter>Source Files\getvrml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\3rdparty\Tootle\include\tootlelib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\encounter_common.h">
+      <Filter>Source Files\ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\Encounter_enums.h">
+      <Filter>Source Files\ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\GlobalEnums.h">
+      <Filter>Source Files\ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\MapDescription.h">
+      <Filter>Source Files\ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="clip.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="combinedpoly.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="geo.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="gettex.h">
+      <Filter>Source Files\gettex</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="manifold.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="mipmap.h">
+      <Filter>Source Files\gettex</Filter>
+    </ClInclude>
+    <ClInclude Include="NVMeshMender.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NVMeshMenderWrapper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="output.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="poly.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="prim.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="procAnim.h">
+      <Filter>Source Files\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="spheremap.h">
+      <Filter>Source Files\gettex</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs_config_build.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs_config_tests.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="taucs_private.h">
+      <Filter>Source Files\taucs</Filter>
+    </ClInclude>
+    <ClInclude Include="tdither.h">
+      <Filter>Source Files\gettex</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="uvpack.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="uvrect.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="uvunwrap.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+    <ClInclude Include="vrml.h">
+      <Filter>Source Files\getvrml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{a5cb2bd2-21bb-4b7a-a9e0-5b515048c22a}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{cc44e70c-95b3-4c02-b6f7-61de29a68ade}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\anim">
+      <UniqueIdentifier>{f887a270-7011-4dbe-a2a4-14d1745c04a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AutoGen">
+      <UniqueIdentifier>{a2bbbf4e-c0bb-4450-ae4c-daec991a978e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{54e904ac-2105-4539-ad70-1dda82eceff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExternHeaders">
+      <UniqueIdentifier>{1d7e8136-2d9a-4ca1-91f3-69a0a31ebb8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gettex">
+      <UniqueIdentifier>{7a1c1b64-57ee-48eb-be13-a14a16279caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\getvrml">
+      <UniqueIdentifier>{dc6e2013-a568-47ff-b0e9-d178ee729121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\taucs">
+      <UniqueIdentifier>{f8042b1c-b408-4dec-8caa-025525338fb8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

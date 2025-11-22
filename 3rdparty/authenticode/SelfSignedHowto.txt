@@ -1,0 +1,12 @@
+How to make a self-signed certificate, for testing
+
+Run the following, in a Visual Studio or Windows SDK command prompt:
+
+(It doesn't matter what you enter for the intermediate passwords, since the output is hardwired to use password "cryptic".)
+
+makecert -r -n "CN=Cryptic Studios Inc. (testing only)" -sv cryptic.pvk cryptic.cert
+cert2spc cryptic.cert cryptic.spc
+pvk2pfx -pvk cryptic.pvk -spc cryptic.spc -po cryptic -PFX cryptic.pfx
+
+
+

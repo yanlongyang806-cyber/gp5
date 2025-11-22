@@ -1,0 +1,14 @@
+<UserSettings>
+	<ApplicationIdentity version="2.0"/>
+	<ToolsOptions/>
+	<Category name="Debugger" Category="{EEDBF29A-5C8B-4E01-827C-263382C18CFE}" Package="{C9DD4A57-47FB-11D2-83E7-00C04F9902C1}" RegisteredName="Debugger" PackageName="Visual Studio Debugger">
+		<PropertyValue name="UseDocumentChecksum">0</PropertyValue>
+		<!-- Make sure to
+			a) add to the end of the list (so as not to mess up people's personal options) and
+			b) add a 1 to the end of SymbolPathState
+		-->
+		<PropertyValue name="SymbolPath">\\somnus\data\symserv\LongTerm;\\somnus\data\symserv\Xenon;\\somnus\data\symserv\dataCryptic;http://msdl.microsoft.com/download/symbols;\\somnus\data\symserv\2week;\\somnus\data\symserv\2day</PropertyValue>
+		<PropertyValue name="SymbolPathState">111011</PropertyValue>
+		<PropertyValue name="SymbolCacheDir">C:\symcache</PropertyValue>
+	</Category>
+</UserSettings>

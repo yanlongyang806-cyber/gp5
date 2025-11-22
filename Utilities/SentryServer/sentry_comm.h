@@ -1,0 +1,100 @@
+#pragma once
+
+#define SENTRY_PROTOCOL_VERSION 20072803
+
+//messages send from sentry.exe to SentryServer
+enum
+{
+	SENTRYCLIENT_AUTOPATCH = 1,
+	SENTRYCLIENT_CONNECT,
+	SENTRYCLIENT_STATS,
+	SENTRYCLIENT_AUTOPATCH_DONE,
+	SENTRYCLIENT_HEREISFILECRC,
+	SENTRYCLIENT_HEREAREDIRECTORYCONTENTS,
+	SENTRYCLIENT_HEREISFILECONTENTS,
+};
+
+//message sent from sentryServer to sentry.exe
+enum
+{
+	SENTRYSERVER_AUTOPATCH = 1,
+	SENTRYSERVER_LAUNCH,
+	SENTRYSERVER_KILL,
+	SENTRYSERVER_DUPQUIT, // sent to duplicate sentries so they know to shut down
+	SENTRYSERVER_CREATEFILE,
+	SENTRYSERVER_LAUNCH_AND_WAIT,
+	SENTRYSERVER_GETFILECRC,
+	SENTRYSERVER_GETDIRECTORYCONTENTS,
+	SENTRYSERVER_GETFILECONTENTS,
+	
+	//just sends files to create, doesn't actually trigger restart or anything
+	SENTRYSERVER_AUTOPATCH_X64FILES,
+};
+
+//messages from sentry server back to people connected to sentry server
+enum
+{
+	MONITORSERVER_QUERY = 1,
+	MONITORSERVER_MSG,
+	MONITORSERVER_EXPRESSIONQUERY_RESULT,
+
+	//new commands for the super-careful-verify-everything system
+	MONITORSERVER_PACKET_VERIFIED,
+	MONITORSERVER_REQUESTING_RESENDS,
+
+	MONITORSERVER_HEREISFILECRC,
+	MONITORSERVER_HEREAREDIRECTORYCONTENTS,
+
+	MONITORSERVER_SIMPLEQUERY_PROCESSES_ON_ONE_MACHINE_RESPONSE,
+	MONITORSERVER_SIMPLEQUERY_MACHINES_RESPONSE,
+
+	MONITORSERVER_EXPRESSIONQUERY_RESULT_SAFE,
+
+	MONITORSERVER_GETFILECONTENTS_RESPONSE,
+
+};
+
+//flags to send along with MONITORCLIENT_EXPRESSIONQUERY
+enum
+{
+	EXPRESSIONQUERY_FLAG_SEARCH_DISCONNECTED_SERVERS = 1 << 0,
+
+	//should ALWAYS use this
+	EXPRESSIONQUERY_FLAG_SEND_BACK_SAFE_RESULT = 1 << 1,
+};
+
+
+//messages to sentry server
+enum
+{
+	MONITORCLIENT_KILL = 1,
+	MONITORCLIENT_LAUNCH,
+	MONITORCLIENT_QUERY,
+	MONITORCLIENT_EXPRESSIONQUERY, 
+	MONITORCLIENT_CREATEFILE,
+	MONITORCLIENT_LAUNCH_AND_WAIT,
+
+	MONITORCLIENT_DEBUG_PRINT, //print something on the sentry server console, for
+		//comm-testing purposes
+
+	//new commands for the super-careful-verify-everything system
+	MONITORCLIENT_PACKET_W_VERIFICATION_INFO,
+
+	//request the CRC of a file, or 0 if the file doesn't exist
+	MONITORCLIENT_GETFILECRC,
+
+	//send a file to multiple machines at once
+	MONITORCLIENT_CREATEFILE_MULTIPLEMACHINES,
+
+	MONITORCLIENT_GETDIRECTORYCONTENTS,
+
+	//goes through a simpler but way way way faster codepath, called from code only,
+	//returns a SentryProcess_FromSimpleQuery_List
+	MONITORCLIENT_SIMPLEQUERY_PROCESSES_ON_ONE_MACHINE,
+	MONITORCLIENT_SIMPLEQUERY_MACHINES,
+
+	MONITORCLIENT_GETFILECONTENTS,
+};
+
+//a directory name string being passed into GetDirectoryContents can have a prefix which changes the behavior
+#define GETDIRCONTENTS_PREFIX_NORECURSE "(NORECURSE)"

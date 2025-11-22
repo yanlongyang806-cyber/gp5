@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="10.00"
+	Name="GeneralSettings"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		DelayLoadDLLs="PhysXLoader.dll;NxCooking.dll;D3DCompiler_42.dll;d3d11.dll;dxgi.dll;binkw32.dll;libcef.dll"
+	/>
+</VisualStudioPropertySheet>

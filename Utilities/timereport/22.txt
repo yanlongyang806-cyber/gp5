@@ -1,0 +1,206 @@
+From: Bruce Rogers
+Sent: Tuesday, September 26, 2006 1:17 PM
+To: Software
+Subject: programming status ending sep 22, 2006
+
+Tech Land
+
+Infrastructure
+
+ben
+
+last login server 1 day,  object db 1 day,  it/subversion 2 days, client/server ref system 1 day
+
+next object db, documentation
+
+ 
+
+mark
+
+last help raoul 1 day,  xpath integration 4 days
+
+next more xpath (2 days),  textparser memory tracking
+
+ 
+
+alex
+
+last sick 3 days,  auto_struct & auto_float features/fixes 2 days
+
+next client/server ref system, tr_ read-only variable checker
+
+ 
+
+bruce
+
+last manglement 2, neck surgery recovery 3
+
+next more surgery recovery, manglement, patcher
+
+ 
+
+ 
+
+ 
+
+Graphics
+
+Jimb
+
+Last Week: GraphicsLib (Multiple device issues) (2d), MaterialEditor (1d), Gimme DLL (6h), Material Effects (5h), Misc (5h)
+
+This Week: WorkspaceWhiz fixes, Material Effects
+
+ 
+
+Tom
+
+Last Week: Terrain: Correct normals (1d), Vertex texture (2d), NP2 textures (0.5d), Xbox Debug (0.5d), Began Vertex interpolation of LODs (1d)
+
+This week: Terrain: Vertex interpolation of LODs (fix seams), Pre-baked normals and colors with LODs, Hierarchical culling, Move to single VB/IB
+
+ 
+
+Conor
+
+Last Week: Asset Manager (4d), Misc GraphicsLib (0.5d), Help Tom get up to speed (0.5d)
+
+This Week: Asset Manager
+
+ 
+
+Dave
+
+Last week: Performance (2d), Parallax mapping (2d), DX Debugging (1d)
+
+This week: Rough estimates of performance limits, guided by Xbox 360 stats, Comparing Xbox 360 to PC performance
+
+ 
+
+Sam
+
+Last Week: DynFx optimization (3d), DynFx documentation (1d), DynFx features (1d)
+
+This Week: DynFx features, DynFx optimization or Bone Scaling
+
+ 
+
+ 
+
+ 
+
+Game Tech
+
+Joe:
+
+Last week: Misc cleanup (artist/conor requests) (2d), editor UI (3d)
+
+This week: Tracker tree
+
+ 
+
+Martin:
+
+Last week: Physics/Entity movement (checked in soon)
+
+This week: Entity Movement Animbit Mega Prediction (EMAMP) (two weeks)
+
+ 
+
+Raoul:
+
+Last week: Management (1d), Expressions (4d)
+
+This week: finish expression stuff, start state machines
+
+ 
+
+ 
+
+Game Land
+
+Cities
+
+Aaron
+
+Last: European Vacation (5d) 
+
+Next: Auction House: design feedback, begin implementation.
+
+ 
+
+Brett
+
+Last: Builderizer (2d), CoH Builds (0.5d), Vacation (2.5d)
+
+Next: Builderizer Remote Invocation
+
+ 
+
+Garth
+
+Last: Arm Scaling IK Support (2d), Support (3d)
+
+Next: Loot Reward Messages, Reward Table
+
+ 
+
+Vince
+
+Last: CSR/Support (2.5d), Invention Recipes (1.5d) , Meetings/Management (1 d)
+
+Next: Invention Recipes/Enhancement Tooltips
+
+ 
+
+Fight Club
+
+CW
+
+Last: FC Design 2.5d, Critter editor 2.5d
+
+Next: Critter editor, costume
+
+ 
+
+Jered
+
+Last: Entity death 1d, Powers 3d, Powers planning 1d
+
+Next: Vacation 1d, power prediction, anim and fx hooks
+
+ 
+
+Joe
+
+Last: UI2 General 4d, UI2 multiple Win32 windows 1d
+
+Next: Menus, Bug fixing, focus
+
+ 
+
+Lincoln
+
+Last: FC Design 1.5d, Encounter editor 3.5d
+
+Next; Encounter editor
+
+ 
+
+Noel
+
+Last: Getting settled 1d, PNPCs 4d
+
+Next: Expression support in textparser
+
+ 
+
+Shannon
+
+Last: FC Design 3d, Mangement 2d
+
+Next: Management, Design
+
+ 
+
+ 

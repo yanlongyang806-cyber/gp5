@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Full Debug|Win32">
+      <Configuration>Full Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1F47D2CA-05A3-46F1-AD58-4756C1E928E6}</ProjectGuid>
+    <RootNamespace>getvrml</RootNamespace>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\..\PropertySheets\GeneralSettings.props" />
+    <Import Project="..\..\PropertySheets\CrypticApplication.props" />
+    <Import Project="..\..\PropertySheets\GameClient.props" />
+    <Import Project="..\..\PropertySheets\LinkerOptimizations.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\..\PropertySheets\GeneralSettings.props" />
+    <Import Project="..\..\PropertySheets\CrypticApplication.props" />
+    <Import Project="..\..\PropertySheets\GameClient.props" />
+    <Import Project="..\..\PropertySheets\LinkerOptimizations.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">true</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">false</EmbedManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">$(ProjectName)FD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../crossroads/common/item;../../crossroads/common/mission;../../crossroads/common;../../crossroads/common/entity;../../libs/InputLib/pub;../../libs/UtilitiesLib;../../libs/UtilitiesLib/utils;../../libs/UtilitiesLib/components;../../libs/UtilitiesLib/assert;../../libs/UtilitiesLib/network;../../libs/WorldLib/pub;../../libs/Renderers/pub;../../libs/GraphicsLib/pub;../../libs/GLRenderLib/glh;../../3rdparty/zlib;../../3rdparty/speedtree/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TRACKED_MEMPOOL;INCLUDE_MEMCHECK;GIMME_INIT_WSA;WIN32;_DEBUG;_CONSOLE;OFFLINE;GETVRML;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>memcheck.h;superassert.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:no %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libtaucs.lib;blas_win32.lib;lapack_win32.lib;libatlas.lib;libcblas.lib;libf77blas.lib;liblapack.lib;libmetis.lib;vcf2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\3rdparty\bin;.\libtaucs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <DelayLoadDLLs>Tootle.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\..\utilities\bin\structparser X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../crossroads/common/item;../../crossroads/common/mission;../../crossroads/common;../../crossroads/common/entity;../../libs/InputLib/pub;../../libs/UtilitiesLib;../../libs/UtilitiesLib/utils;../../libs/UtilitiesLib/components;../../libs/UtilitiesLib/assert;../../libs/UtilitiesLib/network;../../libs/WorldLib/pub;../../libs/Renderers/pub;../../libs/GraphicsLib/pub;../../libs/GLRenderLib/glh;../../3rdparty/zlib;../../3rdparty/speedtree/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TRACKED_MEMPOOL;INCLUDE_MEMCHECK;GIMME_INIT_WSA;WIN32;_DEBUG;_CONSOLE;OFFLINE;GETVRML;_CRTDBG_MAP_ALLOC=1;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>memcheck.h;superassert.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 /FIXED:no %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libtaucs.lib;blas_win32.lib;lapack_win32.lib;libatlas.lib;libcblas.lib;libf77blas.lib;liblapack.lib;libmetis.lib;vcf2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\3rdparty\bin;.\libtaucs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <DelayLoadDLLs>Tootle.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\..\utilities\bin\structparser X $(ProjectDir) X $(ProjectFileName) X $(Platform) X $(Configuration) X $(VCInstallDir) X $(SolutionPath)</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoGen\getvrml_AutoGen_1.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AnySuitable</InlineFunctionExpansion>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ClCompile Include="AutoGen\getvrml_AutoGen_2.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AnySuitable</InlineFunctionExpansion>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ClCompile Include="clip.c" />
+    <ClCompile Include="geo.c" />
+    <ClCompile Include="gettex.c" />
+    <ClCompile Include="GetVrmlCompileLinkSupport.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="manifold.c" />
+    <ClCompile Include="mipmap.c" />
+    <ClCompile Include="NVMeshMender.cpp" />
+    <ClCompile Include="NVMeshMenderWrapper.cpp" />
+    <ClCompile Include="output.c" />
+    <ClCompile Include="poly.c" />
+    <ClCompile Include="procAnim.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../libs/WorldLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Full Debug|Win32'">../../libs/WorldLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="spheremap.c" />
+    <ClCompile Include="tdither.c" />
+    <ClCompile Include="TootleWrapper.cpp" />
+    <ClCompile Include="tree.c" />
+    <ClCompile Include="uvunwrap.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Speed</FavorSizeOrSpeed>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ClCompile Include="vrml.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\3rdparty\Tootle\include\tootlelib.h" />
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\encounter_common.h" />
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\Encounter_enums.h" />
+    <ClInclude Include="..\..\libs\Common\GlobalEnums.h" />
+    <ClInclude Include="..\..\libs\Common\MapDescription.h" />
+    <ClInclude Include="clip.h" />
+    <ClInclude Include="combinedpoly.h" />
+    <ClInclude Include="geo.h" />
+    <ClInclude Include="gettex.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="manifold.h" />
+    <ClInclude Include="mipmap.h" />
+    <ClInclude Include="NVMeshMender.h" />
+    <ClInclude Include="NVMeshMenderWrapper.h" />
+    <ClInclude Include="output.h" />
+    <ClInclude Include="poly.h" />
+    <ClInclude Include="prim.h" />
+    <ClInclude Include="procAnim.h" />
+    <ClInclude Include="spheremap.h" />
+    <ClInclude Include="taucs.h" />
+    <ClInclude Include="taucs_config_build.h" />
+    <ClInclude Include="taucs_config_tests.h" />
+    <ClInclude Include="taucs_private.h" />
+    <ClInclude Include="tdither.h" />
+    <ClInclude Include="tree.h" />
+    <ClInclude Include="uvpack.h" />
+    <ClInclude Include="uvrect.h" />
+    <ClInclude Include="uvunwrap.h" />
+    <ClInclude Include="vrml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\GraphicsLib\GraphicsLib.vcxproj">
+      <Project>{db3966d2-f96d-4f16-8187-7e7c5d0b9d8d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\InputLib\InputLib.vcxproj">
+      <Project>{c860157e-9b18-4bef-ac93-8184f230a7f4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\Renderers\RenderLib.vcxproj">
+      <Project>{13e22c87-13ef-4a48-8cb2-001bfac29837}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\StructParserStub\StructParserStub.vcxproj">
+      <Project>{1d29e421-93b2-4e32-9186-7fafc3971c5b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\UtilitiesLib\UtilitiesLib.vcxproj">
+      <Project>{a6741f6e-5476-4f9f-9d65-62b54aaf1d08}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\WorldLib\WorldLib.vcxproj">
+      <Project>{e9aeb79e-085b-4392-a53f-8a9c609e8385}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\XRenderLib\XRenderLib.vcxproj">
+      <Project>{f8da0fdb-b33d-4fc2-83db-8c5e4ba4c7f3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

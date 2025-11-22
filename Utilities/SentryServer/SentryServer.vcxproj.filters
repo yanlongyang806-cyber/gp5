@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\SentryServer_AutoGen_1.c">
+      <Filter>autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\SentryServer_AutoGen_2.c">
+      <Filter>autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="query.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sentryalerts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sentrycomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SentryServer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="webcomm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="monitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="query.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sentry_comm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sentryalerts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sentrycfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sentrycomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sentrypub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SentryServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="webcomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="autogen">
+      <UniqueIdentifier>{f28582c7-46a5-4360-a26e-7362e4473756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+</Project>

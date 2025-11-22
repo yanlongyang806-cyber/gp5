@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <_PropertySheetDisplayName>GameClient</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <DelayLoadDLLs>PhysXLoader.dll;NxCooking.dll;D3DCompiler_42.dll;d3d11.dll;dxgi.dll;binkw32.dll;libcef.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+	  <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

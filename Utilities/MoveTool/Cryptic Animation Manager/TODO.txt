@@ -1,0 +1,5 @@
+Deal with FX/Anim animlists
+
+Check for D_Bits
+
+Deal with missing Call FX...

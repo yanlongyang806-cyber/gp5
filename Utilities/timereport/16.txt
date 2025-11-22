@@ -1,0 +1,198 @@
+From: Bruce Rogers
+Sent: Tuesday, September 19, 2006 12:07 PM
+To: Software
+Subject: Software Status ending 9/16 2006
+
+ 
+
+Infrastructure
+
+special 3 weeks for the price of 1 report!
+
+ 
+
+ben
+
+last login server 10 days, transient data plan 1 day, general bugs/firefighting 4 days
+
+next login/mapserver state transition fixing/clarifying, coh branch in subversion, documentation
+
+ 
+
+mark
+
+last xpath 6 days, textparser debug & support 5 days, sick 4 days
+
+next help raoul with eval, xpath integrated with objectdb, helping ben
+
+ 
+
+alex
+
+last MCP 7 days, tonsil removal 5 days (at least), sick 3 days
+
+next maptracker appserver (maybe part of controller), more appservers
+
+ 
+
+bruce
+
+last manglement 3, neck surgery recovery 10, patcher 2
+
+next more surgery recovery, manglement, patcher
+
+ 
+
+ 
+
+ 
+
+Squishy
+
+Joe:
+
+Last week: Editor server stuff/EditOrig (2d), Undo (3d)
+
+This week: Undo (1d or so left), Misc Fixes/Non-UI dependent work
+
+ 
+
+Martin:
+
+Last week: Entity movement almost working (5d) (threading is hard, wrong direction initially)
+
+This week: Check in movement/prediction code, start beacon backport hack
+
+ 
+
+Raoul:
+
+Last week: Entity Grid (2d), VS Property Sheets (2.5d), BScript implementation (0.5d)
+
+This week: BScript
+
+ 
+
+ 
+
+Graphics
+
+Jimb
+
+Last Week: MaterialEditor (1d), Art Docs (0.5d), Management (0.5d), Gimme DLL (3d)
+
+This Week: Material Effects (simple ops, refraction?)
+
+ 
+
+Sam:
+
+Last week: DynFx features and optimization start (2d), Ragdoll demos for CoH (2.5d), General code cleanup (0.5d)
+
+This week: DynFx optimization/compiling, Start on Bone/Muscle Scaling, if time permits
+
+ 
+
+Dave
+
+Last week: DX performance measurements & budget (2d), DX bugs (1.5d), Misc (0.5d), Learning about LOD WorldLib & GraphicsLib drawing code (1d)
+
+This week: Work on perf budget after getting zone art, State management improvements
+
+ 
+
+Conor
+
+Last Week: Asset Manager (2d), Misc GraphicsLib (2.5d), Batch build script (0.5d)
+
+This Week: Tom's buddy, Misc GraphicsLib, Asset Manager (if UI is ready)
+
+ 
+
+Tom
+
+This Week: Learning Terrain Editor/Terrain System
+
+ 
+
+Game Team
+
+Cities
+
+Aaron
+
+Last: European Vacation (5d)
+
+Next: European Vacation
+
+ 
+
+Brett
+
+Last: Builderizer (1d), CoH Builds (1d), Character Web Pages (1.5d) Support Issues (0.5d) , Vacation (1d)
+
+Next: Vacation, Character Web Pages, Builderizer
+
+ 
+
+Garth
+
+Last: Arm Scaling IK Support (2.5d), Invention Missions (1d), Support (1.5d)
+
+Next: Arm Scaling IK Support, Support
+
+ 
+
+Vince
+
+Last: CSR/Support (3d), Safeguard Improvements (1d), Builds (0.5d), Meetings/Management (0.5d)
+
+Next: CSR/Support, Invention Recipes
+
+Fight Club
+
+CW
+
+Last: Factions (tabled) 1d, Simple Critter Editor 3d, Meetings 1d
+
+Next: Finish critter editor, hook into asset manager
+
+ 
+
+Jered
+
+Last: FC Powers Implementation 3d, FC Powers design 1d, FC Meetings 1d
+
+Next: Further combo and advanced powers, integration with control state
+
+ 
+
+Joe W
+
+Last: FC UI cleanup 1d, Scrollbar 1d, List .5d, Tree 2d, UI Implementation Design .5d
+
+Next: More widgets, fonts, keyboard nav
+
+ 
+
+Lincoln
+
+Last: Meetings/Misc 1d, Grrenlight setup 1.5d, Branch 1 XBox setup .5d, Encounters 2d
+
+Next: Encounter editor
+
+ 
+
+Noel
+
+Last: Not here
+
+Next: Now here
+
+Shannon
+
+Last: FC Design 3d, Management 2d
+
+Next: More!
+
+ 

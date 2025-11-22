@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	padding: 0; 
+	margin: 10px; 
+	border:5px solid #900;
+	border-radius: 20px;
+}
+
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+
+table {
+	text-align: right;
+	border-collapse: collapse;
+	background-color: #B0D8FF;
+	margin: 20px;
+	border: 5px solid #B0D8FF;
+	border-radius: 10px;
+}
+
+table th, td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+table th {
+	border-bottom: 2px solid black;
+}
+
+tr.alt td {
+	background-color:#CCE6FF;
+}
+
+#wrapper {
+	overflow: hidden;
+}
+
+#tabletotals {
+	border-top: 2px solid black;
+	background-color: #B0D8FF;
+}
+
+#header {
+	background-color: #900;
+	padding-bottom: 25px;
+}
+
+#headerlogo {
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+#headertitle {
+	float: right;
+	vertical-align: central;
+	padding-right: 30px;
+}
+
+#mainstats {
+	padding: 10px;
+	border-bottom: 2px dotted #666;
+	margin-bottom: 20px;
+}
+
+#tables {
+	margin-bottom: 10px;
+	float: left;
+}
+
+#graphs {
+	margin-bottom: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+#graphs img {
+	margin: 10px;
+	padding: 5px;
+	border: 5px solid #B0D8FF;
+	border-radius: 10px;
+/*	background-color: #B0D8FF;  */
+}

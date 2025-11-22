@@ -1,0 +1,7 @@
+{
+	ChatRelays
+	{
+		address localhost
+		uPort 7402
+	}
+}

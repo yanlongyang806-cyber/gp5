@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameDefinitionFile xmlns:baseTypes="urn:schemas-microsoft-com:GamesExplorerBaseTypes.v1" xmlns="urn:schemas-microsoft-com:GameDescription.v1">
+    <GameDefinition gameID="{0B04C972-8509-423B-AF62-5C665707D191}">
+        <Name>Star Trek Online</Name>
+        <Description>In Star Trek Online, the Star Trek universe appears for the first time on a truly massive scale. In this free-to-play massively multiplayer online game from Cryptic Studios, players take captain's chair, commanding their own starship, crew and destiny.
+
+Players will have the opportunity to visit iconic locations from the popular Star Trek fiction, reach out to unexplored star systems and make contact with new alien species. With Episode Missions, every moment spent playing Star Trek Online will feel like a new Star Trek episode in which you are the star.
+
+Immerse yourself in the future of the Trek universe as it moves into the 25th century: a time of shifting alliances and new discoveries.
+
+Beam up, join the action, and become part of Star Trek today!</Description>
+        <ReleaseDate>2010-02-02</ReleaseDate>
+        <Genres>
+            <Genre>MMORPG</Genre>
+            <Genre>Action</Genre>
+        </Genres>
+        <Version>
+            <VersionFile path="Star Trek Online.exe" />
+        </Version>
+        <WindowsSystemPerformanceRating minimum="4.1" recommended="5.6" />
+        <Developers>
+            <Developer URI="http://www.crypticstudios.com/">Cryptic Studios</Developer>
+        </Developers>
+        <Publishers>
+            <Publisher URI="http://www.perfectworld.com/">Perfect World</Publisher>
+        </Publishers>
+        <GameExecutables>
+            <GameExecutable path="Star Trek Online.exe" />
+            <GameExecutable path="Star Trek Online\Live\GameClient.exe" />
+            <GameExecutable path="Star Trek Online\Beta\GameClient.exe" />
+            <GameExecutable path="Star Trek Online\Playtest\GameClient.exe" />
+            <GameExecutable path="Star Trek Online\Tip\GameClient.exe" />
+        </GameExecutables>
+    </GameDefinition>
+</GameDefinitionFile>

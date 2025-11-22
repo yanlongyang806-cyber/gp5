@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	padding: 0; 
+	margin: 0; 
+	border: 0;
+}
+
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border:5px solid #900;
+	border-radius: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:small;
+}

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\Faraday_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\Faraday_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="faraday.c" />
+    <ClCompile Include="faraday_rpc_accounts.c" />
+    <ClCompile Include="faraday_rpc_core.c" />
+    <ClCompile Include="faraday_rpc_games.c" />
+    <ClCompile Include="faraday_rpc_status.c" />
+    <ClCompile Include="faraday_websrv.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="faraday_websrv.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{b9a0f264-3093-4b0a-9626-a824f83556eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

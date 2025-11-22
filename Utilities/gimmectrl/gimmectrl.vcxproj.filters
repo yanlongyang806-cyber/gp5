@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\gimmectrl_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\gimmectrl_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="commands.c" />
+    <ClCompile Include="db.c" />
+    <ClCompile Include="gimmecrtl.c" />
+    <ClCompile Include="queue.c" />
+    <ClCompile Include="systemtray.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="db.h" />
+    <ClInclude Include="gimmectrl.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="systemtray.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{2c9bd6a1-c313-47c3-8444-06f993d90246}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cryptic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gimmectrl.rc" />
+  </ItemGroup>
+</Project>

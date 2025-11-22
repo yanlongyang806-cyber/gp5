@@ -1,0 +1,169 @@
+# Patch Server command-line documentation
+
+For the most part, config.txt is the preferred method of configuring a Patch Server.
+Certain parameters are available on the command line for operational convenience, and some of them are only available on the command line.
+
+For command-line parameters that do not take an additional argument, they can be applied in their reverse form by appending a zero.  As an example, the following two parameters have the same effect:
+-start_down
+-start_down 1
+But this option explicitly does the opposite:
+-start_down 0
+
+For the most part, the negative case is only useful when the option is on by default, or used as part of a script where there is a previous option that must be overridden.  For this purpose, options are processed left-to-right.
+In most cases, command-line options will override equivalent options in config.txt, but this is not always true, so give conflicting parameters with care.
+
+This list is not complete.  There are various options that all Cryptic servers accept, and those will be accepted by a Patch Server.  The most useful of these are documented here.  There are also various internal options that may exist, but may not be present here.  For a full list of all supported options, use PatchServer -help.  Note that special "hidden" commands may not appear on this list. Many generic commands appearing on this list may not be appropriate to run on a Patch Server.
+
+
+****************************************
+Maintenance parameters
+****************************************
+
+-disable_patch_tracking
+This disable the build tracking facility.
+
+-full_expire
+WARNING: Don't do this unless you want all of your data to go away.
+This command will expire all builds.
+
+-neverReallyPrune
+Go through the motions of pruning, but don't actually prune anything, like a "dry run."
+
+-port <port>
+Add an additional PCL listen port.  This can be used multiple times
+
+-start_down
+Start up in the "Report as Down" state, so the load balancer (if any) will not direct clients to it.
+
+-StayUp
+Attempt to automatically restart after a process crash.
+
+
+****************************************
+Verify parameters
+****************************************
+
+-fix_hoggs
+WARNING: This option can cause data loss if the PatchDB is corrupted.  It should be used with extreme care on master servers.
+When doing a verify on startup, also check hogs for files that are broken or don't belong, and remove them.
+
+-sync_ignore_manifest_similarity
+Check for differences in checkins even if the parent manifest received is exactly the same as the last one.
+After the first run, this automatically disables.
+
+-sync_deep_verify_all_checkins
+This is like sync_deep_verify_all_checkins, but do performance-intensive verification of the integrity of all files, to ensure the existing data is completely OK.
+After the first run, this automatically disables.
+
+-sync_verify_all_checkins
+When updating from a parent, re-verify all checkins, to make sure our copy is up-to-date.
+After the first run, this automatically disables.
+
+-sync_verify_all_checkins_sticky
+This makes the above options remain on even after the first run.  This can be used for a system that has to be high-integrity, but for which it is OK if it is slower, like a backup server.
+
+-sync_write_new_manifest
+Note: On by default
+Use -sync_write_new_manifest 0 to use the old mechanism of writing manifests on child servers, where the parent manifest is written verbatim to disk.  This will cause problems for any server that is not completely mirroring the parent, such as if only some projects are mirrored, or a MirrorConfig is used.
+
+-verify
+Note: On by default
+Use -verify 0 to disable the normal verification that occurs on startup.
+
+-verify_project <project>
+When verifying on startup, restrict the verify to a specific project.
+
+-verify_no_data
+Use this to achieve a "quick verify," where the integrity of data inside the hogs is not carefully verified.  This makes verify much faster, and it will catch all errors in the PatchDB that do not involve actual corruption of the file data itself.
+
+
+****************************************
+Performance tuning
+****************************************
+
+-HALCloseDelay <seconds>
+Default: 36 hours
+The number of seconds to keep hog files open before closing them.
+
+-ManifestStashInitSize <bytes>
+Default: 4122624
+Initial size of StashTable used to build manifests, in number of files.
+Lowering this can save memory, at a significant increase in manifest building time.
+
+-num_process_threads <num>
+Default: 4
+The number of threads used to process files being loaded.  This includes zipping and checksum calculation.
+
+
+****************************************
+Logging and reporting parameters
+****************************************
+-BeginStatusReporting <system name> <Controller Tracker name> <monitor port>
+This command registers the process as a Critical System, which makes alerting work.
+  system name: The name that this Patch Server should report as in Critical Systems; probably this should be the same as the server displayname in the config.txt
+  Controller Tracker name: The hostname of the primary Controller Tracker running Critical Systems
+  Monitor Port: The port on the Patch Server that Critical Systems should consider to be the main HTTP monitor port.  It should usually match HttpPort in config.txt.
+
+-LogFramePerf
+Note: On by default
+Use -LogFramePerf 0 to disable FRAMEPERF FPS logging.
+
+
+-LogPatchCmdVerbosity <level>
+Default: 1
+Control level of verbosity of logging patch commands.
+  0: Log none of them
+  1: Log the ones that not typically generated at high volume (default)
+  2: Log all but the highest volume logs
+  3: Log all of them
+
+-LogServer <server>
+As an alternative to specifying LogServer in config.txt, the Log Server may be specified on the command line.
+
+
+****************************************
+Special run modes
+****************************************
+
+These parameters serve as commands, running the Patch Server in a special mode.  Generally, they will complete the requested operation, then terminate.  For the most part, they should be run when the Patch Server is offline.
+
+-dumpBranch <output filename> <database> <branch>
+Dump information about a branch to a file.
+
+-dumpViews <file>
+Dump list of view names to a file.
+
+-merge
+Run the Patch Server merger.  This will combine all files of the form *.journal.merge into their matching .manifest file.
+To merge hot journal files (such as after a Patch Server crash), after running the merger once to capture any .journal.merge files, rename .journal to .journal.merge, and run the merger again.
+
+-pruneCheckin <database> <rev>
+Prune a checkin.
+
+-printChangedFiles <database> <from patchtime> <to patchtime> <path prefix>
+Print all changed files on a database in a particular time range on a particular prefix.
+
+-setExpires <filename> <expiration patchtime>
+Set expiration times on a list of view names.  <filename> must have a particular format, consisting of a list of entries, each on its own line, conforming to the following:
+<project>/<view name>
+
+-touchdb <database>
+Read and re-write a database verbatim.  This might correct certain minor formatting errors in the manifest, or upgrade a PatchDB from a previous version.
+
+
+****************************************
+Debugging parameters
+****************************************
+
+WARNING: Debugging commands are designed for very specific uses, and may have unintended and undesirable side effects.  They should be used with extreme care on any live system.
+
+-corruption_freq
+-log_blocks_uid
+-disconnect
+-slowCompaction
+-aggressiveCompaction
+-verifyDelayedWrites
+-verifyCompactionSuccess
+-compactionHandleAlertTimeout
+-printFileCacheUpdates
+-sync_fast_copy_manifest

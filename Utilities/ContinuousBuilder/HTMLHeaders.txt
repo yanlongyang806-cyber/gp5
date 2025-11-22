@@ -1,0 +1,41 @@
+<style type="text/css">
+ .notice h1, .notice h3 {
+    color: black;
+    display: block;
+    margin: 25px;
+    text-align: center;
+}
+
+.notice h1 {
+    background-color: #a0a0a0;
+    margin-bottom: 0px;
+    white-space: pre;
+	padding: 8px;
+	line-height: 7px;
+	margin: 5px;
+}	
+
+.notice h3 {
+    background-color: yellow;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+div.notice { 
+	border: 1px solid black;
+}
+
+div.SVNAndGimme {
+	background-color: LightPink;
+	font-size: 24px;
+	text-align: center; 
+}
+
+div.FrontPageVariables {
+	background-color: LightGreen;
+	font-size: 24px;
+	text-align: center; 
+}
+
+</style>
+

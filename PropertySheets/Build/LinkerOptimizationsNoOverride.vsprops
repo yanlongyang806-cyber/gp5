@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="10.00"
+	Name="LinkerOptimizations"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		DebugInformationFormat="4"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		LinkIncremental="2"
+		OptimizeReferences="1"
+		EnableCOMDATFolding="0"
+	/>
+	<Tool
+		Name="VCCLX360CompilerTool"
+		DebugInformationFormat="4"
+	/>
+	<Tool
+		Name="VCX360LinkerTool"
+		LinkIncremental="2"
+		OptimizeReferences="1"
+		EnableCOMDATFolding="0"
+	/>
+</VisualStudioPropertySheet>

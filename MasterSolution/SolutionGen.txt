@@ -1,0 +1,1075 @@
+// SolutionGen: Build and run Utilities\Bin\SolutionGen.exe to regenerate automatically-generated .sln files from this file.
+
+
+
+// Target classes need only be specified on applications, not libraries, they will be used for
+//    all appropriate projects within a given solution
+TargetClass Win32
+	Target "Debug|Win32"
+	Target "Full Debug|Win32"
+	Target "Code Coverage|Win32"
+EndTargetClass
+
+TargetClass x64
+	Target "Debug|x64"
+	Target "Full Debug|x64"
+	Target "Code Coverage|x64"
+EndTargetClass
+
+
+// Fallbacks - if the desired one does not exist, use the second instead (e.g. some apps only have a Debug config, but want to link against Full Debug, etc)
+TargetFallback "Full Debug|Win32" "Debug|Win32"
+TargetFallback "Code Coverage|Win32" "Debug|Win32"
+TargetFallback "Full Debug|x64" "Debug|x64"
+TargetFallback "Code Coverage|x64" "Debug|x64"
+
+
+// Blocked configurations - these might exist because Visual Studio creates them, but we never want to build them
+TargetBlock "Profile|Win32"
+TargetBlock "Profile|x64"
+
+
+///////////////////////////////////////////////////////////////////////////
+
+// Shorthand of:
+//	Lib UtilitiesLib
+// Is identical to:
+//	Project UtilitiesLib
+// 		Path libs\UtilitiesLib\UtilitiesLib.vcproj
+//	EndProject
+// Libraries must *NOT* depend on other libraries
+
+// General libs
+Lib AILib
+Lib ClientControllerLib
+Lib ContentLib
+Lib ErrorTrackerLib
+Lib GraphicsLib
+Lib HttpLib
+Lib InputLib
+Lib LuaScriptLib
+Lib PatchClientLib
+Lib PythonLib
+Lib ServerLib
+Lib SoundLib
+Lib StructParserStub
+Lib TicketTrackerLib
+Lib UI2Lib
+Lib UtilitiesLib
+Lib WorldLib
+Lib XLiveLib
+Lib XRenderLib
+Project RenderLib
+	Path libs\Renderers\RenderLib.vcproj
+EndProject
+
+// CrossRoads
+Project AppServerLib
+	Path CrossRoads\AppServerLib\AppServerLib.vcproj
+EndProject
+Project GameClientLib
+	Path CrossRoads\GameClientLib\GameClientLib.vcproj
+EndProject
+Project GameServerLib
+	Path CrossRoads\GameServerLib\GameServerLib.vcproj
+EndProject
+
+
+
+
+// Apps
+
+// For all of the similar apps that need these three dependencies
+ProjectClass ServerApp
+	ProjectDep HttpLib
+        ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+EndProjectClass	
+
+Project AccountServer
+	TargetClass Win32
+	TargetClass x64
+	Path CrossRoads\AccountServer\AccountServer.vcproj
+	ProjectClass ServerApp
+EndProject
+Project ChatRelay
+	TargetClass Win32
+	TargetClass x64
+	Path CrossRoads\ChatRelay\ChatRelay.vcproj
+	ProjectClass ServerApp
+EndProject
+Project ChatServer
+	TargetClass Win32
+	TargetClass x64
+	Path Core\ChatServer\ChatServer.vcproj
+	ProjectDep ContentLib
+	ProjectClass ServerApp
+EndProject
+Project ClientBinner
+	TargetClass Win32
+	Path Core\ClientBinner\ClientBinner.vcproj
+	ProjectDep ClientControllerLib
+	ProjectClass ServerApp
+EndProject
+Project Controller
+	TargetClass Win32
+	TargetClass x64
+	Path Core\Controller\Controller.vcproj
+	ProjectClass ServerApp
+EndProject
+Project CrypticError
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\CrypticError\CrypticError.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project Faraday
+	TargetClass Win32
+	TargetClass x64
+	Path Core\Faraday\Faraday.vcproj
+	ProjectClass ServerApp
+EndProject
+Project GlobalChatServer
+	TargetClass Win32
+	TargetClass x64
+	Path Core\GlobalChatServer\GlobalChatServer.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep ContentLib
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+EndProject
+Project HeadshotServer
+	TargetClass Win32
+	Path Core\HeadshotServer\HeadshotServer.vcproj
+	ProjectDep ClientControllerLib
+	ProjectClass ServerApp
+EndProject
+Project TextureServer
+	TargetClass Win32
+	Path Core\TextureServer\TextureServer.vcproj
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+	ProjectDep HttpLib
+	ProjectDep GraphicsLib
+	ProjectClass ServerApp
+EndProject
+Project Launcher
+	TargetClass Win32
+	TargetClass x64
+	Path Core\launcher\Launcher.vcproj
+	ProjectClass ServerApp
+EndProject
+Project LogParser
+	TargetClass Win32
+	TargetClass x64
+	Path Core\LogParser\LogParser.vcproj
+	ProjectDep WorldLib
+	ProjectClass ServerApp
+EndProject
+Project GameLogReporter
+	TargetClass Win32
+	TargetClass x64
+	Path Core\GameLogReporter\GameLogReporter.vcxproj
+	ProjectClass ServerApp
+EndProject
+Project LogServer
+	TargetClass Win32
+	TargetClass x64
+	Path Core\LogServer\LogServer.vcproj
+	ProjectClass ServerApp
+EndProject
+Project MasterControlProgram
+	TargetClass Win32
+	Path Core\MasterControlProgram\MasterControlProgram.vcproj
+	ProjectClass ServerApp
+EndProject
+Project Multiplexer
+	TargetClass Win32
+	Path Core\Multiplexer\Multiplexer.vcproj
+	ProjectClass ServerApp
+EndProject
+Project NewControllerTracker
+	TargetClass Win32
+	Path Core\NewControllerTracker\NewControllerTracker.vcproj
+	ProjectClass ServerApp
+EndProject
+Project Overlord
+	TargetClass Win32
+	Path Core\Overlord\Overlord.vcproj
+	ProjectClass ServerApp
+EndProject
+Project ClusterController
+	TargetClass Win32
+	Path Core\ClusterController\ClusterController.vcproj
+	ProjectClass ServerApp
+EndProject
+Project ObjectDB
+	TargetClass Win32
+	TargetClass x64
+	Path Core\ObjectDB\ObjectDB.vcproj
+	ProjectClass ServerApp
+EndProject
+Project PatchClient
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\PatchClient\PatchClient.vcproj
+        ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep UtilitiesLib
+EndProject
+Project RevisionFinder
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\RevisionFinder\RevisionFinder.vcxproj
+        ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+	ProjectDep CBMonitor
+EndProject
+Project TestClient
+	TargetClass Win32
+	Path Core\TestClient\TestClient.vcproj
+	ProjectClass ServerApp
+	ProjectDep LuaScriptLib
+	ProjectDep PythonLib
+	ProjectDep ClientControllerLib
+EndProject
+Project TestServer
+	TargetClass Win32
+	Path Core\TestServer\TestServer.vcproj
+	ProjectClass ServerApp
+	ProjectDep LuaScriptLib
+	ProjectDep PythonLib
+EndProject
+Project TransactionServer
+	TargetClass Win32
+	TargetClass x64
+	Path Core\TransactionServer\TransactionServer.vcproj
+	ProjectClass ServerApp
+EndProject
+Project UGCExport
+	TargetClass Win32
+	TargetClass x64
+	Path Core\UGCExport\UGCExport.vcproj
+	ProjectDep PythonLib
+	ProjectDep UtilitiesLib
+	ProjectDep PatchClientLib
+EndProject
+Project UGCImport
+	TargetClass Win32
+	TargetClass x64
+	Path Core\UGCImport\UGCImport.vcproj
+	ProjectDep PythonLib
+	ProjectDep UtilitiesLib
+	ProjectDep PatchClientLib
+EndProject
+Project XmppServer
+	TargetClass Win32
+	TargetClass x64
+	Path Core\XmppServer\XmppServer.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep HttpLib
+        ProjectDep PatchClientLib
+	ProjectDep ServerLib
+EndProject
+
+
+// Utilities and misc
+
+Project AssetManager
+	TargetClass Win32
+	Path Utilities\AssetManager\AssetManager.vcproj
+	ProjectDep ContentLib
+	ProjectDep GameClientLib
+	ProjectDep GraphicsLib
+        ProjectDep HttpLib
+	ProjectDep InputLib
+	ProjectDep PatchClientLib
+	ProjectDep PythonLib 
+	ProjectDep RenderLib
+	ProjectDep SoundLib
+	ProjectDep UI2Lib
+	ProjectDep UtilitiesLib
+	ProjectDep WorldLib
+	ProjectDep XLiveLib
+	ProjectDep XRenderLib
+EndProject
+Project bindifftest
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\bindifftest\bindifftest.vcproj
+        ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep UtilitiesLib
+EndProject
+Project BrutalDownload
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\BrutalDownload\BrutalDownload.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+EndProject
+Project CSRTicketTracker
+	TargetClass Win32
+	TargetClass x64
+	Path Core\CSRTicketTracker\CSRTicketTracker.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep TicketTrackerLib
+EndProject
+Project ContinuousBuilder
+	TargetClass Win32
+	Path Utilities\ContinuousBuilder\ContinuousBuilder.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep ErrorTrackerLib
+EndProject
+Project CBMonitor
+	TargetClass Win32
+	Path Utilities\CBMonitor\CBMonitor.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+EndProject
+Project ChatRelayHammer
+	TargetClass Win32
+	Path Utilities\ChatRelayHammer\ChatRelayHammer.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep WorldLib
+EndProject
+Project CrashTest
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\CrashTest\CrashTest.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+EndProject
+Project CrypticLauncher
+	TargetClass Win32
+	Path Core\CrypticLauncher\CrypticLauncher.vcproj
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep UtilitiesLib
+EndProject
+Project CrypticLauncherImportTranslations
+	TargetClass Win32
+	Path Utilities\CrypticLauncherImportTranslations\CrypticLauncherImportTranslations.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project CrypticMon
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\CrypticMon\CrypticMon.vcproj
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+EndProject
+Project CrypticPerfTest
+	TargetClass Win32
+	Path Utilities\CrypticPerfTest\CrypticPerfTest.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project CrypticURLHandler
+	TargetClass Win32
+	Path Utilities\CrypticURLHandler\CrypticURLHandler.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+EndProject
+Project DBScript
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\DBScript\DBScript.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep LuaScriptLib
+	ProjectDep PythonLib
+EndProject
+Project DeepSpaceServer
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\DeepSpaceServer\DeepSpaceServer.vcproj
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+EndProject
+Project ErrorTracker
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\ErrorTracker\ErrorTracker.vcproj
+	ProjectDep ErrorTrackerLib
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+EndProject
+Project ErrorTrackerHandler
+	TargetClass Win32
+	Path Utilities\ErrorTrackerHandler\ErrorTrackerHandler.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project filewatcher
+	TargetClass Win32
+	Path Utilities\filewatcher\filewatcher.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project GetVRML
+	Path Utilities\GetVrml\GetVRML.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep InputLib
+	ProjectDep RenderLib
+	ProjectDep WorldLib
+	ProjectDep GraphicsLib
+	ProjectDep XRenderLib
+EndProject
+Project gimmeCLI
+	TargetClass Win32
+	Path Utilities\gimme\gimmeCLI.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep GimmeDLL
+EndProject
+Project gimmectrl
+	TargetClass Win32
+	Path Utilities\gimmectrl\gimmectrl.vcproj
+        ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep UtilitiesLib
+EndProject
+Project GimmeDLL
+	TargetClass Win32
+	Path Utilities\GimmeDLL\GimmeDLL.vcproj
+        ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep UtilitiesLib
+EndProject
+Project HttpLibTest
+	TargetClass Win32
+	TargetClass x64
+	Path TestSuites\HttpLibTest\HttpLibTest.vcproj
+	ProjectDep HttpLib
+	ProjectDep UtilitiesLib
+EndProject
+Project LoginHammer
+	TargetClass Win32
+	Path Utilities\LoginHammer\LoginHammer.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep WorldLib
+EndProject
+Project MaterialEditor
+	TargetClass Win32
+	Path Utilities\MaterialEditor\MaterialEditor.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project NetTest
+	TargetClass Win32
+	Path Utilities\nettest\NetTest.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project PatchServer
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\PatchServer\PatchServer.vcproj
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+EndProject
+Project PerfTestResultParser
+	TargetClass Win32
+	Path Utilities\PerfTestResultParser\PerfTestResultParser.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project pigtest
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\pig\pigtest.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project ProjectManager
+	TargetClass Win32
+	Path Utilities\ProjectManager\ProjectManager.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project sentry
+	TargetClass Win32
+	Path Utilities\sentry\sentry.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project SentryServer
+	TargetClass Win32
+	Path Utilities\SentryServer\SentryServer.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep HttpLib
+EndProject
+Project ShaderServer
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\ShaderServer\ShaderServer.vcproj
+	ProjectDep RenderLib
+	ProjectDep XRenderLib
+	ProjectDep UtilitiesLib
+EndProject
+Project ShardLauncher
+	TargetClass Win32
+	Path Utilities\ShardLauncher\ShardLauncher.vcproj
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep UtilitiesLib
+EndProject
+Project ShardMerge
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\ShardMerge\ShardMerge.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep ServerLib
+	ProjectDep HTTPLib
+	ProjectDep PatchClientLib
+	ProjectDep WorldLib
+EndProject
+Project TaskServer
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\TaskServer\TaskServer.vcproj
+	ProjectDep RenderLib
+	ProjectDep XRenderLib
+	ProjectDep UtilitiesLib
+EndProject
+Project sxfer
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\sxfer\sxfer.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+
+Project CrypticKillAll
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\CrypticKillAll\CrypticKillAll.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+
+Project NotesServer
+	TargetClass Win32
+	Path Utilities\NotesServer\NotesServer.vcproj
+	ProjectDep UtilitiesLib
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+EndProject
+
+Project SendAlert
+	TargetClass Win32
+	Path Utilities\SendAlert\SendAlert.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+
+Project POToTranslateFiles
+	TargetClass Win32
+	Path Utilities\POToTranslateFiles\POToTranslateFiles.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+
+Project Remesh
+	TargetClass Win32
+	Path Utilities\Remesh\Remesh.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project SolutionGen
+	TargetClass Win32
+	Path Utilities\SolutionGen\SolutionGen.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project SoundUtil
+	TargetClass Win32
+	Path Utilities\SoundUtil\SoundUtil.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project SymServLookup
+	TargetClass Win32
+	TargetClass x64
+	Path Utilities\SymServLookup\SymServLookup.vcproj
+	ProjectDep ErrorTrackerLib
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+EndProject
+Project SyncProjConfig
+	TargetClass Win32
+	Path Utilities\SyncProjConfig\SyncProjConfig.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project TexOptEditor
+	Path Utilities\TexOptEditor\TexOptEditor.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project UtilitiesLibTest
+	TargetClass Win32
+	TargetClass x64
+	Path TestSuites\UtilitiesLibTest\UtilitiesLibTest.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+Project Dump
+    TargetClass Win32
+    TargetClass x64
+    Path Utilities\Dump\Dump.vcproj
+    ProjectDep UtilitiesLib
+EndProject
+Project AccountProxyTester
+	TargetClass Win32
+	Path Utilities\AccountProxyTester\AccountProxyTester.vcproj
+	ProjectDep UtilitiesLib
+EndProject
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+// Project classes
+// These define a set of project dependencies/targets which can be inherited by a specific project
+
+ProjectClass GameClient
+	TargetClass Win32
+	ProjectDep ContentLib
+	ProjectDep GameClientLib
+	ProjectDep GraphicsLib
+	ProjectDep HttpLib
+	ProjectDep InputLib
+	ProjectDep PatchClientLib
+	ProjectDep PythonLib
+	ProjectDep RenderLib
+	ProjectDep SoundLib
+	ProjectDep UI2Lib
+	ProjectDep UtilitiesLib
+	ProjectDep WorldLib
+	ProjectDep XLiveLib
+	ProjectDep XRenderLib
+EndProjectClass
+
+ProjectClass GameServer
+	TargetClass Win32
+	ProjectDep AILib
+	ProjectDep ContentLib
+	ProjectDep GameServerLib
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+	ProjectDep WorldLib
+EndProjectClass
+
+ProjectClass AppServer
+	TargetClass Win32
+	TargetClass x64
+	ProjectDep AppServerLib
+	ProjectDep ContentLib
+	ProjectDep HttpLib
+	ProjectDep PatchClientLib
+	ProjectDep ServerLib
+	ProjectDep UtilitiesLib
+	ProjectDep WorldLib
+EndProjectClass
+
+
+
+///////////////////////////////////////////////////////////////////////////
+// Solution classes
+// These define a set of projects to be included in a solution
+SolutionClass MasterSolution
+	HasStructParserStub 1
+	Project MasterControlProgram
+	Project AccountServer
+	Project ChatRelay
+	Project ChatRelayHammer
+	Project ChatServer
+	Project ClientBinner
+	Project ClusterController
+	Project Controller
+	Project CrypticError
+	Project Faraday
+	Project GlobalChatServer
+	Project HeadshotServer
+	Project TextureServer
+	Project HttpLibTest
+	Project Launcher
+	Project LoginHammer
+	Project LogParser
+	Project LogServer
+	Project Multiplexer
+	Project NewControllerTracker
+	Project ObjectDB
+	Project PatchClient
+	Project TestClient
+	Project TestServer
+	Project TransactionServer
+	Project UtilitiesLibTest
+	Project XmppServer
+	Project UGCExport
+	Project UGCImport
+	Project GameLogReporter
+EndSolutionClass
+
+
+///////////////////////////////////////////////////////////////////////////
+// Title specific project and solution definitions
+
+Project CoreGameClient
+	Path Core\GameClient\CoreGameClient.vcproj
+	ProjectClass GameClient
+EndProject
+Project CoreGameServer
+	Path Core\GameServer\CoreGameServer.vcproj
+	ProjectClass GameServer
+EndProject
+Project CoreAppServer
+	Path Core\AppServer\CoreAppServer.vcproj
+	ProjectClass AppServer
+EndProject
+Solution CoreMasterSolution
+	Path Core\MasterSolution\COMasterSolution.sln
+	SolutionClass MasterSolution
+	Project CoreGameClient
+	Project CoreAppServer
+	Project CoreGameServer
+EndSolution
+Solution CoreGameClient
+	Path Core\GameClient\CoreGameClient.sln
+	Project CoreGameClient
+EndSolution
+Solution CoreGameServer
+	Path Core\GameServer\CoreGameServer.sln
+	Project CoreGameServer
+EndSolution
+Solution CoreAppServer
+	Path Core\AppServer\CoreAppServer.sln
+	Project CoreAppServer
+EndSolution
+Solution CoreClientServer
+	HasStructParserStub 1
+	Path Core\MasterSolution\COClientServer.sln
+	Project CoreGameClient
+	Project CoreGameServer
+EndSolution
+
+
+Project NNOGameClient
+	Path Night\GameClient\NNOGameClient.vcproj
+	ProjectClass GameClient
+EndProject
+Project NNOGameServer
+	Path Night\GameServer\NNOGameServer.vcproj
+	ProjectClass GameServer
+EndProject
+Project NNOAppServer
+	Path Night\AppServer\NNOAppServer.vcproj
+	ProjectClass AppServer
+EndProject
+Solution NNOMasterSolution
+	Path Night\MasterSolution\NNOMasterSolution.sln
+	SolutionClass MasterSolution
+	Project NNOGameClient
+	Project NNOAppServer
+	Project NNOGameServer
+EndSolution
+Solution NNOGameClient
+	Path Night\GameClient\NNOGameClient.sln
+	Project NNOGameClient
+EndSolution
+Solution NNOGameServer
+	Path Night\GameServer\NNOGameServer.sln
+	Project NNOGameServer
+EndSolution
+Solution NNOAppServer
+	Path Night\AppServer\NNOAppServer.sln
+	Project NNOAppServer
+EndSolution
+Solution NNOClientServer
+	HasStructParserStub 1
+	Path Night\MasterSolution\NNOClientServer.sln
+	Project NNOGameClient
+	Project NNOGameServer
+EndSolution
+
+
+///////////////////////////////////////////////////////////////////////////
+// General solutions and individual project solutions
+
+Solution AccountServer
+	Path CrossRoads/AccountServer/AccountServer.sln
+	Project AccountServer
+EndSolution
+
+Solution CrypticPerfTest
+	Path Utilities/CrypticPerfTest/CrypticPerfTest.sln
+	Project CrypticPerfTest
+EndSolution
+
+Solution filewatcher
+	Path Utilities/filewatcher/filewatcher.sln
+	Project filewatcher
+EndSolution
+
+Solution ProjectManager
+	Path Utilities/ProjectManager/ProjectManager.sln
+	Project ProjectManager
+EndSolution
+
+Solution NotesServer
+	Path Utilities/NotesServer/NotesServer.sln
+	Project NotesServer
+EndSolution
+
+Solution ShaderServer
+	Path Utilities/ShaderServer/ShaderServer.sln
+	Project ShaderServer
+EndSolution
+
+Solution SolutionGen
+	Path Utilities/SolutionGen/SolutionGen.sln
+	Project SolutionGen
+EndSolution
+
+Solution CrashRecovery
+	HasStructParserStub 1
+	Path MasterSolution/CrashRecovery.sln
+	Project CrashTest
+	Project CrypticError
+	Project ErrorTracker
+	Project HttpLibTest
+	Project SymServLookup
+	Project TicketTrackerLib
+	Project ErrorTrackerHandler
+	Project UtilitiesLibTest
+	Project ContinuousBuilder
+EndSolution
+
+Solution Infrastructure
+	HasStructParserStub 1
+	Path MasterSolution/Infrastructure.sln
+	Project AccountServer
+
+	Project CSRTicketTracker
+	Project Controller
+	Project ClusterController
+	Project DBScript
+	Project GameClientLib
+	Project GameServerLib
+	Project GlobalChatServer
+	Project XmppServer
+
+	Project ErrorTracker
+	Project LoginHammer
+	Project LogParser
+	Project NewControllerTracker
+	Project Overlord
+	Project ObjectDB
+	Project PatchClient
+	Project PatchServer
+	Project ShardLauncher
+
+	Project SymServLookup
+
+	Project HttpLibTest
+	Project TestServer
+	Project UtilitiesLibTest
+
+	Project NotesServer
+	Project RevisionFinder
+
+	Project CBMonitor
+EndSolution
+
+
+Solution ArtTools
+	HasStructParserStub 1
+	Path MasterSolution/ArtTools.sln
+	Project AssetManager
+	Project GetVRML
+	Project HttpLibTest
+	Project MaterialEditor
+	Project TexOptEditor
+	Project UtilitiesLibTest
+	Project ServerLib
+EndSolution
+
+
+// Patching, including Gimme
+Solution PatchingAndGimme
+	HasStructParserStub 1
+	Path MasterSolution\PatchingAndGimme.sln
+	Project bindifftest
+	Project BrutalDownload
+	Project CrypticLauncher
+	Project CrypticLauncherImportTranslations
+	Project CrypticMon
+	Project DeepSpaceServer
+	Project gimmeCLI
+	Project gimmectrl
+	Project HttpLibTest
+	Project PatchClient
+	Project PatchServer
+	Project UtilitiesLibTest
+EndSolution
+
+Solution gimme
+	Path Utilities\gimme\gimme.sln
+	Project gimmeCLI
+	Project gimmectrl
+	Project HttpLibTest
+	Project UtilitiesLibTest
+EndSolution
+
+Solution CrypticLauncher
+	Path Core\CrypticLauncher\CrypticLauncher.sln
+	Project CrypticLauncher
+	Project HttpLibTest
+	Project UtilitiesLibTest
+EndSolution
+
+Solution CrypticLauncherImportTranslations
+	Path Utilities\CrypticLauncherImportTranslations\CrypticLauncherImportTranslations.sln
+	Project CrypticLauncherImportTranslations
+EndSolution
+
+Solution ContinuousBuilder
+	Path Utilities\ContinuousBuilder\ContinuousBuilder.sln
+	Project ContinuousBuilder
+EndSolution
+
+Solution CBMonitor
+	Path Utilities\CBMonitor\CBMonitor.sln
+	Project CBMonitor
+EndSolution
+
+Solution ShardLauncher
+	Path Utilities\ShardLauncher\ShardLauncher.sln
+	Project ShardLauncher
+EndSolution
+
+
+Solution SendAlert
+	Path Utilities\SendAlert\SendAlert.sln
+	Project SendAlert
+EndSolution
+
+SolutionClass LoginHammer
+    HasStructParserStub 1
+    Project LoginHammer
+EndSolutionClass
+
+Solution LoginHammer 
+	Path Utilities\LoginHammer\LoginHammer.sln
+    SolutionClass LoginHammer
+EndSolution
+
+SolutionClass Dump
+    HasStructParserStub 1
+    Project Dump
+EndSolutionClass
+
+Solution Dump
+    Path Utilities\Dump\Dump.sln
+    SolutionClass Dump
+EndSolution
+
+Solution sxfer
+    Path Utilities\sxfer\sxfer.sln
+    Project sxfer
+    Project UtilitiesLib
+    Project UtilitiesLibTest
+EndSolution
+
+Solution SentryServerAndSentry
+	Path MasterSolution\SentryServerAndSentry.sln
+	Project UtilitiesLib
+	Project Sentry
+	Project SentryServer
+EndSolution
+
+SolutionClass ShardMerge
+    HasStructParserStub 1
+    Project ShardMerge
+EndSolutionClass
+
+Solution ShardMerge 
+	Path Utilities\ShardMerge\ShardMerge.sln
+    SolutionClass ShardMerge
+EndSolution
+
+
+
+Solution AllProjectsMasterSolution
+	Path MasterSolution\AllProjectsMasterSolution.sln
+	SolutionClass MasterSolution // Get all the normal apps
+	
+	Project AccountProxyTester
+	Project AssetManager
+	Project bindifftest
+	Project BrutalDownload
+	Project CSRTicketTracker
+	Project ContinuousBuilder
+	Project CBMonitor
+	Project CrashTest
+	Project CrypticLauncher
+	Project CrypticLauncherImportTranslations
+	Project CrypticMon
+	Project CrypticPerfTest
+	Project CrypticURLHandler
+	Project DBScript
+	Project DeepSpaceServer
+	Project ErrorTracker
+	Project ErrorTrackerHandler
+	Project filewatcher
+	Project GetVRML
+	Project GimmeDLL
+	Project gimmectrl
+	Project HttpLibTest
+	Project LoginHammer
+	Project MaterialEditor
+	Project NetTest
+	Project PatchServer
+	Project PerfTestResultParser
+	Project SentryServer
+	Project ShaderServer
+	Project ShardLauncher
+	Project CrypticKillAll
+	Project SolutionGen
+	Project SoundUtil
+	Project SymServLookup
+	Project SyncProjConfig
+	Project TexOptEditor
+	Project UtilitiesLibTest
+	Project gimmeCLI
+	Project pigtest
+	//Project ProjectManager Can NOT be in here (full rebuild will clean its output and fail to build)
+	Project sentry
+	Project TaskServer
+	Project Remesh
+	
+	Project CoreGameClient
+	Project CoreAppServer
+	Project CoreGameServer
+
+	Project NNOGameClient
+	Project NNOAppServer
+	Project NNOGameServer
+	
+	Project POToTranslateFiles
+
+	Project NotesServer
+	Project RevisionFinder
+EndSolution

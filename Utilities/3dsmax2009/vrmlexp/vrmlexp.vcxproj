@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7270145F-35B0-4927-AA73-4B3DB3FB1AAC}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="..\MaxExporterSettings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.31118.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\Autodesk\3ds Max 2009\stdplugs\</OutDir>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dle</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dle</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\Autodesk\3ds Max 2009\stdplugs\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+    </Midl>
+    <ClCompile>
+    </ClCompile>
+    <ResourceCompile>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x63740000</BaseAddress>
+      <ModuleDefinitionFile>vrmlexp.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_LEC_;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+    </ResourceCompile>
+    <Link>
+      <BaseAddress>0x63740000</BaseAddress>
+      <ModuleDefinitionFile>vrmlexp.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="anchor.cpp">
+    </ClCompile>
+    <ClCompile Include="audio.cpp">
+    </ClCompile>
+    <ClCompile Include="backgrnd.cpp">
+    </ClCompile>
+    <ClCompile Include="bboard.cpp">
+    </ClCompile>
+    <ClCompile Include="bookmark.cpp">
+    </ClCompile>
+    <ClCompile Include="cppout.cpp">
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+    </ClCompile>
+    <ClCompile Include="EvalCol.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="fog.cpp">
+    </ClCompile>
+    <ClCompile Include="inline.cpp">
+    </ClCompile>
+    <ClCompile Include="lod.cpp">
+    </ClCompile>
+    <ClCompile Include="navinfo.cpp">
+    </ClCompile>
+    <ClCompile Include="pmesh.cpp">
+    </ClCompile>
+    <ClCompile Include="polycnt.cpp">
+    </ClCompile>
+    <ClCompile Include="prox.cpp">
+    </ClCompile>
+    <ClCompile Include="sound.cpp">
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+    </ClCompile>
+    <ClCompile Include="touch.cpp">
+    </ClCompile>
+    <ClCompile Include="vrml2.cpp">
+    </ClCompile>
+    <ClCompile Include="vrml_api.cpp">
+    </ClCompile>
+    <ClCompile Include="vrmlexp.cpp">
+    </ClCompile>
+    <ClCompile Include="vrmlpch.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="anchor.h" />
+    <ClInclude Include="appd.h" />
+    <ClInclude Include="audio.h" />
+    <ClInclude Include="backgrnd.h" />
+    <ClInclude Include="bboard.h" />
+    <ClInclude Include="bookmark.h" />
+    <ClInclude Include="EvalCol.h" />
+    <ClInclude Include="FindSkin.h" />
+    <ClInclude Include="fog.h" />
+    <ClInclude Include="forceinclude.h" />
+    <ClInclude Include="inline.h" />
+    <ClInclude Include="inlist.h" />
+    <ClInclude Include="ISkin.h" />
+    <ClInclude Include="ISkinCodes.h" />
+    <ClInclude Include="lod.h" />
+    <ClInclude Include="navinfo.h" />
+    <ClInclude Include="normtab.h" />
+    <ClInclude Include="ntrack.h" />
+    <ClInclude Include="pmesh.h" />
+    <ClInclude Include="prox.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="Target.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="touch.h" />
+    <ClInclude Include="vrml.h" />
+    <ClInclude Include="vrml2.h" />
+    <ClInclude Include="vrml_api.h" />
+    <ClInclude Include="vrmlexp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vrmlexp.def" />
+    <None Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\MaxPlugins.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

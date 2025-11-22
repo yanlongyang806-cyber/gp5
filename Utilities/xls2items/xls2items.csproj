@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D59AB527-48E5-4DB8-B3AE-332E7F971CAB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xls2items</RootNamespace>
+    <AssemblyName>xls2items</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core.cs" />
+    <Compile Include="Core\BinaryFormat\Enums.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffBlankCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffBOF.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffBoundSheet.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffContinue.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffDbCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffDimensions.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffEOF.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffFormulaCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffFormulaString.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffIndex.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffIntegerCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffInterfaceHdr.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffLabelCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffLabelSSTCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffMulBlankCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffMulRKCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffNumberCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffRecord.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffRKCell.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffRow.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffSimpleValueRecord.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffSST.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffStream.cs" />
+    <Compile Include="Core\BinaryFormat\XlsBiffWindow1.cs" />
+    <Compile Include="Core\BinaryFormat\XlsDirectoryEntry.cs" />
+    <Compile Include="Core\BinaryFormat\XlsFat.cs" />
+    <Compile Include="Core\BinaryFormat\XlsFormattedUnicodeString.cs" />
+    <Compile Include="Core\BinaryFormat\XlsHeader.cs" />
+    <Compile Include="Core\BinaryFormat\XlsRootDirectory.cs" />
+    <Compile Include="Core\BinaryFormat\XlsStream.cs" />
+    <Compile Include="Core\BinaryFormat\XlsWorkbookGlobals.cs" />
+    <Compile Include="Core\BinaryFormat\XlsWorksheet.cs" />
+    <Compile Include="Core\Helpers.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxDimension.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxNumFmt.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxSST.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxStyles.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxWorkbook.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxWorksheet.cs" />
+    <Compile Include="Core\OpenXmlFormat\XlsxXf.cs" />
+    <Compile Include="Core\ZipWorker.cs" />
+    <Compile Include="Errors.cs" />
+    <Compile Include="ExcelBinaryReader.cs" />
+    <Compile Include="ExcelDataReader.cs" />
+    <Compile Include="ExcelFileType.cs" />
+    <Compile Include="ExcelOpenXmlReader.cs" />
+    <Compile Include="Exceptions\BiffRecordException.cs" />
+    <Compile Include="Exceptions\HeaderException.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IExcelDataReader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Core\BinaryFormat\.svn\entries" />
+    <None Include="Core\BinaryFormat\.svn\format" />
+    <None Include="Core\BinaryFormat\.svn\text-base\Enums.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffBlankCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffBOF.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffBoundSheet.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffContinue.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffDbCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffDimensions.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffEOF.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffFormulaCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffFormulaString.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffIndex.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffIntegerCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffInterfaceHdr.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffLabelCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffLabelSSTCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffMulBlankCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffMulRKCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffNumberCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffRecord.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffRKCell.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffRow.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffSimpleValueRecord.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffSST.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffStream.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsBiffWindow1.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsDirectoryEntry.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsFat.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsFormattedUnicodeString.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsHeader.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsRootDirectory.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsStream.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsWorkbookGlobals.cs.svn-base" />
+    <None Include="Core\BinaryFormat\.svn\text-base\XlsWorksheet.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\entries" />
+    <None Include="Core\OpenXmlFormat\.svn\format" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxDimension.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxNumFmt.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxSST.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxStyles.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxWorkbook.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxWorksheet.cs.svn-base" />
+    <None Include="Core\OpenXmlFormat\.svn\text-base\XlsxXf.cs.svn-base" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\BinaryFormat\.svn\prop-base\" />
+    <Folder Include="Core\BinaryFormat\.svn\props\" />
+    <Folder Include="Core\BinaryFormat\.svn\tmp\prop-base\" />
+    <Folder Include="Core\BinaryFormat\.svn\tmp\props\" />
+    <Folder Include="Core\BinaryFormat\.svn\tmp\text-base\" />
+    <Folder Include="Core\OpenXmlFormat\.svn\prop-base\" />
+    <Folder Include="Core\OpenXmlFormat\.svn\props\" />
+    <Folder Include="Core\OpenXmlFormat\.svn\tmp\prop-base\" />
+    <Folder Include="Core\OpenXmlFormat\.svn\tmp\props\" />
+    <Folder Include="Core\OpenXmlFormat\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

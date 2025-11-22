@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "amdperf", "amdperf.vcproj", "{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08} = {A6741F6E-5476-4F9F-9D65-62B54AAF1D08}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UtilitiesLib", "..\..\libs\UtilitiesLib\UtilitiesLib.vcproj", "{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Debug|Xbox 360 = Debug|Xbox 360
+		Full Debug|Win32 = Full Debug|Win32
+		Full Debug|x64 = Full Debug|x64
+		Full Debug|Xbox 360 = Full Debug|Xbox 360
+		Profile|Win32 = Profile|Win32
+		Profile|x64 = Profile|x64
+		Profile|Xbox 360 = Profile|Xbox 360
+		PS3 Debug|Win32 = PS3 Debug|Win32
+		PS3 Debug|x64 = PS3 Debug|x64
+		PS3 Debug|Xbox 360 = PS3 Debug|Xbox 360
+		PS3 Release|Win32 = PS3 Release|Win32
+		PS3 Release|x64 = PS3 Release|x64
+		PS3 Release|Xbox 360 = PS3 Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Debug|Win32.Build.0 = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Debug|x64.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Debug|Xbox 360.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Full Debug|Win32.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Full Debug|Win32.Build.0 = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Full Debug|x64.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Full Debug|Xbox 360.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Profile|Win32.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Profile|Win32.Build.0 = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Profile|x64.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.Profile|Xbox 360.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Debug|Win32.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Debug|Win32.Build.0 = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Debug|x64.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Debug|Xbox 360.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Release|Win32.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Release|Win32.Build.0 = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Release|x64.ActiveCfg = Debug|Win32
+		{EEB5D27C-0C1A-4E3D-933F-EC3C90C96C94}.PS3 Release|Xbox 360.ActiveCfg = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Win32.Build.0 = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|x64.ActiveCfg = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Debug|Xbox 360.ActiveCfg = Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Win32.ActiveCfg = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Win32.Build.0 = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|x64.ActiveCfg = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Full Debug|Xbox 360.ActiveCfg = Full Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Profile|Win32.ActiveCfg = Profile|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Profile|Win32.Build.0 = Profile|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Profile|x64.ActiveCfg = Profile|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.Profile|Xbox 360.ActiveCfg = Profile|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Debug|Win32.ActiveCfg = PS3 Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Debug|Win32.Build.0 = PS3 Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Debug|x64.ActiveCfg = PS3 Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Debug|Xbox 360.ActiveCfg = PS3 Debug|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Release|Win32.ActiveCfg = PS3 Release|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Release|Win32.Build.0 = PS3 Release|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Release|x64.ActiveCfg = PS3 Release|Win32
+		{A6741F6E-5476-4F9F-9D65-62B54AAF1D08}.PS3 Release|Xbox 360.ActiveCfg = PS3 Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

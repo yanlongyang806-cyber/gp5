@@ -1,0 +1,13 @@
+{
+	TotalUsers 10000
+	UsersPerTick 10
+	TotalChannels 10
+	ChannelsPerTick 10
+	JoinsPerTick 10
+	Joins 1000
+
+	// Stress Test starting requests per frame
+	ChannelMessages 1
+	Tells 1
+	PlayerUpdates 1
+}

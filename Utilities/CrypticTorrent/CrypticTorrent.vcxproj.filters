@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\UtilitiesLib">
+      <UniqueIdentifier>{458023b5-9859-4a3f-a8dd-f7f3e92fdc1a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CrypticTorrent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilitiesLib\AppRegCache.c">
+      <Filter>Source Files\UtilitiesLib</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilitiesLib\RegistryReader.c">
+      <Filter>Source Files\UtilitiesLib</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilitiesLib\utils.c">
+      <Filter>Source Files\UtilitiesLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DeepSpace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CrypticTorrent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilitiesLib\AppRegCache.h">
+      <Filter>Source Files\UtilitiesLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilitiesLib\RegistryReader.h">
+      <Filter>Source Files\UtilitiesLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilitiesLib\utils.h">
+      <Filter>Source Files\UtilitiesLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DeepSpace.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CrypticTorrent.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="embedded.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="embedded.torrent">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="empty_installername.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="empty_projectname.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="empty_torrent.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icon.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="projname.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rawdata1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CrypticTorrent.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\pigtest_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\pigtest_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="folderMonTest.c" />
+    <ClCompile Include="heavyTest.c" />
+    <ClCompile Include="patchtest.c" />
+    <ClCompile Include="pig.c" />
+    <ClCompile Include="piglibtest.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="heavyTest.h" />
+    <ClInclude Include="patchtest.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{3f655493-0151-4a5b-b775-decca36766af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="pig.rc" />
+  </ItemGroup>
+</Project>

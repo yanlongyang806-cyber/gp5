@@ -1,0 +1,981 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource_CrypticLauncher.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "version.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CL_START_STANDALONE DIALOGEX 0, 0, 467, 322
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CrypticÆô¶¯³ÌÐò"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "...",IDC_PATCHPC_COMMANDLINE,18,90,18,10,NOT WS_VISIBLE
+    PUSHBUTTON      "...",IDC_LAUNCHCLIENT_COMMANDLINE,17,90,18,10,NOT WS_VISIBLE
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 136, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ñ¡Ïî"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "ºÃ",IDOK,7,126,50,14
+    PUSHBUTTON      "È¡Ïû",IDCANCEL,79,126,50,14
+    CONTROL         "È«ÆÁ",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,48,10
+    CONTROL         "¿ìËÙÆô¶¯",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,53,10
+    CONTROL         "°²È«Ä£Ê½",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,50,10
+    EDITTEXT        IDC_COMMANDLINE,7,108,122,14,ES_AUTOHSCROLL
+    LTEXT           "¸ß¼¶ÃüÁîÐÐ",IDC_STATIC,7,97,78,8
+    CONTROL         "Ç¿ÖÆÑéÖ¤",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,52,10
+    COMBOBOX        IDC_LANGUAGE,68,16,61,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ÓïÑÔ",IDC_LANGLABEL,68,7,32,8
+    CONTROL         "ËõÐ¡µ½ÍÐÅÌ",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,72,61,10
+    CONTROL         "ÏÔÊ¾ÍÐÅÌÍ¼±ê",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,61,10
+    LTEXT           "´úÀí",IDC_STATIC,68,31,20,8
+    COMBOBOX        IDC_PROXY,68,40,61,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "ÏÔÊ¾ËùÓÐµÄÓÎÏ·",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,61,10
+    CONTROL         "Í¨¹ý´úÀí¸üÐÂ",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,59,66,10
+    CONTROL         "Í£ÓÃÐèÇó¸üÐÂ",IDC_DISABLE_MICROPATCHING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,122,10
+END
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 142, 39
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CrypticÆô¶¯³ÌÐò×Ô¶¯¸üÐÂ"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "ÕýÔÚ³¢ÊÔ¸üÐÂµÇÂ½Æ÷£¬ÇëÄÍÐÄµÈ´ý¡£",IDC_STATIC,7,7,128,16
+    CTEXT           "³¢ÊÔÁ¬½Ó1´Î",IDC_RETRIES,25,24,91,8,SS_ENDELLIPSIS
+END
+
+IDD_XFERS DIALOGEX 0, 0, 483, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Transfers"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "24/24 transfers",IDC_STATUS_XFERS,7,7,62,8
+    CONTROL         "",IDC_XFERLIST,"SysListView32",LVS_REPORT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,19,469,224
+    LTEXT           "net_bytes_free = 0.00KB/0.00KB",IDC_STATUS_NETBYTES,70,7,136,8
+    LTEXT           "root = ""C:/Program Files/Champions Online/Playtest""",IDC_STATUS_ROOT,206,7,270,8
+    LTEXT           "Received: 0/0/0",IDC_SPEED_RECV,7,247,67,8
+    LTEXT           "Actual: 0/0/0",IDC_SPEED_ACT,107,247,67,8
+    LTEXT           "Link: 0/0/0",IDC_SPEED_LINK,207,247,67,8
+    LTEXT           "server =",IDC_SERVER,407,247,67,8
+    LTEXT           "ct =",IDC_CONTROLLERTRACKER,307,247,67,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        VERTGUIDE, 68
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 32
+    END
+
+    IDD_XFERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 476
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\zh.dat"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource_CrypticLauncher.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""version.h""\r\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""version.info""\r\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish (Poland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 250, 34
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Automatyczna aktualizacja programu startowego"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Podjêto próbê aktualizacji programu startowego. Prosimy o cierpliwoœæ.",IDC_STATIC,7,7,228,8
+    CTEXT           "Przeprowadzono 1 próbê po³¹czenia siê.",IDC_RETRIES,79,19,96,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 299, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Opcje"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,127,50,14
+    PUSHBUTTON      "Anuluj",IDCANCEL,242,127,50,14
+    CONTROL         "Pe³ny ekran",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,54,10
+    CONTROL         "Szybkie uruchamianie",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,84,10
+    CONTROL         "Bezpieczny tryb",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,67,10
+    EDITTEXT        IDC_COMMANDLINE,7,109,285,14,ES_AUTOHSCROLL
+    LTEXT           "Zaawansowany wiersz poleceñ",IDC_STATIC,7,98,94,8
+    CONTROL         "Wymaga weryfikacji",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,80,10
+    COMBOBOX        IDC_LANGUAGE,143,16,149,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Jêzyk",IDC_LANGLABEL,143,7,24,8
+    CONTROL         "Zminimalizuj do paska",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,72,149,10
+    CONTROL         "Poka¿ ikonê na pasku",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,84,10
+    LTEXT           "Proxy",IDC_STATIC,143,31,20,8
+    COMBOBOX        IDC_PROXY,143,40,149,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Poka¿ wszystkie gry",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,80,10
+    CONTROL         "Aktualizacje za pomoc¹ serwera proxy",IDC_PROXYPATCH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,59,139,10
+    CONTROL         "Wy³¹cz aktualizacjê na ¿¹danie",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,115,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 27
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        VERTGUIDE, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\pl.dat"
+#endif    // Polish (Poland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 136, 53
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Àâòîîáíîâëåíèå ïðîãðàììû çàïóñêà Cryptic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Ïîïûòêà îáíîâëåíèÿ ïðîãðàììû çàïóñêà. Ïîæàëóéñòà, ïîäîæäèòå.",IDC_STATIC,7,7,122,16
+    CTEXT           "Tried connecting 1 time.",IDC_RETRIES,25,24,91,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 294, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Íàñòðîéêè"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,128,50,14
+    PUSHBUTTON      "Îòìåíà",IDCANCEL,237,128,50,14
+    CONTROL         "Ïîëíîýêðàííûé ðåæèì",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,146,10
+    CONTROL         "Áûñòðûé çàïóñê",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,146,10
+    CONTROL         "Áåçîïàñíûé ðåæèì",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,146,10
+    EDITTEXT        IDC_COMMANDLINE,7,108,280,14,ES_AUTOHSCROLL
+    LTEXT           "Ðàñøèðåííàÿ êîìàíäíàÿ ñòðîêà",IDC_STATIC,7,97,78,8
+    CONTROL         "Ñäåëàòü ïðèíóäèòåëüíóþ ïðîâåðêó",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,146,10
+    COMBOBOX        IDC_LANGUAGE,153,16,82,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ßçûê",IDC_LANGLABEL,153,7,32,8
+    CONTROL         "Ñâåðíóòü â çíà÷îê íà ïàíåëè çàäà÷",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,72,134,10
+    CONTROL         "Ïîêàçàòü çíà÷îê íà ïàíåëè çàäà÷",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,146,10
+    LTEXT           "Ïðîêñè-ñåðâåð",IDC_STATIC,153,31,20,8
+    COMBOBOX        IDC_PROXY,153,40,82,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Ïîêàçàòü âñå èãðû",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,146,10
+    CONTROL         "Îáíîâèòü ÷åðåç ïðîêñè-ñåðâåð",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,59,134,10
+    CONTROL         "Îòêëþ÷èòü îáíîâëåíèå ïî çàïðîñó",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,146,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        VERTGUIDE, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\ru.dat"
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// FILE
+//
+
+IDR_LIBCEF              FILE                    "..\\bin\\libcef.dll"
+IDR_AVCODEC             FILE                    "..\\bin\\avcodec-54.dll"
+IDR_AVFORMAT            FILE                    "..\\bin\\avformat-54.dll"
+IDR_AVUTIL              FILE                    "..\\bin\\avutil-51.dll"
+IDR_ICUDT               FILE                    "..\\bin\\icudt.dll"
+IDR_LIBCEF_RES_US       FILE                    "..\\..\\data\\browser\\locales\\en-US.pak"
+IDR_LIBCEF_DEV_RES      FILE                    "..\\..\\data\\browser\\devtools_resources.pak"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FLAG_US             BITMAP                  "flags\\us.bmp"
+IDB_FLAG_ZI             BITMAP                  "flags\\zi.bmp"
+IDB_FLAG_KO             BITMAP                  "flags\\ko.bmp"
+IDB_FLAG_JA             BITMAP                  "flags\\ja.bmp"
+IDB_FLAG_DE             BITMAP                  "flags\\de.bmp"
+IDB_FLAG_FR             BITMAP                  "flags\\fr.bmp"
+IDB_FLAG_ES             BITMAP                  "flags\\es.bmp"
+IDB_FLAG_IT             BITMAP                  "flags\\it.bmp"
+IDB_FLAG_RU             BITMAP                  "flags\\ru.bmp"
+IDB_FLAG_PL             BITMAP                  "flags\\pl.bmp"
+IDB_FLAG_ZH             BITMAP                  "flags\\zh.bmp"
+IDB_FLAG_TR             BITMAP                  "flags\\tr.bmp"
+IDB_FLAG_PT             BITMAP                  "flags\\pt.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LAUNCHER            ICON                    "cryptic.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DATA
+//
+
+__GDF_XML               DATA                    "CrypticLauncher.gdf.xml"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 176, 33
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cryptic-Startprogramm automatisch aktualisieren"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Startprogramm wird aktualisiert. Bitte warten…",IDC_STATIC,7,7,162,8
+    CTEXT           "1. Verbindungsversuch",IDC_RETRIES,41,17,96,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 240, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Optionen"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,128,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,183,128,50,14
+    CONTROL         "Vollbild",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,37,10
+    CONTROL         "Schnellstart",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,53,10
+    CONTROL         "Sicherer Modus",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,65,10
+    EDITTEXT        IDC_COMMANDLINE,7,110,226,14,ES_AUTOHSCROLL
+    LTEXT           "Erweiterte Befehlszeile",IDC_STATIC,7,99,74,8
+    CONTROL         "Überprüfen erzwingen",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,89,10
+    COMBOBOX        IDC_LANGUAGE,144,16,89,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sprache",IDC_LANGLABEL,144,7,27,8
+    CONTROL         "In Taskleiste minimieren",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,144,72,89,10
+    CONTROL         "Taskleistensymbol anzeigen",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,137,10
+    LTEXT           "Proxy",IDC_STATIC,144,31,20,8
+    COMBOBOX        IDC_PROXY,144,40,89,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Alle Spiele anzeigen",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,85,10
+    CONTROL         "Über Proxy patchen",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,144,59,80,10
+    CONTROL         "Bedarfsgesteuerten Patch deaktivieren",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,226,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 26
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\de.dat"
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CL_START_STANDALONE DIALOGEX 0, 0, 467, 322
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cryptic Launcher"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "...",IDC_PATCHPC_COMMANDLINE,18,90,18,10,NOT WS_VISIBLE
+    PUSHBUTTON      "...",IDC_LAUNCHCLIENT_COMMANDLINE,17,90,18,10,NOT WS_VISIBLE
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 136, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,126,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,126,50,14
+    CONTROL         "Fullscreen",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,48,10
+    CONTROL         "Fast launch",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,53,10
+    CONTROL         "Safe mode",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,50,10
+    EDITTEXT        IDC_COMMANDLINE,7,108,122,14,ES_AUTOHSCROLL
+    LTEXT           "Advanced command line",IDC_STATIC,7,97,78,8
+    CONTROL         "Force verify",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,52,10
+    COMBOBOX        IDC_LANGUAGE,68,16,61,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Language",IDC_LANGLABEL,68,7,32,8
+    CONTROL         "Minimize to tray",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,72,61,10
+    CONTROL         "Show tray icon",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,61,10
+    LTEXT           "Proxy",IDC_STATIC,68,31,20,8
+    COMBOBOX        IDC_PROXY,68,40,61,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show all games",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,61,10
+    CONTROL         "Patch via proxy",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,59,66,10
+    CONTROL         "Disable on-demand patching",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,122,10
+END
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 142, 39
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cryptic Launcher Autoupdate"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Trying to update the launcher. \nPlease be patient.",IDC_STATIC,7,7,128,16
+    CTEXT           "Tried connecting 1 time.",IDC_RETRIES,25,24,91,8,SS_ENDELLIPSIS
+END
+
+IDD_XFERS DIALOGEX 0, 0, 483, 286
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Transfers"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "24/24 transfers",IDC_STATUS_XFERS,7,7,62,8
+    CONTROL         "",IDC_XFERLIST,"SysListView32",LVS_REPORT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,19,469,224
+    LTEXT           "net_bytes_free = 0.00KB/0.00KB",IDC_STATUS_NETBYTES,70,7,136,8
+    LTEXT           "root = ""C:/Program Files/Champions Online/Playtest""",IDC_STATUS_ROOT,206,7,270,8
+    LTEXT           "Received: 0/0/0",IDC_SPEED_RECV,7,247,280,8
+    LTEXT           "Actual: 0/0/0",IDC_SPEED_ACT,7,259,284,8
+    LTEXT           "Link: 0/0/0",IDC_SPEED_LINK,7,271,287,8
+    LTEXT           "server =",IDC_SERVER,299,268,169,8
+    LTEXT           "ct =",IDC_CONTROLLERTRACKER,299,252,177,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        VERTGUIDE, 68
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 32
+    END
+
+    IDD_XFERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 476
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\en.dat"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource_CrypticLauncher.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""version.h""\r\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""version.info""\r\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 142, 39
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mise à jour automatique du lanceur Cryptic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Mise à jour du patcher. \nVeuillez patienter.",IDC_STATIC,7,7,128,19
+    CTEXT           "Tentative de connexion : 1 fois.",IDC_RETRIES,23,24,96,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 268, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,127,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,211,127,50,14
+    CONTROL         "Plein écran",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,51,10
+    CONTROL         "Lancement rapide",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,73,10
+    CONTROL         "Mode sans échec",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,71,10
+    EDITTEXT        IDC_COMMANDLINE,7,109,254,14,ES_AUTOHSCROLL
+    LTEXT           "Ligne de commande avancée",IDC_STATIC,7,98,94,8
+    CONTROL         "Forcer la vérification",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,81,10
+    COMBOBOX        IDC_LANGUAGE,143,16,118,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Langue",IDC_LANGLABEL,143,7,24,8
+    CONTROL         "Réduire dans la barre des tâches",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,72,118,10
+    CONTROL         "Afficher l'icône de barre des tâches",IDC_SHOWTRAY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,136,10
+    LTEXT           "Proxy",IDC_STATIC,143,31,20,8
+    COMBOBOX        IDC_PROXY,143,40,118,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Afficher tous les jeux",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,88,10
+    CONTROL         "Mise à jour via proxy",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,59,118,10
+    CONTROL         "Désactiver la mise à jour sur-demande",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,136,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 32
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        VERTGUIDE, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\fr.dat"
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 216, 33
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auto-aggiornamento del programma di avvio di Cryptic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Impossibile aggiornare il programma di avvio. Attendere...",IDC_STATIC,15,7,187,8
+    CTEXT           "Tentativo di connessione: 1 volta.",IDC_RETRIES,63,17,96,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 317, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Opzioni"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,127,50,14
+    PUSHBUTTON      "Annulla",IDCANCEL,260,127,50,14
+    CONTROL         "Schermo intero",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,64,10
+    CONTROL         "Avvio rapido",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,56,10
+    CONTROL         "Modalità sicura",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,63,10
+    EDITTEXT        IDC_COMMANDLINE,7,109,303,14,ES_AUTOHSCROLL
+    LTEXT           "Riga di comando avanzata",IDC_STATIC,7,98,85,8
+    CONTROL         "Obbliga verifica",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,65,10
+    COMBOBOX        IDC_LANGUAGE,157,16,153,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Lingua",IDC_LANGLABEL,157,7,24,8
+    CONTROL         "Riduci a icona nella barra delle applicazioni",IDC_MINTRAY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,158,72,150,10
+    CONTROL         "Mostra icona nella barra delle applicazioni",IDC_SHOWTRAY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,147,10
+    LTEXT           "Proxy",IDC_STATIC,157,31,20,8
+    COMBOBOX        IDC_PROXY,157,40,153,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Mostra tutti i giochi",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,77,10
+    CONTROL         "Patch via proxy",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,158,59,66,10
+    CONTROL         "Disattiva patch su richiesta",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,102,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 26
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\it.dat"
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 142, 39
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Inicializador de auto-atualização Cryptic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Tentando atualizar o inicializador. Por favor, seja paciente.",IDC_STATIC,7,7,128,16
+    CTEXT           "Tentou conectar 1 vez.",IDC_RETRIES,25,24,91,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 262, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Opções"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,7,126,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,205,127,50,14
+    CONTROL         "Tela cheia",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,48,10
+    CONTROL         "Início rápido",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,53,10
+    CONTROL         "Modo seguro",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,50,10
+    EDITTEXT        IDC_COMMANDLINE,7,108,248,14,ES_AUTOHSCROLL
+    LTEXT           "Linha de comando avançado",IDC_STATIC,7,97,78,8
+    CONTROL         "Forçar verificação",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,52,10
+    COMBOBOX        IDC_LANGUAGE,142,16,61,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Idioma",IDC_LANGLABEL,142,7,32,8
+    CONTROL         "Minimizar para a barra de poder",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,142,72,116,10
+    CONTROL         "Exibir ícone na barra de poder",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,112,10
+    LTEXT           "Proxy",IDC_STATIC,142,31,20,8
+    COMBOBOX        IDC_PROXY,142,40,61,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Exibir todos os jogos",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,80,10
+    CONTROL         "Atualização via proxy",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,142,59,116,10
+    CONTROL         "Desabilitar atualização sob demanda",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,122,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 26
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        VERTGUIDE, 142
+        VERTGUIDE, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\pt.dat"
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Turkish (Turkey) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_TRK)
+LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+#pragma code_page(1254)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTOPATCH DIALOGEX 0, 0, 221, 33
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cryptic Baþlatma Programý Otomatik Güncelleme"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Launcher gðncelleniyor. Lütfen bekleyin.",IDC_STATIC,7,7,207,8
+    CTEXT           "Baðlantý denemesi: 1",IDC_RETRIES,77,17,67,8,SS_ENDELLIPSIS
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 242, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Seçenekler"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Tamam",IDOK,7,127,50,14
+    PUSHBUTTON      "Ýptal",IDCANCEL,185,127,50,14
+    CONTROL         "Tam ekran",IDC_FULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,49,10
+    CONTROL         "Hýzlý baþlatma",IDC_FASTLAUNCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,59,10
+    CONTROL         "Güvenli mod",IDC_SAFEMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,55,10
+    EDITTEXT        IDC_COMMANDLINE,7,109,228,14,ES_AUTOHSCROLL
+    LTEXT           "Geliþmiþ komut satýrý",IDC_STATIC,7,98,94,8
+    CONTROL         "Güncelle",IDC_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,46,75,10
+    COMBOBOX        IDC_LANGUAGE,143,16,92,90,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Dil",IDC_LANGLABEL,143,7,24,8
+    CONTROL         "Görev çubuðuna küçült",IDC_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,72,89,10
+    CONTROL         "Simgeyi göster",IDC_SHOWTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,72,63,10
+    LTEXT           "Proxy",IDC_STATIC,143,31,20,8
+    COMBOBOX        IDC_PROXY,143,40,92,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tüm oyunlarý göster",IDC_MULTIGAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,79,10
+    CONTROL         "Proxy aracýlýðýyla yama",IDC_PROXYPATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,59,89,10
+    CONTROL         "Ýsteðe baðlý yamalanma devredýþý",IDC_DISABLE_MICROPATCHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,122,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_AUTOPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 26
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        VERTGUIDE, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MESSAGES
+//
+
+IDR_MESSAGES            MESSAGES                "messages\\tr.dat"
+#endif    // Turkish (Turkey) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "version.info"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

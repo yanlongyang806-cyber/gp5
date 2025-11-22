@@ -1,0 +1,11 @@
+
+This plugin is now a maxscript extension, not an export plugin. To export, use the ExportVRML maxscript command:
+///   ExportVRML(string filename)
+///   or
+///   ExportVRML(string filename, bool exportSelected, bool exportHidden, bool exportVertexColors)
+
+
+Notes on vrml exporter:
+
+Remember to SymStore the .dlx and the .pdb file!
+

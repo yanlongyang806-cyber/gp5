@@ -1,0 +1,4 @@
+Core,c:\Core
+PrimalAge,c:\PrimalAge
+FightClub,c:\FightClub
+StarTrek,c:\StarTrek

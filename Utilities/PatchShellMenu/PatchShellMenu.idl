@@ -1,0 +1,34 @@
+// PatchShellMenu.idl : IDL source for PatchShellMenu
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PatchShellMenu.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0785862B-66DE-4B0B-B348-36657C90FCA9),
+	helpstring("IPatchShellMenuExt Interface"),
+	pointer_default(unique)
+]
+interface IPatchShellMenuExt : IUnknown{
+};
+[
+	uuid(883FAD5A-0122-4B84-8B57-7910704DB3DA),
+	version(1.0),
+	helpstring("PatchShellMenu 1.0 Type Library")
+]
+library PatchShellMenuLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(FFF0A0BE-677B-454C-B712-6949FB082279),
+		helpstring("PatchShellMenuExt Class")
+	]
+	coclass PatchShellMenuExt
+	{
+		[default] interface IPatchShellMenuExt;
+	};
+};

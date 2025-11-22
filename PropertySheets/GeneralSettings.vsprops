@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="10.00"
+	Name="GeneralSettings"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalOptions="/Oy-"
+		Optimization="0"
+		InlineFunctionExpansion="0"
+		EnableIntrinsicFunctions="true"
+		FavorSizeOrSpeed="1"
+		AdditionalIncludeDirectories=".;pub;AutoGen;../../libs/UtilitiesLib;../../libs/UtilitiesLib/assert;../../libs/UtilitiesLib/components;../../libs/UtilitiesLib/language;../../libs/UtilitiesLib/net;../../libs/UtilitiesLib/network;../../libs/UtilitiesLib/utils;../../libs/UtilitiesLib/version;../../libs/Common"
+		StringPooling="true"
+		BasicRuntimeChecks="1"
+		RuntimeLibrary="1"
+		EnableFunctionLevelLinking="true"
+		EnableEnhancedInstructionSet="1"
+		FloatingPointModel="2"
+		WarningLevel="3"
+		WarnAsError="true"
+		Detect64BitPortabilityProblems="true"
+		DebugInformationFormat="4"
+		CompileAs="0"
+		ForcedIncludeFiles="memcheck.h"
+		EnablePREfast="true"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		UseLibraryDependencyInputs="true"
+		GenerateManifest="false"
+	/>
+</VisualStudioPropertySheet>

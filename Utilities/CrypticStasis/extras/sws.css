@@ -1,0 +1,146 @@
+body {
+    text-align: center;
+    font-family: verdana;
+    margin: 0;
+}
+
+p.footer {
+    font-size: 8pt;
+    font-family: verdana;
+}
+
+div.top {
+    text-align: center;
+    width: 100%;
+    font-family: verdana;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    background-color: #d9f7e2;
+}
+
+h2 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 18px;
+}
+
+h3 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: underline;
+    color: #22e;
+}
+
+a.actor {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.actor:hover {
+    text-decoration: underline;
+}
+
+a.spell {
+    text-decoration: none;
+    color: #000;
+}
+
+a.spell span {
+    visibility: hidden;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 9px;
+    color: #22e;
+}
+
+a.spell:hover span {
+    visibility: visible;
+}
+
+table.text {
+    padding:0;
+    margin:0;
+    border: 1px solid #ccc;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.stat {
+    padding:0;
+    margin:0;
+    border: 1px solid #ccc;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.chart {
+    padding:0;
+    margin:0;
+    border: 1px solid #ccc;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.text td {
+    font-size: 11px;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    text-align: left;
+    font-family: verdana;
+    font-size: 11px;
+    background-color: #947db2;
+    color: #fff;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 8px;
+    white-space: nowrap;
+}
+
+tr.sectionSlave td {
+    color: #222;
+    background-color: #f7f7f7;
+}
+
+tr.sectionMaster td {
+    background-color: #eee;
+}
+
+tr.sectionMaster td.first {
+    font-weight: bold;
+}
+
+td.first {
+    width: 220px;
+}
+
+td {
+    vertical-align: top;
+    text-align:left;
+    font-family: verdana;
+    font-size: 10px;
+    background-color: #eee;
+    margin: 0;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 8px;
+    white-space:nowrap;
+}
+
+a.toggle {
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1px 3px;
+}

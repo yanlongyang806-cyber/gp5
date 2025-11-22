@@ -1,0 +1,240 @@
+From: Bruce Rogers
+Sent: Tuesday, October 03, 2006 11:40 AM
+To: Software
+Subject: software status ending 9/29 2006
+
+Discussion:
+
+We’re going to make a TCP port on the client that takes text commands that the new testclient will communicate with. We need a way to error-check commands the same way we did with the old testclient at link time rather than end up with weird run time errors when cmdtable function parameters change.
+
+ 
+
+The solution we agreed to is alex is going to extend the AUTO_COMMAND system to generate a .c and .h each for client->client (only used by testclient), client->server, and server->client (only used by server) commands. In the future, we will try to avoid sprintf’ing buffers for cmdParse, and call the wrapper functions instead.
+
+ 
+
+Tech Land
+
+Infrastructure
+
+ben
+
+last const system for objectdb, documentation
+
+next more documentation, put db into utilslib, server features for alex
+
+ 
+
+mark
+
+last help raoul 2 days, help noel 2 days, xpath 1 day
+
+next more xpath (2 days),  textparser memory tracking
+
+ 
+
+alex
+
+last client/server ref system, const read-only variable checker
+
+next  various odd jobs, start adding features to textparser since waiting on ben & mark
+
+ 
+
+bruce
+
+last manglement 2, neck surgery recovery 3
+
+next more surgery recovery, manglement, patcher
+
+ 
+
+ 
+
+ 
+
+Graphics
+
+Jimb
+
+Last Week: Materials (2d), UtilitesLib (strcpy_s, etc) (1d), WorkspaceWhiz (0.75d), Management/Meetings (0.75d), Misc (0.5d)
+
+This Week: Materials
+
+ 
+
+Sam
+
+Last Week: DynFx optimization / script features (4.5d), GetVRML stuff (0.5d)
+
+This Week: Finish DynFx Optimization, DynFx Features
+
+ 
+
+Conor
+
+Last Week: Asset Manager (2.5d), HDR sky file parameters. (2d), meetings (0.5d)
+
+This Week: Asset Manager
+
+ 
+
+Tom:
+
+Last week: TERRAIN: New data format with baked LODs (2d), New rendering scheme (1d), TERRAIN EDITOR: Began UI / Asset Manager integration (2d)
+
+This week: TERRAIN: Rendering changes (VS2.0 fallback, Hierarchical culling), TERRAIN EDITOR: Finish UI / Asset Manager integration, bug fixes
+
+ 
+
+Dave:
+
+Last week: DX bugs (1d), Performance tests in prototype level (1d), performance budget spreadsheet (2d), Analyzing PIX output to verify performance budget (1d)
+
+This week: Finish analysis, Sky rendering
+
+ 
+
+ 
+
+ 
+
+  
+
+ 
+
+ 
+
+ 
+
+Game Tech
+
+Joe:
+
+Last week: Tracker tree (3d), Misc Features (2d)
+
+This week: Menus as soon as Conor is done with them, Tracker rename/Misc UI
+
+ 
+
+Martin:
+
+Last week: Physics prediction sync'ing
+
+This week: checkin checkin checkin please
+
+ 
+
+Raoul:
+
+Last week: Expressions (3.5d), Mgmt/Noel (1.5d)
+
+This week: Generic FSM
+
+ 
+
+ 
+
+Game Land
+
+Game Land
+
+Cities
+
+Aaron
+
+Last: Auction design/impl 2.5d, control 1.5d, planning .5d, inventory db rework .5d
+
+Next: auction server to mapserver comm
+
+ 
+
+Brett
+
+Last: builderizer: 3d, builds 1d, character webpages .5d, meetings/misc .5d
+
+Next: incremental and translation client build
+
+ 
+
+Garth
+
+Last: resume tracker 1.5d, meetings .5d, beg/end buttons for tabs .5d, dbserver column name checking .5d, initial velocity jitter .5d, vet rewards tech/plaques for new base rooms tech .5d, trade bug/tailor token cmd/two sound material types/etc. 1d
+
+Next: plan invention datamine requirements
+
+ 
+
+Vince:
+
+Last: Inv Enh Popup UI 2d, MMM tools for Inv testing 1.5d, meetings .5d, interviews .5d, invention misc .5d
+
+Next: correct help text for enhancements.
+
+ 
+
+Fight Club
+
+CW
+
+Last: Prototype targeting .5d, Meetings 1.5d, Integrate into asset manager 2d, fixes on critter editor 1d
+
+Next: "Finish" Critter Editor, Start on work for costumes
+
+ 
+
+Jered
+
+Last: Vacation 1d, FC Meetings 1d, FC Powers Implementation Design 3d
+
+Next: FC Powers Prediction?
+
+ 
+
+Joe W
+
+Last: Menus 1d, Intra-window focus 2d, Misc Bugs/InputLib 1d, "Sprite" widget .5d, Slider widget .5d
+
+Next: Review new event-based input with Tom and CW, Polish widgets
+
+ 
+
+Lincoln
+
+Last : Meetings/Interviews/DocReview: 1.5d, Encounter Editor: 3.5d
+
+Next: Encounter In World Editor
+
+ 
+
+Noel
+
+Last: Dual XBOX testing .5d, XLAST / XLSP research & setup 1.5d, MultiVal/TextParse 2d, Eval  1d
+
+Next: Play with other XBox live stuff, Look into SM and SMF as needed
+
+ 
+
+Shannon
+
+Last: FC Design 3d, Management 2d
+
+Next: FC Design, Management
+
+ 
+
+Lost Worlds
+
+No activity
+
+ 
+
+Dungeon Master
+
+No activity
+
+ 
+
+ 
+
+ 

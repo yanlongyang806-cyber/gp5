@@ -1,0 +1,13 @@
+;
+; This file specifies what projects various 3rd party DLLs must be copied into
+;
+; Used by: dbghelp, symsrv
+;
+; One entry per line
+;
+FightClub
+PrimalAge
+Utilities
+TestSuites
+Utilities
+Core

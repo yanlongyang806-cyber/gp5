@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\libs\XRenderLib\pub\DXVersionCheck.c">
+      <Filter>XRenderLib Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\CrypticLauncher_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\CrypticLauncher_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="browser.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="browser_ie.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="browser_libcef.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDetails.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="History.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherLocale.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherMain.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherSelfPatch.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="options.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="patcher.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="registry.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shards.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systemtray.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xfers_dialog.c">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\XRenderLib\pub\DXVersionCheck.h">
+      <Filter>XRenderLib Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\NewControllerTracker\pub\NewControllerTracker_Pub.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Account.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="browser.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="browser_ie.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="browser_libcef.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDetails.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="History.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherLocale.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherMain.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherSelfPatch.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="options.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="patcher.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="registry.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource_CrypticLauncher.h" />
+    <ClInclude Include="Shards.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="systemtray.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDefs.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xfers_dialog.h">
+      <Filter>CrypticLauncher Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{acdb95d7-d788-494c-8009-488892bc576d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bundle Resources">
+      <UniqueIdentifier>{538527fd-de43-4040-aeb7-cd7b8172f1fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bundle Resources\Images">
+      <UniqueIdentifier>{6f22dd1c-9933-4ce7-a95d-631f3af997c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrypticLauncher Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ExternHeaders">
+      <UniqueIdentifier>{104fafb0-94c7-45d0-a721-e2b129374962}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFs">
+      <UniqueIdentifier>{a4b6b1c6-8aca-433f-8091-fe8196af7890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Messages">
+      <UniqueIdentifier>{8d730db0-b151-4810-84d0-0a4a05ef96ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XRenderLib Source Files">
+      <UniqueIdentifier>{6d1ba658-5b98-4568-af90-70eb5e903541}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Cryptic\tools\bin\dbghelp.dll">
+      <Filter>Bundle Resources</Filter>
+    </None>
+    <None Include="..\..\data\browser\devtools_resources.pak" />
+    <None Include="..\..\data\browser\locales\en-US.pak" />
+    <None Include="..\bin\avcodec-54.dll">
+      <Filter>Bundle Resources</Filter>
+    </None>
+    <None Include="..\bin\avformat-54.dll">
+      <Filter>Bundle Resources</Filter>
+    </None>
+    <None Include="..\bin\avutil-51.dll">
+      <Filter>Bundle Resources</Filter>
+    </None>
+    <None Include="..\bin\icudt.dll">
+      <Filter>Bundle Resources</Filter>
+    </None>
+    <None Include="..\bin\libcef.dll">
+      <Filter>Bundle Resources</Filter>
+    </None>
+    <None Include="cryptic.ico">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="CrypticLauncher.gdf.xml">
+      <Filter>GDFs</Filter>
+    </None>
+    <None Include="CrypticLauncher.xml" />
+    <None Include="flags\de.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\es.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\fr.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\it.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\ja.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\ko.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\pl.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\pt.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\ru.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\tr.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\us.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\zh.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="flags\zi.bmp">
+      <Filter>Bundle Resources\Images</Filter>
+    </None>
+    <None Include="GenerateBundledModtimes.py" />
+    <None Include="manualstrings.txt" />
+    <None Include="messages\de.dat">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="messages\en.dat">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="messages\fr.dat">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="messages\it.dat">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="messages\pl.dat">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="messages\pt.dat" />
+    <None Include="messages\ru.dat" />
+    <None Include="messages\tr.dat">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="messages\zh.dat" />
+    <None Include="version.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CrypticLauncher.rc" />
+  </ItemGroup>
+</Project>

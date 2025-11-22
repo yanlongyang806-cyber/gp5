@@ -1,0 +1,35 @@
+body {
+    background: #f8f8ff;
+    font-family: verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #888;
+}
+
+h3 {
+    font-size: 0.8em;
+    margin: 0.1em;
+    padding: 0;
+}
+
+h2 {
+    font-size: 1em;
+    border-top: 1px solid #888;
+    margin: 1em 0 0.8em;
+    padding: 0.5em 0 0;
+}
+
+pre {
+    display: none
+}
+
+pre code {
+    display: block;
+    color: #000;
+}

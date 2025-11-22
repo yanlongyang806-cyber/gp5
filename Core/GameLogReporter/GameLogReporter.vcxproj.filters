@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\CrossRoads\AppServerLib\mission\aslMapState.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\accountCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\AccountDataCache.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ActivityCalendar.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ActivityCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ActivityLog_Trans.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ActivityLogCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\aiStructCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ArmamentSwapCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\AuctionBrokerCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\chatCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\AbilityScores_DD.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\AttribCurve.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\AttribCurveImp.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\AttribMod.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\AttribModFragility.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Character.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Character_combat.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Character_mods.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Character_target.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CharacterAttribs.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CharacterAttribute.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CharacterClass.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Combat_DD.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\combatAdvantage.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatCallbacks.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatConfig.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatDebug.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatEval.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatEvents.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatPool.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatPowerStateSwitching.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatReactivePower.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\CombatSensitivity.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\ComboTracker.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\DamageTracker.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerActivation.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerAnimFX.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerApplication.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerEnhancements.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerHelpers.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerModes.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerReplace.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Powers.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowersAEDebug.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowersAutoDesc.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerSlots.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerSubtarget.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerTree.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerTreeEval.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerTreeHelpers.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\PowerVars.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\Skills_DD.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Combat\StatPoints.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ControlScheme.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\DiaryCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\DiscountShared.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\DoorTransitionCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\EntDebugMenu.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\AccountProxyServerLocks.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\allegiance.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\AuctionLot.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\CombatMods.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\CostumeCommonEntity.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\CostumeCommonGenerate.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\CostumeCommonLoad.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\CostumeCommonRandom.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\CostumeCommonTailor.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\entCritter.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\Entity.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityBuild.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityDataQuery.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityExprFunc.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityInteraction.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityIterator.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityLib.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityMailCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntityNet.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\EntitySystem.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\GameAccountDataCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\Guild.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\InteriorCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\Leaderboard.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\OfficerCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\PlayerDifficultyCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\RegionRules.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\SavedPetCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\SharedBankCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\SkelInfoFixup.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\Team.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\Tray.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Entity\XboxStructs.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GameAccountData\GameAccountData.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GameBranch.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GameEvent.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GamePermissionsCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GamePermissionTransactions.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GameStringFormat.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Genesis\GenesisMissions.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GlobalExpressions.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\GroupProjectCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\guildCommonStructs.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\interaction_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\interactionManager_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\AlgoItemCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\AlgoPet.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\inventoryCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\itemArt.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\ItemAssignmentEval.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\ItemAssignments.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\itemCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\itemEval.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\itemGenCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\itemProgressionCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\itemupgrade.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\rewardCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\RewardTable.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\RewardValTable.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\SuperCritterPet.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\item\tradeCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Login2CharacterDetail.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Login2Common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\LoginCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\MailCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\MapRevealCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\mechanics_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\MicroTransactions.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\microtransactions_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\MinigameCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\contact_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\cutscene_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\encounter_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\gameaction_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\gametimer_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\mapstate_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\mapstate_common_cmd.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\mapstate_common_eval.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\mission_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\missionset_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\nemesis_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\oldencounter_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\playerstats_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\progression_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\Mission\progression_transact.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\NameGen.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\NotifyCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\NumericConversionCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\powerStoreCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\pvp_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\PvPGameCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\queue_common_structs.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ShardClock.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ShardCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ShardEventTimingCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ShardIntervalTimingCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\ShardVariableCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\SocialCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\species_common.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\StickerBookCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\storeCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\TeamPetsCommonStructs.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\TeamUpCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\TextFilterCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\TransformationCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\UGC\UGCAchievements.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\UGC\UGCCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CrossRoads\Common\UGC\UGCTipsCommon.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\Common\MapDescription.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\Common\NoUGCInThisProject.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\Common\VirtualShard.c">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\GameLogReporter_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\GameLogReporter_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelXMLFormatter.c" />
+    <ClCompile Include="GameLogEconomyReport.c" />
+    <ClCompile Include="GameLogMicrotransReport.c" />
+    <ClCompile Include="GameLogNewReportTemplate.c" />
+    <ClCompile Include="GameLogPerCharacterNumericCSV.c" />
+    <ClCompile Include="GameLogReporter.c" />
+    <ClCompile Include="GameLogReporter_Extern.c" />
+    <ClCompile Include="GameLogUniquesReport.c" />
+    <ClCompile Include="XMLFormatStrings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CrossRoads\Common\accountCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\AccountDataCache.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ActivityCalendar.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ActivityCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ActivityLogCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\aiStructCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ArmamentSwapCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\AuctionBrokerCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\chatCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\chatCommonStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\AbilityScores_DD.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\AttribCurve.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\AttribCurveImp.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\AttribMod.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\AttribModFragility.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Character.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Character_combat.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Character_mods.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Character_target.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CharacterAttribs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CharacterAttribsMinimal.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CharacterAttribute.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CharacterClass.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Combat_DD.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\combatAdvantage.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatCallbacks.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatConfig.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatDebug.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatEval.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatEvents.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatMods.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatPool.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatPowerStateSwitching.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatReactivePower.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\CombatSensitivity.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\ComboTracker.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\DamageTracker.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerActivation.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerAnimFX.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerApplication.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerEnhancements.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerHelpers.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerModes.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerReplace.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Powers.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowersAEDebug.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowersAutoDesc.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowersEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerSlots.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerSubtarget.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerTree.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerTreeEval.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerTreeHelpers.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\PowerVars.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\Skills_DD.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Combat\StatPoints.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ControlScheme.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\CostumeCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\CostumeCommonEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\DiaryCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\DiaryEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\DiscountShared.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\DoorTransitionCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\EntDebugMenu.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\aiDebugShared.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\allegiance.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\AuctionLot.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\AuctionLotEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\CostumeCommonEntity.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\CostumeCommonGenerate.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\CostumeCommonLoad.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\CostumeCommonRandom.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\CostumeCommonTailor.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\entCritter.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\entEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\Entity.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityAttach.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityBuild.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityDataQuery.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityExtern.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityGrid.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityInteraction.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityIterator.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityLib.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityMailCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntityNet.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntitySavedData.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\EntitySystemInternal.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\GameAccountDataCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\Guild.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\InteriorCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\Leaderboard.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\OfficerCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\Player.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\PlayerDifficultyCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\RegionRules.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\SavedPetCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\SharedBankCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\Team.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\Tray.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Entity\XBoxStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GameAccountData\GameAccountData.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GameBranch.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GameEvent.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GamePermissionsCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GamePermissionTransactions.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GameStringFormat.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Genesis\GenesisMissions.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GlobalExpressions.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\GroupProjectCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\guildCommonStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\interaction_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\interactionManager_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\AlgoItemCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\AlgoPet.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\inventoryCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\itemArt.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\ItemAssignments.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\itemCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\itemEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\itemGenCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\itemProgressionCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\itemupgrade.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\rewardCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\SuperCritterPet.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\item\tradeCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Login2CharacterDetail.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Login2Common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\LoginCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\MailCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\MapRevealCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\mechanics_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\MicroTransactions.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\microtransactions_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\MinigameCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\contact_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\contact_enums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\cutscene_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\encounter_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\Encounter_enums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\gameaction_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\gametimer_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\mapstate_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\mission_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\mission_enums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\missionset_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\nemesis_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\oldencounter_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\playerstats_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\progression_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\Mission\progression_transact.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\NameGen.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\NotifyCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\NotifyEnum.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\NumericConversionCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\powerStoreCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\pvp_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\PvPGameCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\queue_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\queue_common_structs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ShardClock.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ShardCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ShardEventTimingCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ShardIntervalTimingCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\ShardVariableCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\SocialCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\species_common.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\StickerBookCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\storeCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\TeamPetsCommonStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\TeamUpCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\TransformationCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\UGC\UGCAchievements.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\UGC\UGCCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\UGC\UGCTipsCommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\GlobalComm.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\GlobalEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\MapDescription.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\ugcprojectcommon.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\VirtualShard.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\GlobalTypeEnum.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\GlobalTypes.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\WorldVariable.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\net\accountnet.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\utils\Capsule.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\utils\UtilitiesLibEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\dynNode.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\wlCostume.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\wlGenesisMissions.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\wlGenesisMissionsGameStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\wlGroupPropertyStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\wlSky.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\wlUGC.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\WorldGrid.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\WorldLibEnums.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WorldLib\pub\WorldLibStructs.h">
+      <Filter>Cryptic Engine Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcelXMLFormatter.h" />
+    <ClInclude Include="GameLogEconomyReport.h" />
+    <ClInclude Include="GameLogMicrotransReport.h" />
+    <ClInclude Include="GameLogNewReportTemplate.h" />
+    <ClInclude Include="GameLogPerCharacterNumericCSV.h" />
+    <ClInclude Include="GameLogReporter.h" />
+    <ClInclude Include="GameLogUniquesReport.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{0043b964-1fb2-4281-9e07-a86e5c1d5585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cryptic Engine Dependencies">
+      <UniqueIdentifier>{4b73393e-496d-4417-b3f9-f440ef5e51ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

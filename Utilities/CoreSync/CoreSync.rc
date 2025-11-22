@@ -1,0 +1,128 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 393, 383
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Core Sync"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Exit",IDCANCEL,336,295,50,14
+    CONTROL         "",IDC_STATUS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,310,379,66
+    LTEXT           "Status:",IDC_STATIC,7,300,24,8
+    LTEXT           "File Set:",IDC_STATIC,7,7,27,8
+    COMBOBOX        IDC_FILESET,40,7,118,126,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_FILES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,112,325,189
+    PUSHBUTTON      "Select All",IDC_FILES_SELECTALL,336,115,50,14
+    PUSHBUTTON      "Diff",IDC_FILES_DIFF,336,129,50,14
+    LTEXT           "Files:",IDC_TXT_FILES,7,102,323,8
+    LTEXT           "Projects:",IDC_STATIC,7,24,30,8
+    CONTROL         "",IDC_PROJECTS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,39,22,150,79
+    PUSHBUTTON      "Sync selected files to Projects",IDC_SYNC_TO_PROJECTS,262,23,124,14
+    PUSHBUTTON      "Sync selected files to Core",IDC_SYNC_TO_CORE,262,39,124,14
+    PUSHBUTTON      "Edit",IDC_FILESET_EDIT,161,7,50,14
+    PUSHBUTTON      "Rescan",IDC_FILESET_RELOAD,214,7,50,14
+    PUSHBUTTON      "Select All",IDC_PROJECTS_SELECTALL,191,22,50,14
+    LTEXT           "UpperLeft",IDC_UPPERLEFT,7,113,33,8,NOT WS_VISIBLE
+    LTEXT           "AlignMe",IDC_ALIGNME,307,292,26,8,NOT WS_VISIBLE
+    CONTROL         "No Checkout",IDC_NO_CHECKOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,263,55,57,10
+    PUSHBUTTON      "Open Folder",IDC_OPEN_FOLDER,336,144,50,14
+    CONTROL         "Only Orphans",IDC_ONLY_ORPHANS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,263,65,60,10
+    CONTROL         "No Deletes",IDC_NO_DELETES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,263,75,51,10
+    CONTROL         "All matching files (slow, rescan)",IDC_ALL_MATCHES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,263,85,116,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "CoreSync.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

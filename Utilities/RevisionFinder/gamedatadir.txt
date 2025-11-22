@@ -1,0 +1,3 @@
+..\..\data
+C:\Core\localdata
+C:\Core\data\

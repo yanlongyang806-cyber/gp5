@@ -1,0 +1,141 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 413, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Updater Launcher"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Launch",IDOK,288,110,52,17
+    PUSHBUTTON      "Cancel",IDCANCEL,354,110,52,17
+    EDITTEXT        IDC_EDIT_UPDATERDIR,60,18,286,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SERVER,60,48,286,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FOLDER,60,33,286,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BROWSE1,353,18,53,13
+    PUSHBUTTON      "Browse",IDC_BROWSE2,353,33,53,13
+    CONTROL         "Do Not Patch Updater",IDC_NOSELF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,70,84,14
+    CONTROL         "CoV",IDC_COV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,
+                    87,84,14
+    CONTROL         "MajorPatch",IDC_MAJORPATCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,87,63,14
+    CONTROL         "Console",IDC_CONSOLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,70,63,14
+    LTEXT           "Updater",IDC_STATIC,13,18,41,13
+    LTEXT           "Patch Folder",IDC_STATIC,13,33,41,13
+    LTEXT           "Server",IDC_STATIC,13,48,41,13
+    COMBOBOX        IDC_PROFILES,167,71,115,87,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Save Profile",IDC_SAVEPROFILE,288,71,52,12
+    PUSHBUTTON      "Delete Profile",IDC_DELETEPROFILE,347,71,52,12
+    CONTROL         "Test",IDC_TEST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,
+                    103,84,14
+    CONTROL         "Do Not Launch Game",IDC_NOLAUNCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,108,103,84,14
+END
+
+IDD_SAVEPROFILE DIALOGEX 0, 0, 237, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Enter Profile Name"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,180,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,24,50,14
+    EDITTEXT        IDC_EDIT_PROFILENAME,7,16,159,13,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 406
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_SAVEPROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

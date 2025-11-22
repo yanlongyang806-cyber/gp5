@@ -1,0 +1,192 @@
+From: Shannon Posniewski
+Sent: Tuesday, September 12, 2006 11:42 AM
+To: Software; FC_leads; coh_leads
+Subject: weekly programmer status status ending september 8, 2006
+
+Discussion
+
+Branching CoH from dev
+
+            Yes, we really are doing it.
+
+            Don't forget Zaphod
+
+            Maybe move it to c:\coh?
+
+            CoH team needs to check in everything first
+
+            Jimb to follow up for the answers and to do it with Ben, CoH guys, Raoul.
+
+ 
+
+Project file switches, etc.
+
+            Shannon's /W4 experiment was too much work for one person.
+
+                        Finish UtilitiesLib, some others though and made Conor cry once
+
+            Who should be tracking how we do stuff in these project files?
+
+                        Prop pages, /W on command line, #pragma, etc.
+
+            Raoul stepped up for tracking this stuff
+
+ 
+
+Early Movers
+
+            NCSoft, Mike, Amy, some other ops people moving around 14 Sep.
+
+                        Actually, just found out no earlier than 18 Sep for DSL.
+
+            To temp space across street
+
+            Makes space for 12 more people in this office.      
+
+ 
+
+Tech Land
+
+Graphics Tech
+
+Jimb
+
+Last Week: MaterialEditor (2d), Xbox issues (0.5d), Cleaned up internal build scripts (0.5d), sick/fought the VPN and won (1d), Labor Day (1d)
+
+This Week: MaterialEditor Support/Features, Material Effects
+
+ 
+
+Dave
+
+Last week: DX performance instrumentation (1d), Debugging timer skew problem on Joe's machine (0.25d), Misc (0.5d), learning WorldLib (0.25d) Outlining (2d), Labor Day (1d)
+
+This week: Finish current instrumentation work
+
+ 
+
+Sam
+
+Last Week: DynFx features (2d), CoH Arm Scaling and Ragdoll Demo support (2d), Labor Day (1d)
+
+This week: Coh Ragdoll stuff, DynFx Features
+
+ 
+
+Conor
+
+Last Week: sick (1d), HDR lighting (1d), performance (1d), meetings (0.5d), console input capture fix (0.5d), , Labor Day (1d)
+
+This Week: asset manager architecture, Tom
+
+ 
+
+Game Tech
+
+Joe:
+
+Last week: Instancing (1.5d), Misc (.5d), CmdParse Switchover (0.5d), EditOrig (1.5d), Labor Day (1d)
+
+This week: Finish EditOrig stuff, Undo
+
+ 
+
+Martin:
+
+Last week: Entity Movement (threaded physics) (4d), Labor Day (1d)
+
+This week: Entity Movement - networking
+
+ 
+
+Raoul:
+
+Last week: Docs/Meetings/Planning/Talking about AI (3d), Getting used to FC codebase, begin megagrid port/extension (1d), Labor Day (1d)
+
+This week: Finish megagrid switchover
+
+ 
+
+Game Land
+
+Cities
+
+Aaron
+
+Last: Ragdoll Demo Playback (1d), Vacation Prep (1d), CSRs/Support (2d) , Labor Day (1d)
+
+Next: European Vaction
+
+Aaron will be on vacation from 9/9 through 9/22.
+
+ 
+
+Brett:
+
+Last: Builderizer (1.5 d), CoH Builds (1d), Support Issues (1.5 d) , Labor Day (1d)
+
+Next: Incremental Support in Builderizer
+
+ 
+
+Garth:
+
+Last: Invention Mission (1d), Resume Tracker (1d), I8 Bugs (1.5d), PvP Zone XP (.5d) , Labor Day (1d)
+
+Next: Arm Scaling IK Support
+
+ 
+
+Vince
+
+Last: Invention Recipes (1 d), I8 Bugs (1.5 d),  Support Issues (.5 d), Labor Day  (1d), Vacation (1d)
+
+Next: CSR/Support, Invention Recipes
+
+ 
+
+Fight Club
+
+CW
+
+Last: FC Meetings 2d, Costume 1d, Critter Cleanup 1d, Labor Day 1d
+
+Next: Critters, Costumes
+
+ 
+
+Jered
+
+Last: FC Meetings .5d, FC AttribMods 2d, FC Powers 1.5d, Labor Day 1d
+
+Next: Eval system, combos?
+
+ 
+
+Joe W
+
+Last: basic UI infrastructure 2d, test widgets 1d, learning TextParser .5d, .5d fighting with tools, Labor Day 1d
+
+Next: Asset list, More UI (menus, tooltips, list)
+
+ 
+
+Lincoln
+
+Last: Meetings/Interviews 1d, CoH .5d, Encounters 2.5d, Labor Day 1d
+
+Next: Spawn editor?
+
+ 
+
+Shannon
+
+Last: Management 2d, FC Design 2d, Labor Day 1d
+
+Next: More
+
+ 
+
+ 
+
+ 

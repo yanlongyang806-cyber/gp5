@@ -1,0 +1,9 @@
+; PatchShellMenu.def : Declares the module parameters.
+
+LIBRARY      "PatchShellMenu.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

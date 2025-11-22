@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\Dump_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\Dump_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="dump.c" />
+    <ClCompile Include="heap.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="OS\OSList.c">
+      <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\Win2003x64.c">
+      <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\Win7x64.c">
+      <Filter>OS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dump.h" />
+    <ClInclude Include="heap.h" />
+    <ClInclude Include="heapOSInterface.h" />
+    <ClInclude Include="OS\OSList.h">
+      <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\Win2003x64.h">
+      <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\Win7x64.h">
+      <Filter>OS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{3b9ce2dd-93a7-4427-8f79-ffe2b1460a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS">
+      <UniqueIdentifier>{f7a6dfb5-56f5-43e1-a933-36de3390135d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

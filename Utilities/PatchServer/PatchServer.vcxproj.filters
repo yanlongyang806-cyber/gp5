@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\PatchServer_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\PatchServer_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="patchcompaction.c" />
+    <ClCompile Include="patchfile.c" />
+    <ClCompile Include="patchfileloading.c" />
+    <ClCompile Include="patchhal.c" />
+    <ClCompile Include="patchhttp.c" />
+    <ClCompile Include="patchhttpdb.c" />
+    <ClCompile Include="patchjournal.c" />
+    <ClCompile Include="patchloadbalance.c" />
+    <ClCompile Include="patchmirroring.c" />
+    <ClCompile Include="patchmirroring_opt.c" />
+    <ClCompile Include="patchproject.c" />
+    <ClCompile Include="patchproject_opt.c" />
+    <ClCompile Include="patchpruning.c" />
+    <ClCompile Include="patchserver.c" />
+    <ClCompile Include="patchserverdb.c" />
+    <ClCompile Include="patchserverdb_opt.c" />
+    <ClCompile Include="patchtracking.c" />
+    <ClCompile Include="patchupdate.c" />
+    <ClCompile Include="thrashtable.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\PatchClientLib\patchdb.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\PatchClientLib\patcher_comm.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\utils\LogParsing.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="patchcompaction.h" />
+    <ClInclude Include="patchfile.h" />
+    <ClInclude Include="patchfileloading.h" />
+    <ClInclude Include="patchhal.h" />
+    <ClInclude Include="patchhttp.h" />
+    <ClInclude Include="patchhttpdb.h" />
+    <ClInclude Include="patchjournal.h" />
+    <ClInclude Include="patchloadbalance.h" />
+    <ClInclude Include="patchmirroring.h" />
+    <ClInclude Include="patchmirroring_opt.h" />
+    <ClInclude Include="patchproject.h" />
+    <ClInclude Include="patchproject_opt.h" />
+    <ClInclude Include="patchpruning.h" />
+    <ClInclude Include="patchserver.h" />
+    <ClInclude Include="patchserverdb.h" />
+    <ClInclude Include="patchtracking.h" />
+    <ClInclude Include="patchupdate.h" />
+    <ClInclude Include="thrashtable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="templates\compare_revs.cs">
+      <Filter>templates</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="templates\index.cs">
+      <Filter>templates</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{389c4a38-6d76-4401-b2eb-c8f4eaf278be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{055c8934-c2e4-43ab-9a10-36b4e8b7da18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternHeaders">
+      <UniqueIdentifier>{4e072d1f-4957-4c53-bcb8-850d4531e21a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="templates">
+      <UniqueIdentifier>{070a5b4b-54f8-437f-89e9-2b7fed2e078d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc-commandline.txt">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="templates\add_autoup_errors.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\add_autoup_rule_verify.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\add_branch_rule_verify.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\add_namedview_rule_verify.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\add_rule_errors.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\autoupconf.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\config.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\confirm_autoup_delete.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\confirm_delete.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\connections.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\connections_json.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\display_autoupconf.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\display_rules.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\footer.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\header.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\headerxhtml.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\httpconfig.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\link_breaks.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\macros.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\redirects.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\style.cs">
+      <Filter>templates</Filter>
+    </None>
+    <None Include="templates\user.cs">
+      <Filter>templates</Filter>
+    </None>
+  </ItemGroup>
+</Project>

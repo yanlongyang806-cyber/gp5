@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\RevisionFinder_AutoGen_1.c">
+      <Filter>autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\RevisionFinder_AutoGen_2.c">
+      <Filter>autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="RevisionFinder.c" />
+    <ClCompile Include="revisionMain.c" />
+    <ClCompile Include="rfMergeInfoCache.c" />
+    <ClCompile Include="rfSvnUtil.c" />
+    <ClCompile Include="rfUtil.c" />
+    <ClCompile Include="WebInterface\wiRevisions.c">
+      <Filter>WebInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="WebInterface\wiRFCommon.c">
+      <Filter>WebInterface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Core\NewControllerTracker\pub\NewControllerTracker_Pub.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\StatusReporting.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CBMonitor\CBMonitor.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ContinuousBuilder\ContinuousBuilder_Pub.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="RevisionFinder.h" />
+    <ClInclude Include="rfMergeInfoCache.h" />
+    <ClInclude Include="rfSvnUtil.h" />
+    <ClInclude Include="rfUtil.h" />
+    <ClInclude Include="WebInterface\wiRevisions.h">
+      <Filter>WebInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="WebInterface\wiRFCommon.h">
+      <Filter>WebInterface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="autogen">
+      <UniqueIdentifier>{6b3c0a13-aa6e-4cbd-8099-20100497b46a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{f9b0821b-18b2-448c-8b0f-17c5b41dd0ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebInterface">
+      <UniqueIdentifier>{b679bebf-c6df-4424-8781-bdb9455d5bfe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

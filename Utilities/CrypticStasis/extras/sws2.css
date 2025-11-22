@@ -1,0 +1,364 @@
+body {
+    text-align: center;
+    font-family: verdana;
+    margin: 0;
+    color: #A1A1A1;
+    background-color: #050505;
+}
+
+.swsmaster p.footer {
+    font-size: 8pt;
+    font-family: verdana;
+}
+
+.swsmaster div.top {
+    text-align: center;
+    width: 100%;
+    font-family: verdana;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+    background-color: #050505;
+    color: #fc9049;
+}
+
+.swsmaster h2 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 18px;
+}
+
+.swsmaster h3 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 16px;
+}
+
+.swsmaster h4 {
+    background-color: #e5e5ff;
+    color: #AAAAAA;
+    font-size: 12px;
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.swsmaster a {
+    text-decoration: none;
+    color: #7f7fdd;
+}
+
+.swsmaster a:hover {
+    text-decoration: underline;
+}
+
+.swsmaster a.actor {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.swsmaster a.actor:hover {
+    text-decoration: underline;
+}
+
+.swsmaster a.spell {
+    text-decoration: none;
+    color: white;
+}
+
+.swsmaster a.spell:hover {
+    visibility: visible;
+    text-decoration: underline;
+}
+
+.swsmaster a.spell span {
+    visibility: hidden;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 9px;
+    color: #22e;
+}
+
+.swsmaster a.spell:hover span {
+    visibility: visible;
+    text-decoration: none;
+}
+
+.swsmaster div.tabContainer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 750px;
+    padding: 0;
+}
+
+.swsmaster div.tabBar {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.swsmaster div.tabBar a {
+    padding: 4px;
+    margin: 5px;
+    margin-bottom: 8px;
+#    background-color: #e5e5ff;
+    color: #AAAAAA;
+    font-size: 14px;
+    display: block;
+    float: left;
+}
+
+.swsmaster div.tabBar a.select {
+#    background-color: #AAAAAA;
+    color: #fc9049;
+    text-decoration: none;
+}
+
+.swsmaster div.tabBar a:hover {
+#    background-color: #AAAAAA;
+    color: #fc9049;
+    text-decoration: none;
+}
+
+.swsmaster table.text {
+    padding:0;
+    margin:0;
+/*    border: 1px solid #ccc; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.swsmaster table.stat {
+    padding:0;
+    margin:0;
+/*    border: 1px solid #ccc; */
+    border:0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    clear: both;
+}
+
+.swsmaster table.chart {
+    padding:0;
+    margin:0;
+/*    border: 1px solid #ccc; */
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swsmaster table.text td {
+    font-size: 11px;
+    text-align: left;
+}
+
+.swsmaster td.vh {
+    color: #444;
+}
+
+.swsmaster th {
+    text-align: left;
+    font-family: verdana;
+    font-size: 11px;q
+    color: #121212;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 8px;
+    white-space: nowrap;
+    border-bottom: 1px solid #252525;
+    font-weight: bold;
+}
+
+.swsmaster span.tip {
+    border-bottom: 1px dotted #999;
+}
+
+.swsmaster th.title {
+    background-color: #151515;
+    color: #fc9049;
+    font-size: 12px;
+    padding: 4px;
+    border-top: 20px solid #050505;
+}
+
+.swsmaster th.titlenoclear {
+    border-top: none;
+}
+
+.swsmaster tr.s {
+    display: none;
+}
+
+.swsmaster tr.s td {
+    color: #404040;
+    background-color: #000000;
+}
+
+.swsmaster tr.odd td {
+#    background-color: #f6f6f6;
+    background-color: #151515;
+}
+
+/* Legacy */
+.swsmaster tr.sectionSlave td {
+    color: #222;
+    background-color: #f7f7f7;
+}
+
+.swsmaster td {
+    vertical-align: top;
+    text-align:left;
+    font-family: verdana;
+    font-size: 10px;
+    margin: 0;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 8px;
+    white-space:nowrap;
+}
+
+.swsmaster div.chartbar {
+    background-color: #339933;
+}
+
+.swsmaster a.toggle {
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1px 3px;
+}
+
+.swsmaster td.w {
+    width: 300px;
+}
+
+.swsmaster td.r {
+    text-align: right;
+}
+
+.swsmaster td.f {
+    width: 220px;
+}
+
+.swsmaster td.first {
+    width: 220px;
+}
+
+
+.yui-skin-sam .yuimenuitemlabel {
+    background-color: #151515;
+    color: white;
+}
+
+.swsmaster .colorWarrior {
+    color: #97704e;
+}
+
+.swsmaster .colorDeathKnight {
+    color: #c41f3b;
+}
+
+.swsmaster .colorDruid {
+    color: #ff5807;
+}
+
+.swsmaster .colorRogue {
+    color: #ffdc4a;
+}
+
+.swsmaster .colorMage {
+    color: #69ccf0;
+}
+
+.swsmaster .colorWarlock {
+    color: #695c9b;
+}
+
+.swsmaster .colorHunter {
+    color: #7ca651;
+}
+
+.swsmaster .colorPriest {
+    color: #b3c4cb;
+}
+
+.swsmaster .colorPaladin {
+    color: #dc638a;
+}
+
+.swsmaster .colorShaman {
+    color: #193fff;
+}
+
+.swsmaster .colorPet {
+    color: #666;
+}
+
+.swsmaster .colorMob {
+    color: #CC0000;
+}
+
+.swsmaster .yuimenubar {
+    background-image: none;
+    background-color: none;
+    border-left: 0;
+    border-right: 0;
+    border-color: #AAAAAA;
+}
+
+.swsmaster .yuimenubaritem.first-of-type {
+    margin-left: 15px;
+}
+
+.swsmaster .yuimenubar .yuimenubaritem:hover {
+    background-image: none;
+    background-color: #AAAAAA;
+    color: #e5e5ff;
+}
+
+.swsmaster .yuimenubar .yuimenubaritemlabel {
+    border-color: #AAAAAA;
+    color: white;
+}
+
+.swsmaster .yuimenubar .yuimenubaritemlabel-selected {
+    background-color: #AAAAAA;
+    border-color: #AAAAAA;
+    color: #e5e5ff;
+}
+
+.swsmaster .yuimenubar .yuimenuitem:hover {
+    background-image: none;
+    background-color: #AAAAAA;
+    color: #FFFFFF;
+}
+
+.swsmaster .yuimenubar .yuimenuitemlabel-selected {
+    border-color: #AAAAAA;
+    background-color: #505050;
+#    color: #e5e5ff;
+}
+
+.swsmaster .yuimenubar a {
+    text-decoration: none;
+}
+
+
+.yui-skin-sam .yuimenu .bd {
+    background-color: #050505;
+}
+
+div.swstip {
+    text-align: left;
+    font-size: 10px;
+    font-family: verdana;
+    color: #111;
+}

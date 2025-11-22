@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameDefinitionFile xmlns:baseTypes="urn:schemas-microsoft-com:GamesExplorerBaseTypes.v1" xmlns="urn:schemas-microsoft-com:GameDescription.v1">
+    <GameDefinition gameID="{A8DA2119-F9C8-40E5-9003-755C5D60813E}">
+        <Name>Champions Online</Name>
+        <Description>Powered by the groundbreaking Cryptic Engine, Champions Online will be developed for both Xbox 360 and PC formats. With literally billions of character options allowing total customization, real-time action combat, the richly detailed Champions universe and an experienced Cryptic Studios team devoted to working directly with gamers to deliver a great gaming experience, Champions Online is set to be the premier superheroic massively multiplayer online role playing game.
+
+Save the world. Explore space. Venture into new dimensions.
+
+Be a Champion.</Description>
+        <ReleaseDate>2009-09-01</ReleaseDate>
+        <Genres>
+            <Genre>MMORPG</Genre>
+            <Genre>Action</Genre>
+        </Genres>
+        <Version>
+            <VersionFile path="Champions Online.exe" />
+        </Version>
+        <WindowsSystemPerformanceRating minimum="4.1" recommended="5.6" />
+        <Developers>
+            <Developer URI="http://www.crypticstudios.com/">Cryptic Studios</Developer>
+        </Developers>
+        <Publishers>
+            <Publisher URI="http://www.perfectworld.com/">Perfect World</Publisher>
+        </Publishers>
+        <GameExecutables>
+            <GameExecutable path="Champions Online.exe" />
+            <GameExecutable path="Champions Online\Live\GameClient.exe" />
+            <GameExecutable path="Champions Online\Beta\GameClient.exe" />
+            <GameExecutable path="Champions Online\Playtest\GameClient.exe" />
+            <GameExecutable path="Champions Online\Tip\GameClient.exe" />
+        </GameExecutables>
+    </GameDefinition>
+</GameDefinitionFile>

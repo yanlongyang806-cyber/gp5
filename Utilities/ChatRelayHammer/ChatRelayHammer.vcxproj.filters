@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="autogen\ChatRelayHammer_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\ChatRelayHammer_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="chatCommonFake.c" />
+    <ClCompile Include="ChatRelayCommands.c" />
+    <ClCompile Include="ChatRelayHammer.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CrossRoads\Common\chatCommon.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CrossRoads\Common\chatCommonStructs.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\GlobalEnums.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\GlobalTypeEnum.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\GlobalTypes.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="chatCommonFake.h" />
+    <ClInclude Include="ChatRelayCommands.h" />
+    <ClInclude Include="ChatRelayHammer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{bf445c5b-2b46-4315-9f7f-c2b51c664104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternHeaders">
+      <UniqueIdentifier>{fb52e7c9-ecbf-4d5b-ac71-48d761df031b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

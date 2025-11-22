@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\DBScript_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\DBScript_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="luaCmdLine.c" />
+    <ClCompile Include="luaLibContainer.c" />
+    <ClCompile Include="luaTagContainer.c" />
+    <ClCompile Include="luaWalkSnapshot.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="pyLibContainer.c" />
+    <ClCompile Include="pyWalkSnapshot.c" />
+    <ClCompile Include="sharedLibContainer.c" />
+    <ClCompile Include="WalkSnapshot.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\PythonLib\resource_pylib.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="luaCmdLine.h" />
+    <ClInclude Include="luaLibContainer.h" />
+    <ClInclude Include="luaTagContainer.h" />
+    <ClInclude Include="luaWalkSnapshot.h" />
+    <ClInclude Include="pyLibContainer.h" />
+    <ClInclude Include="pyWalkSnapshot.h" />
+    <ClInclude Include="sharedLibContainer.h" />
+    <ClInclude Include="WalkSnapshot.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{78c1e9bc-aea5-48e9-83c2-0dea1c4b9733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e860e4f8-ef3f-4133-821e-fde5ce3a94cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{58b56626-a73b-4691-b595-2ed12996765d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\libs\PythonLib\import.py">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="..\..\libs\PythonLib\profile.py">
+      <Filter>resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\libs\PythonLib\PythonLib.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

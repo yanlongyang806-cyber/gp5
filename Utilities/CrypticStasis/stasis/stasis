@@ -1,0 +1,791 @@
+#!/usr/bin/perl -w
+
+# Copyright (c) 2008, Gian Merlino
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+#    1. Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#    2. Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+# EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+=head1 NAME
+
+stasis - WoW combat log parser
+
+=head1 DESCRIPTION
+
+This program will read in a WoW combat log and then perform some action that
+you specify. Generally this will be 'add', which runs some calculations on
+the log and writes out HTML, or 'print' which prints out the log in a nicer
+format.
+
+For more information visit I<http://code.google.com/p/stasiscl/>.
+
+=head1 SYNOPSIS
+
+Write HTML for boss kills in the directory C</var/www/sws>:
+    stasis add -dir /var/www/sws -file WoWCombatLog.txt
+
+Write HTML for kills and attempts:
+    stasis add -dir /var/www/sws -file WoWCombatLog.txt -attempt
+
+Update the wws-history/data.xml:
+    stasis history -dir /var/www/sws
+
+=head1 USAGE
+
+    stasis action [options]
+
+=head2 Actions
+
+You must provide one of these as the first command-line argument.
+
+B<add>        Read a combat log and write out parsed HTML corresponding
+           to the encounters found within in.
+
+B<print>      Display a pretty-printed version of the combat log.
+                      
+B<history>    Updates the wws-history/data.xml in the specified
+           directory with all accumulated data of all sws-* dirs.
+
+
+B<convert>    Convert a combat log into a SQLite database.
+           WARNING: This feature is experimental and subject to change!
+
+=head2 Options
+
+You may provide various options after the action. Some of them will be
+required and some will be optional, depending on what action you select.
+
+B<-file>      Specifies the combat log to read.
+
+B<-dir>       Specifies in which directory the generated HTML is living
+           or will be written, depending on action. Default is the
+           current directory.
+           
+B<-server>    If present, Armory links will be included using this server.
+           Only works with the US armory for now.
+
+B<-version>   Either 1 or 2. Pre-2.4 combatlogs should be parsed with
+           version = 1, post-2.4 combatlogs with 2. Default is '2',
+           the new post-2.4 style.
+
+B<-logger>    Name of the logger, optional argument only used when parsing
+           version 1 combat logs. Default is 'You'.
+
+B<-minlength> Exclude encounters less than this amount of seconds.
+           Defaults to 30 seconds.
+           
+B<-attempt>  Include a parse for boss attempts (not just kills).
+               
+B<-trash>     Include a parse for trash mobs (all sections of the log that
+           were not part of a boss encounter).
+
+B<-combine>   Include a parse that rolls up all attempts and kills on each
+           particular boss (one extra parse per boss).
+
+B<-overall>   Include a separate parse that rolls up everything in the log
+           file.
+           
+B<-collapse>  For boss attempts and kills, collapse all mobs that have the
+           same NPC ID and all pets with the same name and owner. This
+           is always done for trash parses to save space, but by
+           default is not done for boss parses.
+
+B<-nav>       Add a cross-split navigation menu to each parse.
+
+=head1 BUGS
+
+http://code.google.com/p/stasiscl/
+
+Use the "Issues" tab.
+
+=cut
+
+use strict;
+use warnings;
+use lib 'lib';
+use Stasis::Parser;
+use Stasis::LogSplit;
+use Stasis::ClassGuess;
+use Stasis::Extension;
+use Stasis::ExtensionRunner;
+use Stasis::EventDispatcher;
+use Stasis::Page;
+use Stasis::Page::Chart;
+use Stasis::Page::Actor;
+use Stasis::Page::Spell;
+use Stasis::Page::LogClip;
+use Stasis::ActorGroup;
+use Stasis::PageMaker;
+use Stasis::DB;
+use Stasis::NameIndex;
+use Stasis::CLI::Writer;
+use File::Find ();
+use File::Path ();
+use File::Spec ();
+use File::Copy qw/copy/;
+use POSIX;
+use HTML::Entities;
+use Getopt::Long;
+
+## OPTIONS ##
+my $opt_version = 2;
+my $opt_minlength;
+my $opt_sfile;
+my $opt_dir = ".";
+my $opt_template;
+my $opt_nowrite;
+my $opt_logger;
+my $opt_file;
+my $opt_attempts;
+my $opt_year;
+my $opt_trash;
+my $opt_overall;
+my $opt_popoverall;
+my $opt_combine;
+my $opt_server;
+my $opt_collapse;
+my $opt_tail;
+my $opt_nav;
+my $opt_filter;
+my $opt_throttle;
+my $opt_debug;
+my $opt_locale;
+my $opt_fork;
+
+## SUBS ##
+
+sub usage {
+    my ($exitvalue) = @_;
+    $exitvalue ||= 1;
+
+    my $me = $0;
+    $me =~ s/^.*\///;
+    print STDERR <<USAGE;
+Usage: $me action [options]
+See 'perldoc stasis'.
+USAGE
+
+    exit $exitvalue;
+}
+
+sub bomb($) {
+    my $msg = shift;
+    my $prog = $0;
+    $msg =~ s/^/$prog: /gm;
+    chomp $msg;
+    print STDERR $msg . "\n";
+    exit 1;
+}
+
+sub status($) {
+    my $msg = shift;
+    my $prog = $0;
+    
+    if( $msg !~ /^[a-z]/ ) {
+        $msg =~ s/^/$prog: /gm;
+    }
+    
+    chomp $msg;
+    if( $msg =~ /\.\.\s*$/ ) {
+        print STDERR $msg;
+    } else {
+        print STDERR $msg . "\n";
+    }
+}
+
+sub makeext() {
+    Stasis::ExtensionRunner->new(qw/Activity Aura Cast Damage Death Dispel ExtraAttack Healing Interrupt Power Presence/);
+}
+
+sub _getsource {
+    # Assign something to the INPUT handle
+    
+    if( $opt_file ) {
+        # Get a filehandle.
+        
+        if( $opt_tail ) {
+            # See if we have File::Tail
+            eval {
+                require File::Tail;
+                import File::Tail;
+            }; if( $@ ) {
+                bomb "please install File::Tail from CPAN or try again without -tail";
+            }
+            
+            # Can't do trash, combine, overall, or navigation with -tail
+            $opt_nav = 0;
+            if( $opt_trash || $opt_combine || $opt_overall ) {
+                bomb "-trash, -combine, -overall, and -navigation are not supported with -tail";
+            }
+            
+            tie *INPUT, "File::Tail", ( 
+                name => $opt_file,
+
+                # Never wait more than 1 second between checks.
+                interval => 1,
+                maxinterval => 1,
+
+                # Tail from the end of the file, don't read in pre-existing data.
+                tail => 0,
+
+                # If the file is moved out of the way and replaced, read its entire replacement.
+                reset_tail => 1,
+            );
+        } else {
+            open INPUT, $opt_file or bomb "could not open file: $opt_file";
+        }
+    } elsif( $opt_sfile ) {
+        # Get a database connection.
+        
+        bomb "SQLite files cannot be read from";
+        
+        # if( $opt_tail ) {
+        #     bomb "SQLite mode is not supported with -tail";
+        # } else {
+        #     status "WARNING: SQLite mode is experimental, and the file format is subject to change!";
+        #     $db = Stasis::DB->new( db => $opt_sfile );
+        #     $db->line(1);
+        # }
+    } else {
+        $opt_file = 1;
+        open INPUT, "<&STDIN";
+    }
+}
+
+## CODE ##
+
+# Get the action first.
+usage(0) unless @ARGV;
+my $action = lc shift @ARGV;
+usage(0) if $action eq "-h" || $action eq "help" || $action eq "-help" || $action eq "--help";
+
+# Get options.
+my $rc = GetOptions(
+    "version=s"     => \$opt_version,
+    "logger=s"      => \$opt_logger,
+    "file=s"        => \$opt_file,
+    "dir=s"         => \$opt_dir,
+    "template=s"    => \$opt_template,
+    "minlength=i"   => \$opt_minlength,
+    "attempts"      => \$opt_attempts,
+    "nowrite"       => \$opt_nowrite,
+    "year=i"        => \$opt_year,
+    "sfile=s"       => \$opt_sfile,
+    "trash"         => \$opt_trash,
+    "overall"       => \$opt_overall,
+    "popoverall"    => \$opt_popoverall,
+    "combine"       => \$opt_combine,
+    "server=s"      => \$opt_server,
+    "collapse"      => \$opt_collapse,
+    "tail"          => \$opt_tail,
+    "navigation"    => \$opt_nav,
+    "filter=s@"     => \$opt_filter,
+    "throttle=i"    => \$opt_throttle,
+    "debug"         => \$opt_debug,
+    "locale=s"      => \$opt_locale,
+    "fork"          => \$opt_fork,
+);
+
+setlocale( LC_ALL, $opt_locale ) if $opt_locale;
+
+# nav always on
+$opt_nav = 1;
+
+# fix throttle
+$opt_throttle = int($opt_throttle) if $opt_throttle;
+
+bomb "Too many extra arguments: " . join( " ", @ARGV ) . "\n" if @ARGV;
+
+# Clean up opt_dir
+if( $opt_dir ) {
+    $opt_dir = File::Spec->rel2abs($opt_dir);
+}
+
+# Create a parser.
+my $parser = Stasis::Parser->new(
+    version => $opt_version,
+    logger  => $opt_logger,
+    year    => $opt_year,
+);
+
+# Case out the various actions.
+if( $action eq "print" ) {
+    # action PRINT: used to print out actions from a log file
+    
+    # Figure out what input to use.
+    _getsource();
+    
+    # Print in utf8 (since that's what we're reading in)
+    binmode( STDOUT, "utf8" );
+    
+    while( my $line = <INPUT> ) {
+        select(undef, undef, undef, $opt_throttle/1000) if $opt_throttle;
+        
+        utf8::decode($line);
+        
+        my $event = $parser->parse($line);
+        if( $event->{action} ) {
+            if( $opt_filter ) {
+                # Check filter
+                my $match;
+                
+                FILTER: foreach my $filter (@$opt_filter) {
+                    my @ff = split /\s*[+,]\s*/;
+                    
+                    foreach my $f ( @ff ) {
+                        if( $f =~ /^(\w+):\s*(.*)$/ ) {
+                            my ( $k, $v ) = ( $1, $2 );
+
+                            if( $k eq 'from' ) {
+                                next FILTER unless $v eq $event->{actor_name};
+                            } elsif( $k eq 'to' ) {
+                                next FILTER unless $v eq $event->{target_name};
+                            } elsif( $k eq 'spell' ) {
+                                next FILTER
+                                  unless ( $event->{spellname} && $v eq $event->{spellname} )
+                                      || ( $event->{extraspellname} && $v eq $event->{extraspellname} );
+                            } elsif( $k eq 'event' ) {
+                                next FILTER unless $parser->action_name( $event->{action} ) =~ /$v/i;
+                            } else {
+                                die "bad filter key: $k";
+                            }
+                        } else {
+                            # check all
+                            next FILTER
+                              unless $filter eq $event->{actor_name}
+                                  || $filter eq $event->{target_name}
+                                  || ( $event->{spellname}      && $filter eq $event->{spellname} )
+                                  || ( $event->{extraspellname} && $filter eq $event->{extraspellname} )
+                                  || ( $parser->action_name( $event->{action} ) =~ /$filter/i );
+                        }
+                    }
+                    
+                    # matched this filter
+                    $match = 1;
+                    last;
+                }
+                
+                next unless $match;
+            }
+            
+            if( my $text = $event->toString( undef, sub { "$_[1] ($_[0])" } ) ) {
+                printf "%s  %s\n", $event->timeString(), $text;
+            } else {
+                print $line;
+            }
+        } else {
+            warn "bad line: " . $line;
+        }
+    }
+} elsif( $action eq "add" ) {
+    # Figure out what input to use.
+    _getsource();
+    
+    # Going to output in $opt_dir
+    bomb "not a directory: $opt_dir" unless $opt_dir && -d $opt_dir;
+    status "Using directory: $opt_dir";
+    
+    # Warn if the user tried to use template or fork
+    status "WARNING: -template is an experimental option, please report any strange behavior" if $opt_template;
+    status "WARNING: -fork is an experimental option, please report any strange behavior" if $opt_fork;
+    
+    # Set up the event dispatchers.
+    my $ed_splitter = Stasis::EventDispatcher->new;
+    my $ed = Stasis::EventDispatcher->new;
+    
+    # Assign classes to %raid and splits to @splits
+    my %boss_tries;
+    
+    # Extension holders for normal splits, "-trash", "-overall", and "-combine".
+    my $split_exts = makeext;
+    my $trash_exts = makeext;
+    my $overall_exts = makeext;
+    my %combine_exts; # indexed by boss short name
+    
+    # a NameIndex for doing that sort of thing
+    my $index = Stasis::NameIndex->new;
+    
+    # Use this to write stuff out.
+    my $writer = Stasis::CLI::Writer->new(
+        base     => $opt_dir,
+        server   => $opt_server,
+        template => $opt_template,
+        debug    => $opt_debug,
+        fork     => $opt_fork
+    );
+    
+    my $classer = Stasis::ClassGuess->new( debug => $opt_debug );
+    my $splitter = Stasis::LogSplit->new( debug => $opt_debug, callback =>
+        # LogSplit callback
+        sub {
+            my ( $boss ) = @_;
+            
+            if( ! defined $boss->{kill} ) {
+                # Starting a new split.
+                $split_exts->start($ed);
+                
+                # Start up the combined extensions.
+                if( $opt_combine ) {
+                    if( !$combine_exts{ $boss->{short} } ) {
+                        $combine_exts{ $boss->{short} } = makeext;
+                        $combine_exts{ $boss->{short} }->start($ed);
+                    } else {
+                        $combine_exts{ $boss->{short} }->resume($ed);
+                    }
+                }
+                
+                # Suspend trash.
+                $trash_exts->suspend($ed) if $opt_trash;
+                
+                # Let the user know we saw a boss start.
+                my $start = $boss->{start};
+                $start =~ /^(\d+)(\.(\d+)|)$/;
+                my @t = localtime $1;
+                status sprintf(
+                    "Encounter start: %s at %d/%d %02d:%02d:%02d\.%03d .. \n",
+                    $boss->{short},
+                    $t[4]+1,
+                    $t[3],
+                    $t[2],
+                    $t[1],
+                    $t[0],
+                    $2?$3:0,
+                );
+            } else {
+                # Closing a split.
+                $split_exts->finish($ed);
+                $boss_tries{ $boss->{short} } ++;
+                
+                # Suspend the combined extensions.
+                $combine_exts{ $boss->{short} }->suspend($ed) if $opt_combine;
+                
+                # Resume trash.
+                $trash_exts->resume($ed) if $opt_trash;
+                
+                # Possibly add an attempt number
+                $boss->{long} .= " try " . $boss_tries{ $boss->{short} } if !$boss->{kill};
+                
+                if( $opt_minlength && $boss->{end} - $boss->{start} < $opt_minlength ) {
+                    # Check minlength option.
+                    status "skipping (too short).";
+                } elsif( !$opt_attempts && !$boss->{kill} ) {
+                    # Check attempts option.
+                    status "skipping (no mobs).";
+                } else {
+                    # If we got this far, we should write this encounter.
+                    $writer->set(
+                        boss     => $boss,
+                        raid     => { $classer->finish },
+                        exts     => $split_exts,
+                        collapse => $opt_collapse,
+                        index    => $index,
+                    );
+
+                    # Find the directory name.
+                    status sprintf "writing %s (%s) .. ", $boss->{long}, $writer->fill_template;
+
+                    # Write the files for this split.
+                    unless( $opt_nowrite ) {
+                        eval {
+                            $writer->write_dir;
+                        }; if( $@ ) {
+                            bomb $@;
+                        }
+                    }
+
+                    status "done.";
+                }
+            }
+        }
+    );
+    
+    # Add LogSplit, ClassGuess, and NameIndex to the event dispatcher.
+    $classer->register( $ed );
+    $index->register( $ed );
+    $splitter->register( $ed_splitter );
+    
+    # Start overall and trash if requested.
+    $overall_exts->start($ed) if $opt_overall;
+    $trash_exts->start($ed) if $opt_trash;
+    
+    # Keep track of when the log started.
+    my $first = 0;
+    
+    while( my $line = <INPUT> ) {
+        select(undef, undef, undef, $opt_throttle/1000) if $opt_throttle;
+        
+        utf8::decode($line);
+        
+        # Get the line.
+        my $event = $parser->parse($line);
+        $first ||= $event->{t};
+        
+        # Dispatch this action.
+        if( $event->{action} ) {
+            $ed_splitter->process($event);
+            $ed->process($event);
+        } else {
+            warn "bad line: " . $line;
+        }
+    }
+    
+    if( $opt_tail ) {
+        # Shouldn't do any of this other junk.
+        status "Ending.";
+        exit(0);
+    }
+    
+    if( $opt_combine ) {
+        foreach my $e (values %combine_exts) {
+            $e->finish($ed);
+        }
+    }
+    
+    $trash_exts->finish($ed) if $opt_trash;
+    $overall_exts->finish($ed) if $opt_overall;
+    
+    my %raid = $classer->finish;
+    my @splits = $splitter->finish;
+    
+    # Count the results so the user can see what's up.
+    my $n_players = 0;
+    my $n_pets = 0;
+    while( my ($rid, $rdata) = each(%raid) ) {
+        if( $rdata->{class} ne "Pet" ) {
+            $n_players ++;
+        } else {
+            $n_pets ++;
+        }
+    }
+    
+    status 
+            "Done processing. Found $n_players player" . ($n_players == 1 ? "" : "s") . 
+            ", $n_pets pet" . ($n_pets == 1 ? "" : "s") . 
+            ", and " . scalar(@splits) . " boss encounter" . (scalar(@splits) == 1 ? "" : "s") . ".";
+    
+    # Write trash
+    if( $opt_trash && !$opt_nowrite ) {
+        my $boss = { short => "trash", long => "Trash Mobs", start => $first, kill => 0 };
+
+        eval {
+            $writer->set( boss => $boss, raid => \%raid, exts => $trash_exts, index => $index, collapse => 1 );
+            
+            status sprintf "Writing %s (%s) .. ", $boss->{long}, $writer->fill_template;
+            $writer->write_dir;
+            status "done.";
+        }; if( $@ ) {
+            bomb $@;
+        }
+    }
+    
+    # Write combine
+    if( $opt_combine && !$opt_nowrite ) {
+        while( my ($kboss, $exts) = each (%combine_exts) ) {
+            my $dname = sprintf "%s/sws-%s-combine-%d", $opt_dir, $kboss, floor($first);
+            my $dname_old = $dname;
+            
+            # Skip unless we actually had more than one of this boss.
+            if( $boss_tries{$kboss} > 1 ) {
+                # Boss name.
+                my $bname = Stasis::LogSplit->name( $kboss );
+                my $boss = { short => "${kboss}-combine", long => "$bname (combined)", start => $first, kill => 0 };
+
+                eval {
+                    $writer->set( boss => $boss, raid => \%raid, exts => $exts, index => $index, collapse => $opt_collapse );
+
+                    status sprintf "Writing %s (%s) .. ", $boss->{long}, $writer->fill_template;
+                    $writer->write_dir;
+                    status "done.";
+                }; if( $@ ) {
+                    bomb $@;
+                }
+            }
+        }
+    }
+    
+    # Write overall
+    if( $opt_overall && !$opt_nowrite ) {
+        my $boss = { short => "overall", long => "Overall", start => $first, kill => 0 };
+
+        eval {
+            $writer->set( boss => $boss, raid => \%raid, exts => $overall_exts, index => $index, collapse => 1 );
+
+            status sprintf "Writing %s (%s) .. ", $boss->{long}, $writer->fill_template;
+            $writer->write_dir;
+            status "done.";
+
+            if($opt_popoverall)
+            {
+            	my $popme = "output\\" . $writer->fill_template . "\\index.html";
+
+            	print "Displaying $popme in a browser ...\n";
+            	system("cmd /c start \"ignored\" \"$popme\"");
+            }
+        }; if( $@ ) {
+            bomb $@;
+        }
+    }
+    
+    # Write navigation
+    
+    status "Waiting for children to exit .. " if $opt_fork;
+    my @dirs_written = $writer->written_dirs;    
+    status "done." if $opt_fork;
+
+    if( $opt_nav && !$opt_nowrite && @dirs_written ) {
+        # save dnames
+        $_->{_dname} = $_->{dname} foreach (@dirs_written);
+        
+        foreach my $d (@dirs_written) {
+            next if !$d->{dname};
+            
+            # count path separators, this code kinda blows. not sure how to do it portably
+            my $seps = 0;
+            while( $d->{dname} =~ /[\/\\]/g ) { $seps ++ }
+            
+            $d->{dname} = "../" . $d->{dname} . "/index.html";
+            $d->{dname} = ( "../" x $seps ) . $d->{dname};
+        }
+        
+        my $NAV = Stasis::Page->_json( \@dirs_written );
+        
+        # restore old dnames
+        $_->{dname} = delete $_->{_dname} foreach (@dirs_written);
+        
+        foreach my $dir (@dirs_written) {
+            eval {
+                my $dname = sprintf "%s/%s", $opt_dir, $dir->{dname};
+                die "Could not find " . $opt_dir . "/" . $dir->{dname} unless -d $dname;
+                
+                open my $dnav, ">$dname/raid.json" or die "Could not open $dname/raid.json";
+                print $dnav $NAV;
+                close $dnav;
+            }; if( $@ ) {
+                bomb $@;
+            }
+        }
+    }
+} elsif( $action eq "history" ) {
+    # Going to output in $opt_dir
+    bomb "not a directory: $opt_dir" unless $opt_dir && -d $opt_dir;
+    status "Using directory: $opt_dir";
+    
+    # Header
+    my $xml = "<wws-history>\n";
+    
+    # Look at all data.xmls.
+    my @dataxmls;
+    File::Find::find( 
+        sub {
+            if( -f $_ && ( $File::Find::name =~ /\/sws-[0-9]+\/data.xml$/ || $File::Find::name =~ /\/sws-[\w]+-[0-9]+\/data.xml$/ ) ) {
+                push @dataxmls, $File::Find::name;
+            }
+        },
+        
+        $opt_dir 
+    );
+    
+    status "Reading from " . (scalar @dataxmls) . " subdirectories.";
+    
+    foreach my $dataxml (@dataxmls) {
+        open DXML, $dataxml or die "Could not open a subdirectory for reading.";
+        while( <DXML> ) {
+            $xml .= $_;
+        }
+        close DXML;
+    }
+    
+    # Footer
+    $xml .= "</wws-history>\n";
+    
+    # Create wws-history directory if it doesn't exist.
+    if( ! -d $opt_dir . "/wws-history" ) {
+        mkdir $opt_dir . "/wws-history" or bomb "Could not create extras directory";
+    }
+    
+    open DXML, ">$opt_dir/wws-history/data.xml" or die "Could not open data.xml for writing";
+    print DXML $xml;
+    close DXML;
+    
+    status "Wrote: $opt_dir/wws-history/data.xml";
+    
+    # Copy JS and CSS
+    my ($prog_vol, $prog_dir) = File::Spec->splitpath( File::Spec->rel2abs($0) );
+    my $extra_path = File::Spec->catpath( $prog_vol, File::Spec->catdir( $prog_dir, "extras" ), "" );
+    
+    if( -d $extra_path && -f "$extra_path/sws.js" && -f "$extra_path/sws2.css" ) {
+        status "Copying extras from: $extra_path";
+        
+        # Create extras directory if it doesn't exist
+        if( ! -d $opt_dir . "/extras" ) {
+            mkdir $opt_dir . "/extras" or die;
+        }
+        
+        # Copy JS and CSS
+        copy( "$extra_path/sws.js", "$opt_dir/extras/sws.js" ) or die;
+        status "Wrote: $opt_dir/extras/sws.js";
+        
+        copy( "$extra_path/sws2.css", "$opt_dir/extras/sws2.css" ) or die;
+        status "Wrote: $opt_dir/extras/sws2.css";
+    } else {
+        bomb "Could not find extras dir: checked $extra_path";
+    }
+} elsif( $action eq "convert" ) {
+    status "WARNING: SQLite mode is experimental, and the file format is subject to change!";
+    
+    _getsource();
+    
+    if( $opt_tail ) {
+        bomb "tail is not supported in SQLite mode, try again without -tail";
+    }
+    
+    # Get a database connection.
+    my $db = Stasis::DB->new( db => $opt_sfile );
+    
+    if( -e $opt_sfile ) {
+        # Bail if the file exists.
+        bomb "target file exists, choose another name: $opt_sfile";
+    }
+    
+    eval {
+        # Create the target file.
+        $db->create();
+        
+        # Import log entries.
+        my $nlog = -1;
+        while( my $line = <INPUT> ) {
+            select(undef, undef, undef, $opt_throttle/1000) if $opt_throttle;
+            
+            $nlog++;
+            my $event = $parser->parse($line);
+            $db->addLine( $nlog, $event );
+        }
+        
+        $db->finish();
+        $db->disconnect();
+    }; if( $@ ) {
+        bomb "convert error: $@";
+        unlink $opt_sfile;
+    }
+} else {
+    bomb "bad action: $action";
+}
+
+exit 0;

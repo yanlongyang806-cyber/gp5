@@ -1,0 +1,15 @@
+<UserSettings>
+	<ApplicationIdentity version="10.0"/>
+	<Category name="Debugger" Category="{EEDBF29A-5C8B-4E01-827C-263382C18CFE}" Package="{C9DD4A57-47FB-11D2-83E7-00C04F9902C1}" RegisteredName="Debugger" PackageName="Visual Studio Debugger">
+		<PropertyValue name="UseDocumentChecksum">0</PropertyValue>
+		<!-- Make sure to
+			a) add to the end of the list (so as not to mess up people's personal options) and
+			b) add a 1 to the end of SymbolPathState
+		-->
+		<PropertyValue name="SymbolPath">\\somnus\data\symserv\LongTerm;\\somnus\data\symserv\Xenon;\\somnus\data\symserv\dataCryptic;\\somnus\data\symserv\2week;\\somnus\data\symserv\2day</PropertyValue>
+		<PropertyValue name="SymbolPathState">11111</PropertyValue>
+		<PropertyValue name="SymbolCacheDir">C:\symcache</PropertyValue>
+		<PropertyValue name="SymbolExcludeList">ieframe.dll;shdocvw.dll;oleacc.dll;iertutil.dll;wpdshext.dll;gdiplus.dll;comctl32.dll;propsys.dll;clbcatq.dll;GoogleDesktopNetwork3.dll;steam_api.dll</PropertyValue>
+		<PropertyValue name="SymbolExcludeListState">11111111111</PropertyValue>
+	</Category>
+</UserSettings>

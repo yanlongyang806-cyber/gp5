@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\CrypticError_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\CrypticError_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="dataValidation.c" />
+    <ClCompile Include="harvest.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="systemtray.c" />
+    <ClCompile Include="throttle.c" />
+    <ClCompile Include="ui.c" />
+    <ClCompile Include="uitools.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dataValidation.h" />
+    <ClInclude Include="harvest.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="systemtray.h" />
+    <ClInclude Include="throttle.h" />
+    <ClInclude Include="ui.h" />
+    <ClInclude Include="uitools.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{f5a33356-9ea8-4894-b615-d85df03ea891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{6e7e83a9-7b8f-4b71-83bc-59e892e8d71b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cryptic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CrypticError.rc" />
+  </ItemGroup>
+</Project>

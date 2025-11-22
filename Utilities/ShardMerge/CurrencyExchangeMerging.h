@@ -1,0 +1,7 @@
+#pragma once
+
+typedef struct CurrencyExchangeAccountData CurrencyExchangeAccountData;
+typedef struct CurrencyExchangeAccountData_AutoGen_NoConst CurrencyExchangeAccountData_AutoGen_NoConst;
+
+void InitializeCurrencyExchangeContainer(NOCONST(CurrencyExchangeAccountData) *lhs);
+void MergeTwoCurrencyExchangeContainers(NOCONST(CurrencyExchangeAccountData) *lhs, CurrencyExchangeAccountData *rhs);

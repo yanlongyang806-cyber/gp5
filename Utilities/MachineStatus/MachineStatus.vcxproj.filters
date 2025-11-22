@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\MachineStatus_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\MachineStatus_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineStatus.c" />
+    <ClCompile Include="MainScreen.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\PatchClientLib\PatchClientLibStatusMonitoring.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineStatus.h" />
+    <ClInclude Include="MachineStatusPub.h" />
+    <ClInclude Include="MainScreen.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{0455c75d-6857-479e-8654-c01bf33e2495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternHeaders">
+      <UniqueIdentifier>{806a08c0-8a2b-415c-8c74-0463732fce92}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MachineStatus.rc" />
+  </ItemGroup>
+</Project>

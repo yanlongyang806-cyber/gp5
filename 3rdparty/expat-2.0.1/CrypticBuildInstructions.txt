@@ -1,0 +1,10 @@
+Build only expat_static, in the following configurations:
+	Debug Win32			libexpatMTdebug
+	Release Win32		libexpatMT
+	Debug x64			libexpatX64MTdebug
+	and Release X64		libexpatX64MT
+
+Check in the .lib and .pdb for each of these, but do not check in the .idb.
+
+A good sanity check for small changes is to make sure the file size of the new version you
+are checking in is approximately the same as the file size of the old version.

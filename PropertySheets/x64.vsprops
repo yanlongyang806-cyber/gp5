@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="10.00"
+	Name="x64"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		EnableEnhancedInstructionSet="0"
+		DebugInformationFormat="3"
+		EnablePREfast="false"
+	/>
+</VisualStudioPropertySheet>

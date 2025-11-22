@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutoGen\TaskServer_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\TaskServer_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfPatch.c" />
+    <ClCompile Include="TaskServer.c" />
+    <ClCompile Include="TaskServerWorker.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SelfPatch.h" />
+    <ClInclude Include="TaskServer.h" />
+    <ClInclude Include="TaskServer_AnonAutoRunIncludes.h">
+      <Filter>AutoGen</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+"""Contains global variables for test methods"""
+bit = lambda x: 1 << x
+USERINFO_PERMISSIONS = bit(0) # Include permissions
+USERINFO_KEYVALUES = bit(1) # Include key values
+USERINFO_PRODUCTSOWNED = bit(2) # Include products owned
+USERINFO_QUESTIONS = bit(3) # Include secret questions
+USERINFO_PRODUCTKEYS = bit(4) # Include product keys
+USERINFO_DISTRIBUTEDPRODUCTKEYS = bit(5) # Include distributed product keys
+USERINFO_INTERNALSUBS = bit(6) # Include internal subscriptions
+USERINFO_ACTIVITYLOG = bit(7) # Include activity log
+USERINFO_SUBHISTORY = bit(8) # Include sub history
+USERINFO_SUBSTATS = bit(9) # Include sub stats
+USERINFO_RECRUITS = bit(10) # Include recruits
+USERINFO_RECRUITERS = bit(11) # Include recruiters
+USERINFO_RECRUITSLOTS = bit(12) # Include number of recruitment slots available
+USERINFO_PLAYTIME = bit(13) # Playtime information
+USERINFO_PROFILES = bit(14) # Profile information (used by Eden stuff)
+USERINFO_SPENDINGCAP = bit(15) # Profile information (used by Eden stuff)
+USERINFO_PERFECTWORLDACCOUNT = bit(16) # Linked Perfect World account info
+USERINFO_SAVEDMACHINES = bit(17) # Machine Locking info

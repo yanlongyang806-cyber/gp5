@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\libs\HostIOLib\xboxHostIO.c" />
+    <ClCompile Include="AutoGen\ContinuousBuilder_AutoGen_1.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGen\ContinuousBuilder_AutoGen_2.c">
+      <Filter>AutoGen</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildScriptingUI.c" />
+    <ClCompile Include="CBConfig.c" />
+    <ClCompile Include="CBErrorProcessing.c" />
+    <ClCompile Include="CBOverrideables.c" />
+    <ClCompile Include="CBReportToCBMonitor.c" />
+    <ClCompile Include="CBStartup.c" />
+    <ClCompile Include="CBZoomedInTextEditor.c" />
+    <ClCompile Include="ContinuousBuilder.c" />
+    <ClCompile Include="ContinuousBuilderTiming.c" />
+    <ClCompile Include="SuspectList.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\Common\ETCommon\ETCommonStructs.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\ETCommon\ETDumps.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\ETCommon\ETIncomingData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\ETCommon\ETShared.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\ETCommon\ETWebCommon.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\Common\ETCommon\symstore.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\HostIOLib\xboxHostIO.h" />
+    <ClInclude Include="..\..\libs\UtilitiesLib\components\BuildScripting.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\utils\structInternals.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\UtilitiesLib\utils\trivia.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CBMonitor\CBMonitor_pub.h">
+      <Filter>ExternHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CBConfig.h" />
+    <ClInclude Include="CBErrorProcessing.h" />
+    <ClInclude Include="CBOverrideables.h" />
+    <ClInclude Include="CBReportToCBMonitor.h" />
+    <ClInclude Include="CBStartup.h" />
+    <ClInclude Include="CBZoomedInTextEditor.h" />
+    <ClInclude Include="ContinuousBuilder.h" />
+    <ClInclude Include="ContinuousBuilder_Pub.h" />
+    <ClInclude Include="ContinuousBuilderTiming.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SuspectList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutoGen">
+      <UniqueIdentifier>{c8722047-79c4-4bfa-abfd-1289ad19ea32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a0564ca2-7c2e-4848-9fb1-ca07d60890f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternHeaders">
+      <UniqueIdentifier>{a39237b2-5bb2-45f2-b49a-a6e1bad72780}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTMLHeaders.txt" />
+    <None Include="txt1.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ContinuousBuilder.rc" />
+  </ItemGroup>
+</Project>

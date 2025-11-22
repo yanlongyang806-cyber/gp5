@@ -1,0 +1,51 @@
+HKCR
+{
+	PatchShellMenu.PatchShellMenuExt.1 = s 'PatchShellMenuExt Class'
+	{
+		CLSID = s '{FFF0A0BE-677B-454C-B712-6949FB082279}'
+	}
+	PatchShellMenu.PatchShellMenuExt = s 'PatchShellMenuExt Class'
+	{
+		CLSID = s '{FFF0A0BE-677B-454C-B712-6949FB082279}'
+		CurVer = s 'PatchShellMenu.PatchShellMenuExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {FFF0A0BE-677B-454C-B712-6949FB082279} = s 'PatchShellMenuExt Class'
+		{
+			ProgID = s 'PatchShellMenu.PatchShellMenuExt.1'
+			VersionIndependentProgID = s 'PatchShellMenu.PatchShellMenuExt'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{883FAD5A-0122-4B84-8B57-7910704DB3DA}'
+		}
+	}
+	NoRemove AllFileSystemObjects
+	{
+		NoRemove ShellEx
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove PatchShellMenuExt = s '{FFF0A0BE-677B-454C-B712-6949FB082279}'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Background
+		{
+			NoRemove ShellEx
+			{
+				NoRemove ContextMenuHandlers
+				{
+					ForceRemove PatchShellMenuExt = s '{FFF0A0BE-677B-454C-B712-6949FB082279}'
+				}
+			}
+		}
+	}
+
+}
+
